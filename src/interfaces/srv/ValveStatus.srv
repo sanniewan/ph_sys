@@ -1,0 +1,4 @@
+---
+uint8[<=80] activated_valves
+# list of valves that are activated
+# e.g. [2,3] if the 2nd and 3rd valve are activated

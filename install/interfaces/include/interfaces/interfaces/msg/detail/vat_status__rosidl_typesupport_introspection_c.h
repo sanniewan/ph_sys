@@ -1,0 +1,1 @@
+/workspace/ph_sys_ws/build/interfaces/rosidl_typesupport_introspection_c/interfaces/msg/detail/vat_status__rosidl_typesupport_introspection_c.h

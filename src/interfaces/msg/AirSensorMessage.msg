@@ -1,0 +1,5 @@
+bool        err
+string      msg
+float32     t
+int8        rh
+int16       co2

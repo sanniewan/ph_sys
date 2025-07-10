@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating ph_controller.egg-info
+writing ph_controller.egg-info/PKG-INFO
+writing dependency_links to ph_controller.egg-info/dependency_links.txt
+writing entry points to ph_controller.egg-info/entry_points.txt
+writing requirements to ph_controller.egg-info/requires.txt
+writing top-level names to ph_controller.egg-info/top_level.txt
+writing manifest file 'ph_controller.egg-info/SOURCES.txt'
+reading manifest file 'ph_controller.egg-info/SOURCES.txt'
+writing manifest file 'ph_controller.egg-info/SOURCES.txt'
+running build_ext
+Creating /workspace/ph_sys_ws/install/ph_controller/lib/python3.10/site-packages/ph-controller.egg-link (link to .)
+Installing ph_controller_node script to /workspace/ph_sys_ws/install/ph_controller/lib/ph_controller
+
+Installed /workspace/ph_sys_ws/build/ph_controller
+running symlink_data
+creating /workspace/ph_sys_ws/install/ph_controller/share/ament_index
+creating /workspace/ph_sys_ws/install/ph_controller/share/ament_index/resource_index
+creating /workspace/ph_sys_ws/install/ph_controller/share/ament_index/resource_index/packages
+symbolically linking /workspace/ph_sys_ws/build/ph_controller/resource/ph_controller -> /workspace/ph_sys_ws/install/ph_controller/share/ament_index/resource_index/packages
+symbolically linking /workspace/ph_sys_ws/build/ph_controller/package.xml -> /workspace/ph_sys_ws/install/ph_controller/share/ph_controller

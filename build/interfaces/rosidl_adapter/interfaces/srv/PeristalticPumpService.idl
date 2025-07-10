@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from interfaces/srv/PeristalticPumpService.srv
+// generated code does not contain a copyright notice
+
+
+module interfaces {
+  module srv {
+    struct PeristalticPumpService_Request {
+      float volume;
+    };
+    struct PeristalticPumpService_Response {
+      boolean err;
+
+      string msg;
+
+      float volume;
+    };
+  };
+};

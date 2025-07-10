@@ -1,0 +1,3 @@
+[console_scripts]
+first_package_node = first_package.first_package_node:main
+

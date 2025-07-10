@@ -1,0 +1,7 @@
+string      instruction
+int8        speed
+---
+bool        err
+string      msg
+string      status
+int8        speed

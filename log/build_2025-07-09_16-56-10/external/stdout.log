@@ -1,0 +1,21 @@
+running develop
+running egg_info
+creating external.egg-info
+writing external.egg-info/PKG-INFO
+writing dependency_links to external.egg-info/dependency_links.txt
+writing entry points to external.egg-info/entry_points.txt
+writing requirements to external.egg-info/requires.txt
+writing top-level names to external.egg-info/top_level.txt
+writing manifest file 'external.egg-info/SOURCES.txt'
+reading manifest file 'external.egg-info/SOURCES.txt'
+writing manifest file 'external.egg-info/SOURCES.txt'
+running build_ext
+Creating /workspace/ph_sys_ws/install/external/lib/python3.10/site-packages/external.egg-link (link to .)
+
+Installed /workspace/ph_sys_ws/build/external
+running symlink_data
+creating /workspace/ph_sys_ws/install/external/share/ament_index
+creating /workspace/ph_sys_ws/install/external/share/ament_index/resource_index
+creating /workspace/ph_sys_ws/install/external/share/ament_index/resource_index/packages
+symbolically linking /workspace/ph_sys_ws/build/external/resource/external -> /workspace/ph_sys_ws/install/external/share/ament_index/resource_index/packages
+symbolically linking /workspace/ph_sys_ws/build/external/package.xml -> /workspace/ph_sys_ws/install/external/share/external

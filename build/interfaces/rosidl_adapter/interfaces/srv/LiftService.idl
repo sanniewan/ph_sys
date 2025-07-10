@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from interfaces/srv/LiftService.srv
+// generated code does not contain a copyright notice
+
+
+module interfaces {
+  module srv {
+    struct LiftService_Request {
+      string instruction;
+
+      int16 height;
+    };
+    struct LiftService_Response {
+      boolean err;
+
+      string msg;
+
+      boolean state;
+
+      int16 height;
+    };
+  };
+};

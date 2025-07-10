@@ -1,0 +1,9 @@
+---
+bool[<=4] send_pump_active
+# list with activity status of up to four irrigation send pumps
+# True corresponds to the pump being active
+# The first element corresponds to the first circuit,
+# the second pair to the second circuit, etc.
+# There may be up to four irrigation circuits and the first circuit
+# typically corresponds to the nursery irrigation circuit.
+# e.g. [0.,0., 5.5,4.4, 0.,0., 0.,0.]

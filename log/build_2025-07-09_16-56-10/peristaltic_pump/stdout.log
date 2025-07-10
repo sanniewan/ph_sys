@@ -1,0 +1,21 @@
+running develop
+running egg_info
+creating peristaltic_pump.egg-info
+writing peristaltic_pump.egg-info/PKG-INFO
+writing dependency_links to peristaltic_pump.egg-info/dependency_links.txt
+writing entry points to peristaltic_pump.egg-info/entry_points.txt
+writing requirements to peristaltic_pump.egg-info/requires.txt
+writing top-level names to peristaltic_pump.egg-info/top_level.txt
+writing manifest file 'peristaltic_pump.egg-info/SOURCES.txt'
+reading manifest file 'peristaltic_pump.egg-info/SOURCES.txt'
+writing manifest file 'peristaltic_pump.egg-info/SOURCES.txt'
+running build_ext
+Creating /workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages/peristaltic-pump.egg-link (link to .)
+
+Installed /workspace/ph_sys_ws/build/peristaltic_pump
+running symlink_data
+creating /workspace/ph_sys_ws/install/peristaltic_pump/share/ament_index
+creating /workspace/ph_sys_ws/install/peristaltic_pump/share/ament_index/resource_index
+creating /workspace/ph_sys_ws/install/peristaltic_pump/share/ament_index/resource_index/packages
+symbolically linking /workspace/ph_sys_ws/build/peristaltic_pump/resource/peristaltic_pump -> /workspace/ph_sys_ws/install/peristaltic_pump/share/ament_index/resource_index/packages
+symbolically linking /workspace/ph_sys_ws/build/peristaltic_pump/package.xml -> /workspace/ph_sys_ws/install/peristaltic_pump/share/peristaltic_pump

@@ -1,0 +1,24 @@
+[6.960s] Invoking command in '/workspace/ph_sys_ws/build/ph_controller': PYTHONPATH=/workspace/ph_sys_ws/build/ph_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/ph_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/ph_controller/build --no-deps symlink_data
+[9.123s] running develop
+[9.805s] running egg_info
+[9.806s] creating ph_controller.egg-info
+[9.806s] writing ph_controller.egg-info/PKG-INFO
+[9.807s] writing dependency_links to ph_controller.egg-info/dependency_links.txt
+[9.807s] writing entry points to ph_controller.egg-info/entry_points.txt
+[9.807s] writing requirements to ph_controller.egg-info/requires.txt
+[9.808s] writing top-level names to ph_controller.egg-info/top_level.txt
+[9.808s] writing manifest file 'ph_controller.egg-info/SOURCES.txt'
+[9.813s] reading manifest file 'ph_controller.egg-info/SOURCES.txt'
+[9.816s] writing manifest file 'ph_controller.egg-info/SOURCES.txt'
+[9.823s] running build_ext
+[9.824s] Creating /workspace/ph_sys_ws/install/ph_controller/lib/python3.10/site-packages/ph-controller.egg-link (link to .)
+[9.826s] Installing ph_controller_node script to /workspace/ph_sys_ws/install/ph_controller/lib/ph_controller
+[9.833s] 
+[9.833s] Installed /workspace/ph_sys_ws/build/ph_controller
+[9.834s] running symlink_data
+[9.835s] creating /workspace/ph_sys_ws/install/ph_controller/share/ament_index
+[9.836s] creating /workspace/ph_sys_ws/install/ph_controller/share/ament_index/resource_index
+[9.842s] creating /workspace/ph_sys_ws/install/ph_controller/share/ament_index/resource_index/packages
+[9.843s] symbolically linking /workspace/ph_sys_ws/build/ph_controller/resource/ph_controller -> /workspace/ph_sys_ws/install/ph_controller/share/ament_index/resource_index/packages
+[9.843s] symbolically linking /workspace/ph_sys_ws/build/ph_controller/package.xml -> /workspace/ph_sys_ws/install/ph_controller/share/ph_controller
+[10.051s] Invoked command in '/workspace/ph_sys_ws/build/ph_controller' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/ph_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/ph_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/ph_controller/build --no-deps symlink_data

@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+hardware/__init__.py
+hardware/config.py
+hardware.egg-info/PKG-INFO
+hardware.egg-info/SOURCES.txt
+hardware.egg-info/dependency_links.txt
+hardware.egg-info/entry_points.txt
+hardware.egg-info/requires.txt
+hardware.egg-info/top_level.txt
+hardware.egg-info/zip-safe
+resource/hardware

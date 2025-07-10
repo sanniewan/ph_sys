@@ -1,0 +1,7 @@
+float32     ec_target       # target EC
+float32     ph_target       # target pH
+float32     level_target    # target water level
+
+bool        ph_control      # pH agent control enabled
+bool        ec_control      # EC agent control enabled
+bool        level_control   # water level control enabled

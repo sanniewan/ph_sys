@@ -1,0 +1,12 @@
+package.xml
+setup.cfg
+setup.py
+peristaltic_pump/__init__.py
+peristaltic_pump.egg-info/PKG-INFO
+peristaltic_pump.egg-info/SOURCES.txt
+peristaltic_pump.egg-info/dependency_links.txt
+peristaltic_pump.egg-info/entry_points.txt
+peristaltic_pump.egg-info/requires.txt
+peristaltic_pump.egg-info/top_level.txt
+peristaltic_pump.egg-info/zip-safe
+resource/peristaltic_pump

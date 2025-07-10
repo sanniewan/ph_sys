@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from interfaces/msg/VatStatus.msg
+// generated code does not contain a copyright notice
+
+
+module interfaces {
+  module msg {
+    struct VatStatus {
+      @verbatim (language="comment", text=
+        "nutrient level in vat 1, mm")
+      int8 level_1;
+
+      @verbatim (language="comment", text=
+        "nutrient level in vat 2, mm")
+      int8 level_2;
+
+      @verbatim (language="comment", text=
+        "nutrient level in vat 3, mm")
+      int8 level_3;
+
+      @verbatim (language="comment", text=
+        "nutrient level in vat 4, mm")
+      int8 level_4;
+    };
+  };
+};

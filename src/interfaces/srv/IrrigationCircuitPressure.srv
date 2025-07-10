@@ -1,0 +1,11 @@
+---
+float32[<=8] circuit_pressure
+# list of measured pressures in the irrigation circuits
+# The list elements are ordered in pairs, with
+# the first element of each pair the incoming pressure, 
+# and the second element the outgoing pressure of the circuit
+# The first pair corresponds to the first circuit,
+# the second pair to the second circuit, etc.
+# There may be up to four irrigation circuits and the first circuit
+# typically corresponds to the nursery irrigation circuit.
+# e.g. [0.,0., 5.5,4.4, 0.,0., 0.,0.]

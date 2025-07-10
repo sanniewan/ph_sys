@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from interfaces/msg/LightStatus.msg
+// generated code does not contain a copyright notice
+
+
+module interfaces {
+  module msg {
+    struct LightStatus {
+      boolean growlight_state;
+
+      int8 growlight_level;
+
+      boolean tasklight_state;
+    };
+  };
+};

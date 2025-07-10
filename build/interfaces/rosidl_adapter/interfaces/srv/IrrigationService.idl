@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from interfaces/srv/IrrigationService.srv
+// generated code does not contain a copyright notice
+
+
+module interfaces {
+  module srv {
+    struct IrrigationService_Request {
+      string instruction;
+
+      int8 valve;
+    };
+    struct IrrigationService_Response {
+      boolean err;
+
+      string msg;
+
+      boolean state;
+    };
+  };
+};

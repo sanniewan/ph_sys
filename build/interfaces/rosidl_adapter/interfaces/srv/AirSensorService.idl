@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from interfaces/srv/AirSensorService.srv
+// generated code does not contain a copyright notice
+
+
+module interfaces {
+  module srv {
+    struct AirSensorService_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct AirSensorService_Response {
+      boolean err;
+
+      string msg;
+
+      float t;
+
+      int8 rh;
+
+      int16 co2;
+    };
+  };
+};

@@ -1,0 +1,6 @@
+string      instruction
+int8        wiper
+---
+bool        err
+string      msg
+int8        wiper

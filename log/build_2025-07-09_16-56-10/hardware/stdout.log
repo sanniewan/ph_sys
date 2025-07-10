@@ -1,0 +1,21 @@
+running develop
+running egg_info
+creating hardware.egg-info
+writing hardware.egg-info/PKG-INFO
+writing dependency_links to hardware.egg-info/dependency_links.txt
+writing entry points to hardware.egg-info/entry_points.txt
+writing requirements to hardware.egg-info/requires.txt
+writing top-level names to hardware.egg-info/top_level.txt
+writing manifest file 'hardware.egg-info/SOURCES.txt'
+reading manifest file 'hardware.egg-info/SOURCES.txt'
+writing manifest file 'hardware.egg-info/SOURCES.txt'
+running build_ext
+Creating /workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages/hardware.egg-link (link to .)
+
+Installed /workspace/ph_sys_ws/build/hardware
+running symlink_data
+creating /workspace/ph_sys_ws/install/hardware/share/ament_index
+creating /workspace/ph_sys_ws/install/hardware/share/ament_index/resource_index
+creating /workspace/ph_sys_ws/install/hardware/share/ament_index/resource_index/packages
+symbolically linking /workspace/ph_sys_ws/build/hardware/resource/hardware -> /workspace/ph_sys_ws/install/hardware/share/ament_index/resource_index/packages
+symbolically linking /workspace/ph_sys_ws/build/hardware/package.xml -> /workspace/ph_sys_ws/install/hardware/share/hardware

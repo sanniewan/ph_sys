@@ -1,0 +1,1 @@
+/workspace/ph_sys_ws/build/interfaces/rosidl_generator_c/interfaces/msg/detail/actuator_status_rwc__struct.h

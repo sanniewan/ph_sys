@@ -1,0 +1,26 @@
+string request
+string tank
+int8[] duration
+---
+bool err
+---
+int8[] time_remaining
+
+# request
+#   "open": open valves
+#   "close": close valves
+#
+# tank
+#   "nursery" : the nursery tank
+#   "cultivation" : the first cultivation tank
+#   "cultivation2" : the second cultivation tank
+#   "cultivation3" : the third cultivation tank
+#
+# duration
+#   list of 25 integers
+#
+# err
+#
+# time_remaining
+#    list of 25 integers
+
