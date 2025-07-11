@@ -1,0 +1,35 @@
+[4.939s] Invoking command in '/workspace/ph_sys_ws/build/hardware': PYTHONPATH=/workspace/ph_sys_ws/build/hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /workspace/ph_sys_ws/build/hardware/build
+[6.316s] running develop
+[7.262s] Removing /workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages/hardware.egg-link (link to .)
+[7.519s] Invoked command in '/workspace/ph_sys_ws/build/hardware' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /workspace/ph_sys_ws/build/hardware/build
+[7.533s] Invoking command in '/workspace/ph_sys_ws/src/hardware': PYTHONPATH=/workspace/ph_sys_ws/build/hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hardware build --build-base /workspace/ph_sys_ws/build/hardware/build install --record /workspace/ph_sys_ws/build/hardware/install.log --single-version-externally-managed install_data --force
+[9.134s] running egg_info
+[9.153s] writing ../../build/hardware/hardware.egg-info/PKG-INFO
+[9.154s] writing dependency_links to ../../build/hardware/hardware.egg-info/dependency_links.txt
+[9.154s] writing entry points to ../../build/hardware/hardware.egg-info/entry_points.txt
+[9.155s] writing requirements to ../../build/hardware/hardware.egg-info/requires.txt
+[9.178s] writing top-level names to ../../build/hardware/hardware.egg-info/top_level.txt
+[9.189s] reading manifest file '../../build/hardware/hardware.egg-info/SOURCES.txt'
+[9.200s] writing manifest file '../../build/hardware/hardware.egg-info/SOURCES.txt'
+[9.209s] running build
+[9.211s] running build_py
+[9.219s] creating /workspace/ph_sys_ws/build/hardware/build
+[9.221s] creating /workspace/ph_sys_ws/build/hardware/build/lib
+[9.228s] creating /workspace/ph_sys_ws/build/hardware/build/lib/hardware
+[9.234s] copying hardware/config.py -> /workspace/ph_sys_ws/build/hardware/build/lib/hardware
+[9.250s] copying hardware/__init__.py -> /workspace/ph_sys_ws/build/hardware/build/lib/hardware
+[9.251s] running install
+[9.294s] running install_lib
+[9.294s] creating /workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages/hardware
+[9.306s] copying /workspace/ph_sys_ws/build/hardware/build/lib/hardware/config.py -> /workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages/hardware
+[9.310s] copying /workspace/ph_sys_ws/build/hardware/build/lib/hardware/__init__.py -> /workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages/hardware
+[9.315s] byte-compiling /workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages/hardware/config.py to config.cpython-310.pyc
+[9.315s] byte-compiling /workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages/hardware/__init__.py to __init__.cpython-310.pyc
+[9.320s] running install_data
+[9.327s] copying resource/hardware -> /workspace/ph_sys_ws/install/hardware/share/ament_index/resource_index/packages
+[9.327s] copying package.xml -> /workspace/ph_sys_ws/install/hardware/share/hardware
+[9.328s] running install_egg_info
+[9.331s] Copying ../../build/hardware/hardware.egg-info to /workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages/hardware-0.0.0-py3.10.egg-info
+[9.331s] running install_scripts
+[9.456s] writing list of installed files to '/workspace/ph_sys_ws/build/hardware/install.log'
+[10.721s] Invoked command in '/workspace/ph_sys_ws/src/hardware' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/hardware build --build-base /workspace/ph_sys_ws/build/hardware/build install --record /workspace/ph_sys_ws/build/hardware/install.log --single-version-externally-managed install_data --force

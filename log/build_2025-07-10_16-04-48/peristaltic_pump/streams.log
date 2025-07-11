@@ -1,0 +1,39 @@
+[5.083s] Invoking command in '/workspace/ph_sys_ws/build/peristaltic_pump': PYTHONPATH=/workspace/ph_sys_ws/build/peristaltic_pump/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /workspace/ph_sys_ws/build/peristaltic_pump/build
+[9.246s] running develop
+[10.797s] Removing /workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages/peristaltic-pump.egg-link (link to .)
+[11.020s] Invoked command in '/workspace/ph_sys_ws/build/peristaltic_pump' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/peristaltic_pump/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /workspace/ph_sys_ws/build/peristaltic_pump/build
+[11.026s] Invoking command in '/workspace/ph_sys_ws/src/peristaltic_pump': PYTHONPATH=/workspace/ph_sys_ws/build/peristaltic_pump/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/peristaltic_pump build --build-base /workspace/ph_sys_ws/build/peristaltic_pump/build install --record /workspace/ph_sys_ws/build/peristaltic_pump/install.log --single-version-externally-managed install_data --force
+[12.189s] running egg_info
+[12.192s] writing ../../build/peristaltic_pump/peristaltic_pump.egg-info/PKG-INFO
+[12.193s] writing dependency_links to ../../build/peristaltic_pump/peristaltic_pump.egg-info/dependency_links.txt
+[12.197s] writing entry points to ../../build/peristaltic_pump/peristaltic_pump.egg-info/entry_points.txt
+[12.199s] writing requirements to ../../build/peristaltic_pump/peristaltic_pump.egg-info/requires.txt
+[12.201s] writing top-level names to ../../build/peristaltic_pump/peristaltic_pump.egg-info/top_level.txt
+[12.205s] reading manifest file '../../build/peristaltic_pump/peristaltic_pump.egg-info/SOURCES.txt'
+[12.211s] writing manifest file '../../build/peristaltic_pump/peristaltic_pump.egg-info/SOURCES.txt'
+[12.214s] running build
+[12.216s] running build_py
+[12.221s] creating /workspace/ph_sys_ws/build/peristaltic_pump/build
+[12.223s] creating /workspace/ph_sys_ws/build/peristaltic_pump/build/lib
+[12.225s] creating /workspace/ph_sys_ws/build/peristaltic_pump/build/lib/peristaltic_pump
+[12.228s] copying peristaltic_pump/peristaltic_pump_node.py -> /workspace/ph_sys_ws/build/peristaltic_pump/build/lib/peristaltic_pump
+[12.234s] copying peristaltic_pump/ezo_peristaltic_pump.py -> /workspace/ph_sys_ws/build/peristaltic_pump/build/lib/peristaltic_pump
+[12.237s] copying peristaltic_pump/__init__.py -> /workspace/ph_sys_ws/build/peristaltic_pump/build/lib/peristaltic_pump
+[12.241s] running install
+[12.244s] running install_lib
+[12.247s] creating /workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages/peristaltic_pump
+[12.251s] copying /workspace/ph_sys_ws/build/peristaltic_pump/build/lib/peristaltic_pump/peristaltic_pump_node.py -> /workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages/peristaltic_pump
+[12.252s] copying /workspace/ph_sys_ws/build/peristaltic_pump/build/lib/peristaltic_pump/ezo_peristaltic_pump.py -> /workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages/peristaltic_pump
+[12.254s] copying /workspace/ph_sys_ws/build/peristaltic_pump/build/lib/peristaltic_pump/__init__.py -> /workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages/peristaltic_pump
+[12.258s] byte-compiling /workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages/peristaltic_pump/peristaltic_pump_node.py to peristaltic_pump_node.cpython-310.pyc
+[12.261s] byte-compiling /workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages/peristaltic_pump/ezo_peristaltic_pump.py to ezo_peristaltic_pump.cpython-310.pyc
+[12.264s] byte-compiling /workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages/peristaltic_pump/__init__.py to __init__.cpython-310.pyc
+[12.267s] running install_data
+[12.271s] copying resource/peristaltic_pump -> /workspace/ph_sys_ws/install/peristaltic_pump/share/ament_index/resource_index/packages
+[12.274s] copying package.xml -> /workspace/ph_sys_ws/install/peristaltic_pump/share/peristaltic_pump
+[12.276s] running install_egg_info
+[12.279s] Copying ../../build/peristaltic_pump/peristaltic_pump.egg-info to /workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages/peristaltic_pump-0.0.0-py3.10.egg-info
+[12.282s] running install_scripts
+[12.402s] Installing peristaltic_pump_node script to /workspace/ph_sys_ws/install/peristaltic_pump/lib/peristaltic_pump
+[12.407s] writing list of installed files to '/workspace/ph_sys_ws/build/peristaltic_pump/install.log'
+[12.592s] Invoked command in '/workspace/ph_sys_ws/src/peristaltic_pump' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/peristaltic_pump/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/peristaltic_pump build --build-base /workspace/ph_sys_ws/build/peristaltic_pump/build install --record /workspace/ph_sys_ws/build/peristaltic_pump/install.log --single-version-externally-managed install_data --force

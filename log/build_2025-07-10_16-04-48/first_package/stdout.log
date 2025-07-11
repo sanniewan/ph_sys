@@ -1,0 +1,32 @@
+running develop
+Removing /workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages/first-package.egg-link (link to .)
+running egg_info
+writing ../../build/first_package/first_package.egg-info/PKG-INFO
+writing dependency_links to ../../build/first_package/first_package.egg-info/dependency_links.txt
+writing entry points to ../../build/first_package/first_package.egg-info/entry_points.txt
+writing requirements to ../../build/first_package/first_package.egg-info/requires.txt
+writing top-level names to ../../build/first_package/first_package.egg-info/top_level.txt
+reading manifest file '../../build/first_package/first_package.egg-info/SOURCES.txt'
+writing manifest file '../../build/first_package/first_package.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /workspace/ph_sys_ws/build/first_package/build
+creating /workspace/ph_sys_ws/build/first_package/build/lib
+creating /workspace/ph_sys_ws/build/first_package/build/lib/first_package
+copying first_package/first_package_node.py -> /workspace/ph_sys_ws/build/first_package/build/lib/first_package
+copying first_package/__init__.py -> /workspace/ph_sys_ws/build/first_package/build/lib/first_package
+running install
+running install_lib
+creating /workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages/first_package
+copying /workspace/ph_sys_ws/build/first_package/build/lib/first_package/first_package_node.py -> /workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages/first_package
+copying /workspace/ph_sys_ws/build/first_package/build/lib/first_package/__init__.py -> /workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages/first_package
+byte-compiling /workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages/first_package/first_package_node.py to first_package_node.cpython-310.pyc
+byte-compiling /workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages/first_package/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying resource/first_package -> /workspace/ph_sys_ws/install/first_package/share/ament_index/resource_index/packages
+copying package.xml -> /workspace/ph_sys_ws/install/first_package/share/first_package
+running install_egg_info
+Copying ../../build/first_package/first_package.egg-info to /workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages/first_package-0.0.0-py3.10.egg-info
+running install_scripts
+Installing first_package_node script to /workspace/ph_sys_ws/install/first_package/lib/first_package
+writing list of installed files to '/workspace/ph_sys_ws/build/first_package/install.log'

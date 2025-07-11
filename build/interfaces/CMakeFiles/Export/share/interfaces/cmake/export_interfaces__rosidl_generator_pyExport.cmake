@@ -54,6 +54,7 @@ endif()
 add_library(interfaces::interfaces__rosidl_generator_py SHARED IMPORTED)
 
 set_target_properties(interfaces::interfaces__rosidl_generator_py PROPERTIES
+  INTERFACE_INCLUDE_DIRECTORIES "/usr/local/lib/python3.10/dist-packages/numpy/_core/include"
   INTERFACE_LINK_LIBRARIES "interfaces::interfaces__rosidl_generator_c;/usr/lib/aarch64-linux-gnu/libpython3.10.so;interfaces::interfaces__rosidl_typesupport_c;builtin_interfaces::builtin_interfaces__rosidl_generator_py"
 )
 

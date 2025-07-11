@@ -99,7 +99,7 @@ rosidl_generator_c/interfaces/msg/actuator_message.h: rosidl_adapter/interfaces/
 rosidl_generator_c/interfaces/msg/actuator_message.h: rosidl_adapter/interfaces/srv/IrrigationService.idl
 rosidl_generator_c/interfaces/msg/actuator_message.h: rosidl_adapter/interfaces/msg/LiftMessage.idl
 rosidl_generator_c/interfaces/msg/actuator_message.h: rosidl_adapter/interfaces/srv/LiftService.idl
-rosidl_generator_c/interfaces/msg/actuator_message.h: rosidl_adapter/interfaces/msg/PeristalticPumpMessage.idl
+rosidl_generator_c/interfaces/msg/actuator_message.h: rosidl_adapter/interfaces/msg/PhControllerPumpCommand.idl
 rosidl_generator_c/interfaces/msg/actuator_message.h: rosidl_adapter/interfaces/srv/PeristalticPumpService.idl
 rosidl_generator_c/interfaces/msg/actuator_message.h: rosidl_adapter/interfaces/msg/SensorMessageInt16.idl
 rosidl_generator_c/interfaces/msg/actuator_message.h: rosidl_adapter/interfaces/srv/SensorServiceInt16.idl
@@ -333,17 +333,17 @@ rosidl_generator_c/interfaces/srv/detail/lift_service__struct.h: rosidl_generato
 rosidl_generator_c/interfaces/srv/detail/lift_service__type_support.h: rosidl_generator_c/interfaces/msg/actuator_message.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/detail/lift_service__type_support.h
 
-rosidl_generator_c/interfaces/msg/peristaltic_pump_message.h: rosidl_generator_c/interfaces/msg/actuator_message.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/peristaltic_pump_message.h
+rosidl_generator_c/interfaces/msg/ph_controller_pump_command.h: rosidl_generator_c/interfaces/msg/actuator_message.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/ph_controller_pump_command.h
 
-rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.h: rosidl_generator_c/interfaces/msg/actuator_message.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.h
+rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.h: rosidl_generator_c/interfaces/msg/actuator_message.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.h
 
-rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__struct.h: rosidl_generator_c/interfaces/msg/actuator_message.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__struct.h
+rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__struct.h: rosidl_generator_c/interfaces/msg/actuator_message.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__struct.h
 
-rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__type_support.h: rosidl_generator_c/interfaces/msg/actuator_message.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__type_support.h
+rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__type_support.h: rosidl_generator_c/interfaces/msg/actuator_message.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__type_support.h
 
 rosidl_generator_c/interfaces/srv/peristaltic_pump_service.h: rosidl_generator_c/interfaces/msg/actuator_message.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/peristaltic_pump_service.h
@@ -720,8 +720,8 @@ rosidl_generator_c/interfaces/msg/detail/lift_message__functions.c: rosidl_gener
 rosidl_generator_c/interfaces/srv/detail/lift_service__functions.c: rosidl_generator_c/interfaces/msg/actuator_message.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/detail/lift_service__functions.c
 
-rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c: rosidl_generator_c/interfaces/msg/actuator_message.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c
+rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c: rosidl_generator_c/interfaces/msg/actuator_message.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c
 
 rosidl_generator_c/interfaces/srv/detail/peristaltic_pump_service__functions.c: rosidl_generator_c/interfaces/msg/actuator_message.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/detail/peristaltic_pump_service__functions.c
@@ -1042,19 +1042,19 @@ CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/lift_service__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /workspace/ph_sys_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/lift_service__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/lift_service__functions.c.s
 
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c.o: rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/ph_sys_ws/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c.o -MF CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c.o.d -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c.o -c /workspace/ph_sys_ws/build/interfaces/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c.o: rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/ph_sys_ws/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c.o -MF CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c.o.d -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c.o -c /workspace/ph_sys_ws/build/interfaces/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c
 
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /workspace/ph_sys_ws/build/interfaces/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c > CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c.i
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /workspace/ph_sys_ws/build/interfaces/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c > CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c.i
 
-CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /workspace/ph_sys_ws/build/interfaces/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c.s
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /workspace/ph_sys_ws/build/interfaces/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c.s
 
 CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/peristaltic_pump_service__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/peristaltic_pump_service__functions.c.o: rosidl_generator_c/interfaces/srv/detail/peristaltic_pump_service__functions.c
@@ -1453,7 +1453,7 @@ interfaces__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/irrigation_service__functions.c.o" \
 "CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/lift_message__functions.c.o" \
 "CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/lift_service__functions.c.o" \
-"CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c.o" \
+"CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c.o" \
 "CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/peristaltic_pump_service__functions.c.o" \
 "CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/sensor_message_int16__functions.c.o" \
 "CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/sensor_service_int16__functions.c.o" \
@@ -1502,7 +1502,7 @@ libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.
 libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/irrigation_service__functions.c.o
 libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/lift_message__functions.c.o
 libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/lift_service__functions.c.o
-libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c.o
+libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c.o
 libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/peristaltic_pump_service__functions.c.o
 libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/sensor_message_int16__functions.c.o
 libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/sensor_service_int16__functions.c.o
@@ -1627,10 +1627,10 @@ CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfa
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/light_status__functions.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/light_status__struct.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/light_status__type_support.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.c
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__struct.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__type_support.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__functions.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__struct.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/ph_controller_pump_command__type_support.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/potentiometer_message__functions.c
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/potentiometer_message__functions.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/detail/potentiometer_message__struct.h
@@ -1676,7 +1676,7 @@ CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfa
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/lift_status.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/light_instruction.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/light_status.h
-CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/peristaltic_pump_message.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/ph_controller_pump_command.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/potentiometer_message.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/sensor_message_float32.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/msg/sensor_message_int16.h

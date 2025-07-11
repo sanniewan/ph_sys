@@ -5,6 +5,7 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get update && \
     apt-get install -y \
+        python3-numpy \
         i2c-tools \
         ros-dev-tools \
         python3-pip \

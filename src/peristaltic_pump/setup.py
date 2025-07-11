@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'peristaltic_pump_node = peristaltic_pump.peristaltic_pump_node:main',
         ],
     },
 )

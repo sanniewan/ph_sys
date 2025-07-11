@@ -101,7 +101,7 @@ CMakeFiles/interfaces: /workspace/ph_sys_ws/src/interfaces/msg/LiftMessage.msg
 CMakeFiles/interfaces: /workspace/ph_sys_ws/src/interfaces/srv/LiftService.srv
 CMakeFiles/interfaces: rosidl_cmake/srv/LiftService_Request.msg
 CMakeFiles/interfaces: rosidl_cmake/srv/LiftService_Response.msg
-CMakeFiles/interfaces: /workspace/ph_sys_ws/src/interfaces/msg/PeristalticPumpMessage.msg
+CMakeFiles/interfaces: /workspace/ph_sys_ws/src/interfaces/msg/PhControllerPumpCommand.msg
 CMakeFiles/interfaces: /workspace/ph_sys_ws/src/interfaces/srv/PeristalticPumpService.srv
 CMakeFiles/interfaces: rosidl_cmake/srv/PeristalticPumpService_Request.msg
 CMakeFiles/interfaces: rosidl_cmake/srv/PeristalticPumpService_Response.msg

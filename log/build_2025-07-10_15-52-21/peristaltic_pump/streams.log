@@ -1,0 +1,23 @@
+[3.835s] Invoking command in '/workspace/ph_sys_ws/build/peristaltic_pump': PYTHONPATH=/workspace/ph_sys_ws/build/peristaltic_pump/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/peristaltic_pump/build --no-deps symlink_data
+[6.223s] running develop
+[7.763s] running egg_info
+[7.764s] creating peristaltic_pump.egg-info
+[7.773s] writing peristaltic_pump.egg-info/PKG-INFO
+[7.774s] writing dependency_links to peristaltic_pump.egg-info/dependency_links.txt
+[7.774s] writing entry points to peristaltic_pump.egg-info/entry_points.txt
+[7.776s] writing requirements to peristaltic_pump.egg-info/requires.txt
+[7.782s] writing top-level names to peristaltic_pump.egg-info/top_level.txt
+[7.798s] writing manifest file 'peristaltic_pump.egg-info/SOURCES.txt'
+[7.817s] reading manifest file 'peristaltic_pump.egg-info/SOURCES.txt'
+[7.830s] writing manifest file 'peristaltic_pump.egg-info/SOURCES.txt'
+[7.848s] running build_ext
+[7.854s] Creating /workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages/peristaltic-pump.egg-link (link to .)
+[7.865s] 
+[7.878s] Installed /workspace/ph_sys_ws/build/peristaltic_pump
+[7.879s] running symlink_data
+[7.880s] creating /workspace/ph_sys_ws/install/peristaltic_pump/share/ament_index
+[7.881s] creating /workspace/ph_sys_ws/install/peristaltic_pump/share/ament_index/resource_index
+[7.881s] creating /workspace/ph_sys_ws/install/peristaltic_pump/share/ament_index/resource_index/packages
+[7.890s] symbolically linking /workspace/ph_sys_ws/build/peristaltic_pump/resource/peristaltic_pump -> /workspace/ph_sys_ws/install/peristaltic_pump/share/ament_index/resource_index/packages
+[7.891s] symbolically linking /workspace/ph_sys_ws/build/peristaltic_pump/package.xml -> /workspace/ph_sys_ws/install/peristaltic_pump/share/peristaltic_pump
+[8.468s] Invoked command in '/workspace/ph_sys_ws/build/peristaltic_pump' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/peristaltic_pump/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/peristaltic_pump/build --no-deps symlink_data

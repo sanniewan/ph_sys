@@ -1,0 +1,21 @@
+[5.647s] Invoking command in '/workspace/ph_sys_ws/src/ph_sensor': PYTHONPATH=/workspace/ph_sys_ws/build/ph_sensor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/ph_sensor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ph_sensor build --build-base /workspace/ph_sys_ws/build/ph_sensor/build install --record /workspace/ph_sys_ws/build/ph_sensor/install.log --single-version-externally-managed install_data
+[6.888s] running egg_info
+[6.889s] writing ../../build/ph_sensor/ph_sensor.egg-info/PKG-INFO
+[6.889s] writing dependency_links to ../../build/ph_sensor/ph_sensor.egg-info/dependency_links.txt
+[6.890s] writing entry points to ../../build/ph_sensor/ph_sensor.egg-info/entry_points.txt
+[6.892s] writing requirements to ../../build/ph_sensor/ph_sensor.egg-info/requires.txt
+[6.893s] writing top-level names to ../../build/ph_sensor/ph_sensor.egg-info/top_level.txt
+[6.905s] reading manifest file '../../build/ph_sensor/ph_sensor.egg-info/SOURCES.txt'
+[6.906s] writing manifest file '../../build/ph_sensor/ph_sensor.egg-info/SOURCES.txt'
+[6.906s] running build
+[6.907s] running build_py
+[6.909s] running install
+[6.911s] running install_lib
+[6.916s] running install_data
+[6.920s] running install_egg_info
+[6.924s] removing '/workspace/ph_sys_ws/install/ph_sensor/lib/python3.10/site-packages/ph_sensor-0.0.0-py3.10.egg-info' (and everything under it)
+[6.925s] Copying ../../build/ph_sensor/ph_sensor.egg-info to /workspace/ph_sys_ws/install/ph_sensor/lib/python3.10/site-packages/ph_sensor-0.0.0-py3.10.egg-info
+[6.929s] running install_scripts
+[7.021s] Installing ph_sensor_node script to /workspace/ph_sys_ws/install/ph_sensor/lib/ph_sensor
+[7.023s] writing list of installed files to '/workspace/ph_sys_ws/build/ph_sensor/install.log'
+[7.173s] Invoked command in '/workspace/ph_sys_ws/src/ph_sensor' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/ph_sensor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/ph_sensor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ph_sensor build --build-base /workspace/ph_sys_ws/build/ph_sensor/build install --record /workspace/ph_sys_ws/build/ph_sensor/install.log --single-version-externally-managed install_data

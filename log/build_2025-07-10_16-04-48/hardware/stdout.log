@@ -1,0 +1,31 @@
+running develop
+Removing /workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages/hardware.egg-link (link to .)
+running egg_info
+writing ../../build/hardware/hardware.egg-info/PKG-INFO
+writing dependency_links to ../../build/hardware/hardware.egg-info/dependency_links.txt
+writing entry points to ../../build/hardware/hardware.egg-info/entry_points.txt
+writing requirements to ../../build/hardware/hardware.egg-info/requires.txt
+writing top-level names to ../../build/hardware/hardware.egg-info/top_level.txt
+reading manifest file '../../build/hardware/hardware.egg-info/SOURCES.txt'
+writing manifest file '../../build/hardware/hardware.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /workspace/ph_sys_ws/build/hardware/build
+creating /workspace/ph_sys_ws/build/hardware/build/lib
+creating /workspace/ph_sys_ws/build/hardware/build/lib/hardware
+copying hardware/config.py -> /workspace/ph_sys_ws/build/hardware/build/lib/hardware
+copying hardware/__init__.py -> /workspace/ph_sys_ws/build/hardware/build/lib/hardware
+running install
+running install_lib
+creating /workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages/hardware
+copying /workspace/ph_sys_ws/build/hardware/build/lib/hardware/config.py -> /workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages/hardware
+copying /workspace/ph_sys_ws/build/hardware/build/lib/hardware/__init__.py -> /workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages/hardware
+byte-compiling /workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages/hardware/config.py to config.cpython-310.pyc
+byte-compiling /workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages/hardware/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying resource/hardware -> /workspace/ph_sys_ws/install/hardware/share/ament_index/resource_index/packages
+copying package.xml -> /workspace/ph_sys_ws/install/hardware/share/hardware
+running install_egg_info
+Copying ../../build/hardware/hardware.egg-info to /workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages/hardware-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/workspace/ph_sys_ws/build/hardware/install.log'

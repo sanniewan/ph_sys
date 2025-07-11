@@ -18,7 +18,7 @@
     "/workspace/ph_sys_ws/src/interfaces:srv/IrrigationService.srv",
     "/workspace/ph_sys_ws/src/interfaces:msg/LiftMessage.msg",
     "/workspace/ph_sys_ws/src/interfaces:srv/LiftService.srv",
-    "/workspace/ph_sys_ws/src/interfaces:msg/PeristalticPumpMessage.msg",
+    "/workspace/ph_sys_ws/src/interfaces:msg/PhControllerPumpCommand.msg",
     "/workspace/ph_sys_ws/src/interfaces:srv/PeristalticPumpService.srv",
     "/workspace/ph_sys_ws/src/interfaces:msg/SensorMessageInt16.msg",
     "/workspace/ph_sys_ws/src/interfaces:srv/SensorServiceInt16.srv",

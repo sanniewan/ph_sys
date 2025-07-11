@@ -151,11 +151,11 @@ CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/lift_serv
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/lift_service__struct.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/lift_service__traits.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/lift_service__type_support.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/peristaltic_pump_message.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__builder.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__struct.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__traits.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__type_support.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/ph_controller_pump_command.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/ph_controller_pump_command__builder.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/ph_controller_pump_command__struct.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/ph_controller_pump_command__traits.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/ph_controller_pump_command__type_support.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/peristaltic_pump_service.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/peristaltic_pump_service__builder.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/peristaltic_pump_service__struct.hpp
@@ -325,7 +325,7 @@ rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfa
 rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/srv/IrrigationService.idl
 rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/msg/LiftMessage.idl
 rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/srv/LiftService.idl
-rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/msg/PeristalticPumpMessage.idl
+rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/msg/PhControllerPumpCommand.idl
 rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/srv/PeristalticPumpService.idl
 rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/msg/SensorMessageInt16.idl
 rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/srv/SensorServiceInt16.idl
@@ -610,20 +610,20 @@ rosidl_generator_cpp/interfaces/srv/detail/lift_service__traits.hpp: rosidl_gene
 rosidl_generator_cpp/interfaces/srv/detail/lift_service__type_support.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/lift_service__type_support.hpp
 
-rosidl_generator_cpp/interfaces/msg/peristaltic_pump_message.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/peristaltic_pump_message.hpp
+rosidl_generator_cpp/interfaces/msg/ph_controller_pump_command.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/ph_controller_pump_command.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__builder.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__builder.hpp
+rosidl_generator_cpp/interfaces/msg/detail/ph_controller_pump_command__builder.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/ph_controller_pump_command__builder.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__struct.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__struct.hpp
+rosidl_generator_cpp/interfaces/msg/detail/ph_controller_pump_command__struct.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/ph_controller_pump_command__struct.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__traits.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__traits.hpp
+rosidl_generator_cpp/interfaces/msg/detail/ph_controller_pump_command__traits.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/ph_controller_pump_command__traits.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__type_support.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__type_support.hpp
+rosidl_generator_cpp/interfaces/msg/detail/ph_controller_pump_command__type_support.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/ph_controller_pump_command__type_support.hpp
 
 rosidl_generator_cpp/interfaces/srv/peristaltic_pump_service.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/peristaltic_pump_service.hpp
@@ -1112,10 +1112,10 @@ interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/light_status__builde
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/light_status__struct.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/light_status__traits.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/light_status__type_support.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__builder.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__struct.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__traits.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__type_support.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/ph_controller_pump_command__builder.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/ph_controller_pump_command__struct.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/ph_controller_pump_command__traits.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/ph_controller_pump_command__type_support.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/potentiometer_message__builder.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/potentiometer_message__struct.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/potentiometer_message__traits.hpp
@@ -1161,7 +1161,7 @@ interfaces__cpp: rosidl_generator_cpp/interfaces/msg/lift_message.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/lift_status.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/light_instruction.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/light_status.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/peristaltic_pump_message.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/ph_controller_pump_command.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/potentiometer_message.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/sensor_message_float32.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/sensor_message_int16.hpp

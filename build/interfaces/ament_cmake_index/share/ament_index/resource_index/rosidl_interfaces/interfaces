@@ -34,8 +34,8 @@ msg/LightInstruction.idl
 msg/LightInstruction.msg
 msg/LightStatus.idl
 msg/LightStatus.msg
-msg/PeristalticPumpMessage.idl
-msg/PeristalticPumpMessage.msg
+msg/PhControllerPumpCommand.idl
+msg/PhControllerPumpCommand.msg
 msg/PotentiometerMessage.idl
 msg/PotentiometerMessage.msg
 msg/SensorMessageFloat32.idl

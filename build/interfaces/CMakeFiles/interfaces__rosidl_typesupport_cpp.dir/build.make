@@ -92,7 +92,7 @@ rosidl_typesupport_cpp/interfaces/msg/actuator_message__type_support.cpp: rosidl
 rosidl_typesupport_cpp/interfaces/msg/actuator_message__type_support.cpp: rosidl_adapter/interfaces/srv/IrrigationService.idl
 rosidl_typesupport_cpp/interfaces/msg/actuator_message__type_support.cpp: rosidl_adapter/interfaces/msg/LiftMessage.idl
 rosidl_typesupport_cpp/interfaces/msg/actuator_message__type_support.cpp: rosidl_adapter/interfaces/srv/LiftService.idl
-rosidl_typesupport_cpp/interfaces/msg/actuator_message__type_support.cpp: rosidl_adapter/interfaces/msg/PeristalticPumpMessage.idl
+rosidl_typesupport_cpp/interfaces/msg/actuator_message__type_support.cpp: rosidl_adapter/interfaces/msg/PhControllerPumpCommand.idl
 rosidl_typesupport_cpp/interfaces/msg/actuator_message__type_support.cpp: rosidl_adapter/interfaces/srv/PeristalticPumpService.idl
 rosidl_typesupport_cpp/interfaces/msg/actuator_message__type_support.cpp: rosidl_adapter/interfaces/msg/SensorMessageInt16.idl
 rosidl_typesupport_cpp/interfaces/msg/actuator_message__type_support.cpp: rosidl_adapter/interfaces/srv/SensorServiceInt16.idl
@@ -173,8 +173,8 @@ rosidl_typesupport_cpp/interfaces/msg/lift_message__type_support.cpp: rosidl_typ
 rosidl_typesupport_cpp/interfaces/srv/lift_service__type_support.cpp: rosidl_typesupport_cpp/interfaces/msg/actuator_message__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/interfaces/srv/lift_service__type_support.cpp
 
-rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp: rosidl_typesupport_cpp/interfaces/msg/actuator_message__type_support.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp
+rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp: rosidl_typesupport_cpp/interfaces/msg/actuator_message__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp
 
 rosidl_typesupport_cpp/interfaces/srv/peristaltic_pump_service__type_support.cpp: rosidl_typesupport_cpp/interfaces/msg/actuator_message__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/interfaces/srv/peristaltic_pump_service__type_support.cpp
@@ -495,19 +495,19 @@ CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfa
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/srv/lift_service__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/ph_sys_ws/build/interfaces/rosidl_typesupport_cpp/interfaces/srv/lift_service__type_support.cpp -o CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/srv/lift_service__type_support.cpp.s
 
-CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp.o: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/flags.make
-CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp.o: rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp
-CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp.o: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/ph_sys_ws/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp.o -MF CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp.o.d -o CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp.o -c /workspace/ph_sys_ws/build/interfaces/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp
+CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp.o: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/flags.make
+CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp.o: rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp
+CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp.o: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspace/ph_sys_ws/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp.o -MF CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp.o.d -o CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp.o -c /workspace/ph_sys_ws/build/interfaces/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp
 
-CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/ph_sys_ws/build/interfaces/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp > CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp.i
+CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/ph_sys_ws/build/interfaces/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp > CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp.i
 
-CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/ph_sys_ws/build/interfaces/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp -o CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp.s
+CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/ph_sys_ws/build/interfaces/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp -o CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp.s
 
 CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/srv/peristaltic_pump_service__type_support.cpp.o: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/flags.make
 CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/srv/peristaltic_pump_service__type_support.cpp.o: rosidl_typesupport_cpp/interfaces/srv/peristaltic_pump_service__type_support.cpp
@@ -906,7 +906,7 @@ interfaces__rosidl_typesupport_cpp_OBJECTS = \
 "CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/srv/irrigation_service__type_support.cpp.o" \
 "CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/lift_message__type_support.cpp.o" \
 "CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/srv/lift_service__type_support.cpp.o" \
-"CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp.o" \
+"CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp.o" \
 "CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/srv/peristaltic_pump_service__type_support.cpp.o" \
 "CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/sensor_message_int16__type_support.cpp.o" \
 "CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/srv/sensor_service_int16__type_support.cpp.o" \
@@ -955,7 +955,7 @@ libinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/interfaces__rosidl_typesupp
 libinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/srv/irrigation_service__type_support.cpp.o
 libinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/lift_message__type_support.cpp.o
 libinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/srv/lift_service__type_support.cpp.o
-libinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp.o
+libinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp.o
 libinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/srv/peristaltic_pump_service__type_support.cpp.o
 libinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/sensor_message_int16__type_support.cpp.o
 libinterfaces__rosidl_typesupport_cpp.so: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/srv/sensor_service_int16__type_support.cpp.o
@@ -1019,7 +1019,7 @@ CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp
 CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/interfaces/msg/lift_status__type_support.cpp
 CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/interfaces/msg/light_instruction__type_support.cpp
 CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/interfaces/msg/light_status__type_support.cpp
-CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/interfaces/msg/peristaltic_pump_message__type_support.cpp
+CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/interfaces/msg/ph_controller_pump_command__type_support.cpp
 CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/interfaces/msg/potentiometer_message__type_support.cpp
 CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/interfaces/msg/sensor_message_float32__type_support.cpp
 CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/interfaces/msg/sensor_message_int16__type_support.cpp

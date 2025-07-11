@@ -1,0 +1,29 @@
+running develop
+Removing /workspace/ph_sys_ws/install/ph_controller/lib/python3.10/site-packages/ph-controller.egg-link (link to .)
+running egg_info
+writing ../../build/ph_controller/ph_controller.egg-info/PKG-INFO
+writing dependency_links to ../../build/ph_controller/ph_controller.egg-info/dependency_links.txt
+writing entry points to ../../build/ph_controller/ph_controller.egg-info/entry_points.txt
+writing requirements to ../../build/ph_controller/ph_controller.egg-info/requires.txt
+writing top-level names to ../../build/ph_controller/ph_controller.egg-info/top_level.txt
+reading manifest file '../../build/ph_controller/ph_controller.egg-info/SOURCES.txt'
+writing manifest file '../../build/ph_controller/ph_controller.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /workspace/ph_sys_ws/build/ph_controller/build
+creating /workspace/ph_sys_ws/build/ph_controller/build/lib
+creating /workspace/ph_sys_ws/build/ph_controller/build/lib/ph_controller
+copying ph_controller/__init__.py -> /workspace/ph_sys_ws/build/ph_controller/build/lib/ph_controller
+running install
+running install_lib
+creating /workspace/ph_sys_ws/install/ph_controller/lib/python3.10/site-packages/ph_controller
+copying /workspace/ph_sys_ws/build/ph_controller/build/lib/ph_controller/__init__.py -> /workspace/ph_sys_ws/install/ph_controller/lib/python3.10/site-packages/ph_controller
+byte-compiling /workspace/ph_sys_ws/install/ph_controller/lib/python3.10/site-packages/ph_controller/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying resource/ph_controller -> /workspace/ph_sys_ws/install/ph_controller/share/ament_index/resource_index/packages
+copying package.xml -> /workspace/ph_sys_ws/install/ph_controller/share/ph_controller
+running install_egg_info
+Copying ../../build/ph_controller/ph_controller.egg-info to /workspace/ph_sys_ws/install/ph_controller/lib/python3.10/site-packages/ph_controller-0.0.0-py3.10.egg-info
+running install_scripts
+Installing ph_controller_node script to /workspace/ph_sys_ws/install/ph_controller/lib/ph_controller
+writing list of installed files to '/workspace/ph_sys_ws/build/ph_controller/install.log'
