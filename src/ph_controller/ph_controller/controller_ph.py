@@ -26,12 +26,21 @@ class Controller:
                 - Error/Warning message: Description of the error or warning, empty if no error or warning.
                 - float: Control output of the volume to dispense in mL
         """
+        
+        """Controller behavior in different ranges of pH
+
+        Already acceptable pH values, do nothing:                           self.target_low <= measurement <= self.target_high
+        In the critical, possibly malfunctioning range, dispense 0 mL:      self.crit_low > measurement or self.crit_high < measurement
+        In the operating range, calculate the volume to dispense:           measurement < self.target_low or measurement > self.target_high 
+        """
         if (self.target_low <= measurement <= self.target_high):
             return False, "", 0
         elif (self.crit_low > measurement or self.crit_high < measurement):
-            msg = f"Warning: {self.unit_name} value has reached a critical {"low." if (self.crit_low > measurement) else "high."}"
+            msg = f"Warning: {self.unit_name} value has reached a critical {'low.' if (self.crit_low > measurement) else 'high.'}"
             return True, msg, 0
         else:
-            error = self.target - measurement
+            # if control is negative, then ph_down pump 0x5b activates.
+            mid_target = (self.target_low + self.target_high)/2
+            error = mid_target - measurement
             control = self.kp * error
-            return False, "", control
+            return False, "", float(control)

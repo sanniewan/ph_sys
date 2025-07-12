@@ -34,8 +34,10 @@ msg/LightInstruction.idl
 msg/LightInstruction.msg
 msg/LightStatus.idl
 msg/LightStatus.msg
-msg/PhControllerPumpCommand.idl
-msg/PhControllerPumpCommand.msg
+msg/PeristalticPumpMessage.idl
+msg/PeristalticPumpMessage.msg
+msg/PhControllerMessage.idl
+msg/PhControllerMessage.msg
 msg/PotentiometerMessage.idl
 msg/PotentiometerMessage.msg
 msg/SensorMessageFloat32.idl
@@ -102,6 +104,10 @@ srv/PeristalticPumpService.idl
 srv/PeristalticPumpService.srv
 srv/PeristalticPumpService_Request.msg
 srv/PeristalticPumpService_Response.msg
+srv/PhControllerService.idl
+srv/PhControllerService.srv
+srv/PhControllerService_Request.msg
+srv/PhControllerService_Response.msg
 srv/PotentiometerService.idl
 srv/PotentiometerService.srv
 srv/PotentiometerService_Request.msg

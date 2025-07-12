@@ -1,0 +1,35 @@
+[6.133s] Invoking command in '/workspace/ph_sys_ws/build/external': PYTHONPATH=/workspace/ph_sys_ws/build/external/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/external/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /workspace/ph_sys_ws/build/external/build
+[7.539s] running develop
+[8.382s] Removing /workspace/ph_sys_ws/install/external/lib/python3.10/site-packages/external.egg-link (link to .)
+[8.678s] Invoked command in '/workspace/ph_sys_ws/build/external' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/external/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/external/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /workspace/ph_sys_ws/build/external/build
+[8.685s] Invoking command in '/workspace/ph_sys_ws/src/external': PYTHONPATH=/workspace/ph_sys_ws/build/external/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/external/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/external build --build-base /workspace/ph_sys_ws/build/external/build install --record /workspace/ph_sys_ws/build/external/install.log --single-version-externally-managed install_data --force
+[10.088s] running egg_info
+[10.095s] writing ../../build/external/external.egg-info/PKG-INFO
+[10.097s] writing dependency_links to ../../build/external/external.egg-info/dependency_links.txt
+[10.104s] writing entry points to ../../build/external/external.egg-info/entry_points.txt
+[10.114s] writing requirements to ../../build/external/external.egg-info/requires.txt
+[10.115s] writing top-level names to ../../build/external/external.egg-info/top_level.txt
+[10.126s] reading manifest file '../../build/external/external.egg-info/SOURCES.txt'
+[10.134s] writing manifest file '../../build/external/external.egg-info/SOURCES.txt'
+[10.139s] running build
+[10.141s] running build_py
+[10.145s] creating /workspace/ph_sys_ws/build/external/build
+[10.146s] creating /workspace/ph_sys_ws/build/external/build/lib
+[10.147s] creating /workspace/ph_sys_ws/build/external/build/lib/external
+[10.148s] copying external/atlas.py -> /workspace/ph_sys_ws/build/external/build/lib/external
+[10.149s] copying external/__init__.py -> /workspace/ph_sys_ws/build/external/build/lib/external
+[10.151s] running install
+[10.155s] running install_lib
+[10.162s] creating /workspace/ph_sys_ws/install/external/lib/python3.10/site-packages/external
+[10.163s] copying /workspace/ph_sys_ws/build/external/build/lib/external/atlas.py -> /workspace/ph_sys_ws/install/external/lib/python3.10/site-packages/external
+[10.171s] copying /workspace/ph_sys_ws/build/external/build/lib/external/__init__.py -> /workspace/ph_sys_ws/install/external/lib/python3.10/site-packages/external
+[10.172s] byte-compiling /workspace/ph_sys_ws/install/external/lib/python3.10/site-packages/external/atlas.py to atlas.cpython-310.pyc
+[10.184s] byte-compiling /workspace/ph_sys_ws/install/external/lib/python3.10/site-packages/external/__init__.py to __init__.cpython-310.pyc
+[10.187s] running install_data
+[10.191s] copying resource/external -> /workspace/ph_sys_ws/install/external/share/ament_index/resource_index/packages
+[10.191s] copying package.xml -> /workspace/ph_sys_ws/install/external/share/external
+[10.192s] running install_egg_info
+[10.211s] Copying ../../build/external/external.egg-info to /workspace/ph_sys_ws/install/external/lib/python3.10/site-packages/external-0.0.0-py3.10.egg-info
+[10.222s] running install_scripts
+[10.474s] writing list of installed files to '/workspace/ph_sys_ws/build/external/install.log'
+[10.780s] Invoked command in '/workspace/ph_sys_ws/src/external' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/external/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/external/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/external build --build-base /workspace/ph_sys_ws/build/external/build install --record /workspace/ph_sys_ws/build/external/install.log --single-version-externally-managed install_data --force

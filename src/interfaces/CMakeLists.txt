@@ -40,9 +40,11 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/LiftMessage.msg"
   "srv/LiftService.srv"
 
-# "msg/PeristalticPumpMessage.msg"
-  "msg/PhControllerPumpCommand.msg"
+ "msg/PeristalticPumpMessage.msg"
   "srv/PeristalticPumpService.srv"
+
+  "msg/PhControllerMessage.msg"  
+  "srv/PhControllerService.srv"
 
   "msg/SensorMessageInt16.msg"
   "srv/SensorServiceInt16.srv"

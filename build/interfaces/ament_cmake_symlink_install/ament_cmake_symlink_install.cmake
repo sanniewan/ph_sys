@@ -409,11 +409,17 @@ ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/
 # install(FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_adapter/interfaces/srv/LiftService.idl" "DESTINATION" "share/interfaces/srv")
 ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_adapter/interfaces/srv/LiftService.idl" "DESTINATION" "share/interfaces/srv")
 
-# install(FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_adapter/interfaces/msg/PhControllerPumpCommand.idl" "DESTINATION" "share/interfaces/msg")
-ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_adapter/interfaces/msg/PhControllerPumpCommand.idl" "DESTINATION" "share/interfaces/msg")
+# install(FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_adapter/interfaces/msg/PeristalticPumpMessage.idl" "DESTINATION" "share/interfaces/msg")
+ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_adapter/interfaces/msg/PeristalticPumpMessage.idl" "DESTINATION" "share/interfaces/msg")
 
 # install(FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_adapter/interfaces/srv/PeristalticPumpService.idl" "DESTINATION" "share/interfaces/srv")
 ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_adapter/interfaces/srv/PeristalticPumpService.idl" "DESTINATION" "share/interfaces/srv")
+
+# install(FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_adapter/interfaces/msg/PhControllerMessage.idl" "DESTINATION" "share/interfaces/msg")
+ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_adapter/interfaces/msg/PhControllerMessage.idl" "DESTINATION" "share/interfaces/msg")
+
+# install(FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_adapter/interfaces/srv/PhControllerService.idl" "DESTINATION" "share/interfaces/srv")
+ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_adapter/interfaces/srv/PhControllerService.idl" "DESTINATION" "share/interfaces/srv")
 
 # install(FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_adapter/interfaces/msg/SensorMessageInt16.idl" "DESTINATION" "share/interfaces/msg")
 ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_adapter/interfaces/msg/SensorMessageInt16.idl" "DESTINATION" "share/interfaces/msg")
@@ -598,8 +604,8 @@ ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/
 # install(FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_cmake/srv/LiftService_Response.msg" "DESTINATION" "share/interfaces/srv")
 ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_cmake/srv/LiftService_Response.msg" "DESTINATION" "share/interfaces/srv")
 
-# install(FILES "/workspace/ph_sys_ws/src/interfaces/msg/PhControllerPumpCommand.msg" "DESTINATION" "share/interfaces/msg")
-ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/src/interfaces/msg/PhControllerPumpCommand.msg" "DESTINATION" "share/interfaces/msg")
+# install(FILES "/workspace/ph_sys_ws/src/interfaces/msg/PeristalticPumpMessage.msg" "DESTINATION" "share/interfaces/msg")
+ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/src/interfaces/msg/PeristalticPumpMessage.msg" "DESTINATION" "share/interfaces/msg")
 
 # install(FILES "/workspace/ph_sys_ws/src/interfaces/srv/PeristalticPumpService.srv" "DESTINATION" "share/interfaces/srv")
 ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/src/interfaces/srv/PeristalticPumpService.srv" "DESTINATION" "share/interfaces/srv")
@@ -609,6 +615,18 @@ ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/
 
 # install(FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_cmake/srv/PeristalticPumpService_Response.msg" "DESTINATION" "share/interfaces/srv")
 ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_cmake/srv/PeristalticPumpService_Response.msg" "DESTINATION" "share/interfaces/srv")
+
+# install(FILES "/workspace/ph_sys_ws/src/interfaces/msg/PhControllerMessage.msg" "DESTINATION" "share/interfaces/msg")
+ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/src/interfaces/msg/PhControllerMessage.msg" "DESTINATION" "share/interfaces/msg")
+
+# install(FILES "/workspace/ph_sys_ws/src/interfaces/srv/PhControllerService.srv" "DESTINATION" "share/interfaces/srv")
+ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/src/interfaces/srv/PhControllerService.srv" "DESTINATION" "share/interfaces/srv")
+
+# install(FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_cmake/srv/PhControllerService_Request.msg" "DESTINATION" "share/interfaces/srv")
+ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_cmake/srv/PhControllerService_Request.msg" "DESTINATION" "share/interfaces/srv")
+
+# install(FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_cmake/srv/PhControllerService_Response.msg" "DESTINATION" "share/interfaces/srv")
+ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/build/interfaces/rosidl_cmake/srv/PhControllerService_Response.msg" "DESTINATION" "share/interfaces/srv")
 
 # install(FILES "/workspace/ph_sys_ws/src/interfaces/msg/SensorMessageInt16.msg" "DESTINATION" "share/interfaces/msg")
 ament_cmake_symlink_install_files("/workspace/ph_sys_ws/src/interfaces" FILES "/workspace/ph_sys_ws/src/interfaces/msg/SensorMessageInt16.msg" "DESTINATION" "share/interfaces/msg")

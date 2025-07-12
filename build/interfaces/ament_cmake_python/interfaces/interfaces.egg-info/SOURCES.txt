@@ -24,6 +24,7 @@ interfaces/msg/_lift_status.py
 interfaces/msg/_light_instruction.py
 interfaces/msg/_light_status.py
 interfaces/msg/_peristaltic_pump_message.py
+interfaces/msg/_ph_controller_message.py
 interfaces/msg/_potentiometer_message.py
 interfaces/msg/_sensor_message_float32.py
 interfaces/msg/_sensor_message_int16.py
@@ -46,6 +47,7 @@ interfaces/srv/_i2c_expander_service.py
 interfaces/srv/_irrigation_service.py
 interfaces/srv/_lift_service.py
 interfaces/srv/_peristaltic_pump_service.py
+interfaces/srv/_ph_controller_service.py
 interfaces/srv/_potentiometer_service.py
 interfaces/srv/_sensor_service_float32.py
 interfaces/srv/_sensor_service_int16.py

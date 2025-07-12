@@ -16,7 +16,8 @@ from interfaces.msg._lift_message import LiftMessage  # noqa: F401
 from interfaces.msg._lift_status import LiftStatus  # noqa: F401
 from interfaces.msg._light_instruction import LightInstruction  # noqa: F401
 from interfaces.msg._light_status import LightStatus  # noqa: F401
-from interfaces.msg._ph_controller_pump_command import PhControllerPumpCommand  # noqa: F401
+from interfaces.msg._peristaltic_pump_message import PeristalticPumpMessage  # noqa: F401
+from interfaces.msg._ph_controller_message import PhControllerMessage  # noqa: F401
 from interfaces.msg._potentiometer_message import PotentiometerMessage  # noqa: F401
 from interfaces.msg._sensor_message_float32 import SensorMessageFloat32  # noqa: F401
 from interfaces.msg._sensor_message_int16 import SensorMessageInt16  # noqa: F401

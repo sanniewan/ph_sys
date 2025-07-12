@@ -1,0 +1,36 @@
+[6.007s] Invoking command in '/workspace/ph_sys_ws/build/first_package': PYTHONPATH=/workspace/ph_sys_ws/build/first_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /workspace/ph_sys_ws/build/first_package/build
+[7.543s] running develop
+[8.528s] Removing /workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages/first-package.egg-link (link to .)
+[8.801s] Invoked command in '/workspace/ph_sys_ws/build/first_package' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/first_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /workspace/ph_sys_ws/build/first_package/build
+[8.813s] Invoking command in '/workspace/ph_sys_ws/src/first_package': PYTHONPATH=/workspace/ph_sys_ws/build/first_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/first_package build --build-base /workspace/ph_sys_ws/build/first_package/build install --record /workspace/ph_sys_ws/build/first_package/install.log --single-version-externally-managed install_data --force
+[10.297s] running egg_info
+[10.300s] writing ../../build/first_package/first_package.egg-info/PKG-INFO
+[10.307s] writing dependency_links to ../../build/first_package/first_package.egg-info/dependency_links.txt
+[10.310s] writing entry points to ../../build/first_package/first_package.egg-info/entry_points.txt
+[10.317s] writing requirements to ../../build/first_package/first_package.egg-info/requires.txt
+[10.324s] writing top-level names to ../../build/first_package/first_package.egg-info/top_level.txt
+[10.418s] reading manifest file '../../build/first_package/first_package.egg-info/SOURCES.txt'
+[10.484s] writing manifest file '../../build/first_package/first_package.egg-info/SOURCES.txt'
+[10.485s] running build
+[10.486s] running build_py
+[10.487s] creating /workspace/ph_sys_ws/build/first_package/build
+[10.492s] creating /workspace/ph_sys_ws/build/first_package/build/lib
+[10.493s] creating /workspace/ph_sys_ws/build/first_package/build/lib/first_package
+[10.494s] copying first_package/first_package_node.py -> /workspace/ph_sys_ws/build/first_package/build/lib/first_package
+[10.500s] copying first_package/__init__.py -> /workspace/ph_sys_ws/build/first_package/build/lib/first_package
+[10.506s] running install
+[10.507s] running install_lib
+[10.527s] creating /workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages/first_package
+[10.531s] copying /workspace/ph_sys_ws/build/first_package/build/lib/first_package/first_package_node.py -> /workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages/first_package
+[10.537s] copying /workspace/ph_sys_ws/build/first_package/build/lib/first_package/__init__.py -> /workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages/first_package
+[10.544s] byte-compiling /workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages/first_package/first_package_node.py to first_package_node.cpython-310.pyc
+[10.553s] byte-compiling /workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages/first_package/__init__.py to __init__.cpython-310.pyc
+[10.560s] running install_data
+[10.592s] copying resource/first_package -> /workspace/ph_sys_ws/install/first_package/share/ament_index/resource_index/packages
+[10.593s] copying package.xml -> /workspace/ph_sys_ws/install/first_package/share/first_package
+[10.603s] running install_egg_info
+[10.616s] Copying ../../build/first_package/first_package.egg-info to /workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages/first_package-0.0.0-py3.10.egg-info
+[10.628s] running install_scripts
+[10.777s] Installing first_package_node script to /workspace/ph_sys_ws/install/first_package/lib/first_package
+[10.778s] writing list of installed files to '/workspace/ph_sys_ws/build/first_package/install.log'
+[10.904s] Invoked command in '/workspace/ph_sys_ws/src/first_package' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/first_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/first_package build --build-base /workspace/ph_sys_ws/build/first_package/build install --record /workspace/ph_sys_ws/build/first_package/install.log --single-version-externally-managed install_data --force

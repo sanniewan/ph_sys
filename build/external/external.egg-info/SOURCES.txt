@@ -10,7 +10,11 @@ setup.py
 ../../build/external/external.egg-info/zip-safe
 external/__init__.py
 external/atlas.py
+external.egg-info/PKG-INFO
+external.egg-info/SOURCES.txt
+external.egg-info/dependency_links.txt
+external.egg-info/entry_points.txt
+external.egg-info/requires.txt
+external.egg-info/top_level.txt
+external.egg-info/zip-safe
 resource/external
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

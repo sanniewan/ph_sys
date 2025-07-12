@@ -11,7 +11,11 @@ setup.py
 ph_sensor/__init__.py
 ph_sensor/ezo_ph_sensor.py
 ph_sensor/ph_sensor_node.py
+ph_sensor.egg-info/PKG-INFO
+ph_sensor.egg-info/SOURCES.txt
+ph_sensor.egg-info/dependency_links.txt
+ph_sensor.egg-info/entry_points.txt
+ph_sensor.egg-info/requires.txt
+ph_sensor.egg-info/top_level.txt
+ph_sensor.egg-info/zip-safe
 resource/ph_sensor
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

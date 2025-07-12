@@ -3,7 +3,7 @@ from rclpy.callback_groups import ReentrantCallbackGroup, MutuallyExclusiveCallb
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 
-from interfaces.msg import PhControllerPumpCommand
+from interfaces.msg import PhControllerMessage
 from interfaces.srv import PeristalticPumpService
 # from hardware.config import WATER_PH_SENSORS, WATER_SENSOR_PERIOD, TANKS
 from peristaltic_pump.ezo_peristaltic_pump import AtlasEzoPeristalticPump
@@ -16,6 +16,8 @@ class PeristalticPump(Node):
     The node is responsible for controlling the peristaltic pump by volume to dispense
 
     """
+    
+    BUFFER_SIZE = 10
     INIT_TIMER_PERIOD = 60  # Time in seconds for the initialization timer
     
     def __init__(self, solution_type: str):
@@ -39,10 +41,11 @@ class PeristalticPump(Node):
         
         # Create subscriber to ph_controller topic
         self._ph_controller_subscriber = self.create_subscription(
-            PhControllerPumpCommand,
+            PhControllerMessage,
             f'{solution_type}_peristaltic_pump',
             self._ph_controller_callback,
-            
+            self.BUFFER_SIZE,
+            callback_group=callback_group
         )
         # Create initialization timer
         self._init_timer = self.create_timer(
@@ -67,14 +70,14 @@ class PeristalticPump(Node):
         error, message, volume = self._dispense_volume()
         return response
         
-    def _ph_controller_callback(self, msg: PhControllerPumpCommand):
+    def _ph_controller_callback(self, msg: PhControllerMessage):
         """Callback for the pH controller to send commands to the pump.
         
         Args:
-            msg (PhControllerPumpCommand): The recieved command from the pH controller.
+            msg (PhControllerMessage): The recieved command from the pH controller.
         """
         if msg.err:
-            self.get_logger().warning(f'Received error from ph controller: {msg.msg}')
+            self.get_logger().warning(f'Received warning from ph controller: {msg.msg}')
         else: 
             self._dispense_volume(msg.volume)
     
@@ -121,7 +124,7 @@ class PeristalticPump(Node):
         if err:
             self.get_logger().info(f"Error dispensing at {self._solution_type} pump, address {self._device._i2c_address}.")
         
-        self.get_logger().info(f"Successfully dispensed {volume} mL at address {self._device._i2c_address}.")
+        self.get_logger().info(f"Successfully dispensed {volume} mL at address {hex(self._device._i2c_address)}.")
         
         return err, msg
             
@@ -132,7 +135,7 @@ class PeristalticPump(Node):
         Returns:
             bool: Error flag, True if configuration failed, False otherwise.
         """
-        self._device = AtlasEzoPeristalticPump(0x5a)
+        self._device = AtlasEzoPeristalticPump(0x5a)  # ** change this later to be a dynamic address
         
         if self._device.error:
             return True

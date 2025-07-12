@@ -1,0 +1,5 @@
+float32 ph
+---
+bool      warning
+string    msg
+float32   volume

@@ -10,7 +10,11 @@ setup.py
 ../../build/hardware/hardware.egg-info/zip-safe
 hardware/__init__.py
 hardware/config.py
+hardware.egg-info/PKG-INFO
+hardware.egg-info/SOURCES.txt
+hardware.egg-info/dependency_links.txt
+hardware.egg-info/entry_points.txt
+hardware.egg-info/requires.txt
+hardware.egg-info/top_level.txt
+hardware.egg-info/zip-safe
 resource/hardware
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

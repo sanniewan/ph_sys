@@ -1,0 +1,18 @@
+[6.018s] Invoking command in '/workspace/ph_sys_ws/build/external': PYTHONPATH=/workspace/ph_sys_ws/build/external/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/external/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/external/build --no-deps symlink_data --force
+[7.550s] running develop
+[8.426s] running egg_info
+[8.434s] writing external.egg-info/PKG-INFO
+[8.441s] writing dependency_links to external.egg-info/dependency_links.txt
+[8.445s] writing entry points to external.egg-info/entry_points.txt
+[8.451s] writing requirements to external.egg-info/requires.txt
+[8.453s] writing top-level names to external.egg-info/top_level.txt
+[8.454s] reading manifest file 'external.egg-info/SOURCES.txt'
+[8.485s] writing manifest file 'external.egg-info/SOURCES.txt'
+[8.547s] running build_ext
+[8.562s] Creating /workspace/ph_sys_ws/install/external/lib/python3.10/site-packages/external.egg-link (link to .)
+[8.594s] 
+[8.598s] Installed /workspace/ph_sys_ws/build/external
+[8.608s] running symlink_data
+[8.612s] symbolically linking /workspace/ph_sys_ws/build/external/resource/external -> /workspace/ph_sys_ws/install/external/share/ament_index/resource_index/packages
+[8.616s] symbolically linking /workspace/ph_sys_ws/build/external/package.xml -> /workspace/ph_sys_ws/install/external/share/external
+[8.759s] Invoked command in '/workspace/ph_sys_ws/build/external' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/external/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/external/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/external/build --no-deps symlink_data --force

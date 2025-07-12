@@ -10,6 +10,7 @@ from interfaces.srv._i2c_expander_service import I2cExpanderService  # noqa: F40
 from interfaces.srv._irrigation_service import IrrigationService  # noqa: F401
 from interfaces.srv._lift_service import LiftService  # noqa: F401
 from interfaces.srv._peristaltic_pump_service import PeristalticPumpService  # noqa: F401
+from interfaces.srv._ph_controller_service import PhControllerService  # noqa: F401
 from interfaces.srv._potentiometer_service import PotentiometerService  # noqa: F401
 from interfaces.srv._sensor_service_float32 import SensorServiceFloat32  # noqa: F401
 from interfaces.srv._sensor_service_int16 import SensorServiceInt16  # noqa: F401

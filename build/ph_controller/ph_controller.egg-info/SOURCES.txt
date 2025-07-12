@@ -9,7 +9,13 @@ setup.py
 ../../build/ph_controller/ph_controller.egg-info/top_level.txt
 ../../build/ph_controller/ph_controller.egg-info/zip-safe
 ph_controller/__init__.py
+ph_controller/controller_ph.py
+ph_controller/ph_controller_node.py
+ph_controller.egg-info/PKG-INFO
+ph_controller.egg-info/SOURCES.txt
+ph_controller.egg-info/dependency_links.txt
+ph_controller.egg-info/entry_points.txt
+ph_controller.egg-info/requires.txt
+ph_controller.egg-info/top_level.txt
+ph_controller.egg-info/zip-safe
 resource/ph_controller
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

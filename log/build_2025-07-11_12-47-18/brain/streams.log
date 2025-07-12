@@ -1,0 +1,18 @@
+[6.087s] Invoking command in '/workspace/ph_sys_ws/src/brain': PYTHONPATH=/workspace/ph_sys_ws/build/brain/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/brain/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/brain build --build-base /workspace/ph_sys_ws/build/brain/build install --record /workspace/ph_sys_ws/build/brain/install.log --single-version-externally-managed install_data
+[7.580s] running egg_info
+[7.583s] writing ../../build/brain/brain.egg-info/PKG-INFO
+[7.585s] writing dependency_links to ../../build/brain/brain.egg-info/dependency_links.txt
+[7.586s] writing entry points to ../../build/brain/brain.egg-info/entry_points.txt
+[7.588s] writing requirements to ../../build/brain/brain.egg-info/requires.txt
+[7.591s] writing top-level names to ../../build/brain/brain.egg-info/top_level.txt
+[7.596s] reading manifest file '../../build/brain/brain.egg-info/SOURCES.txt'
+[7.600s] writing manifest file '../../build/brain/brain.egg-info/SOURCES.txt'
+[7.602s] running build
+[7.603s] running install
+[7.603s] running install_data
+[7.604s] running install_egg_info
+[7.615s] removing '/workspace/ph_sys_ws/install/brain/lib/python3.10/site-packages/brain-0.0.0-py3.10.egg-info' (and everything under it)
+[7.617s] Copying ../../build/brain/brain.egg-info to /workspace/ph_sys_ws/install/brain/lib/python3.10/site-packages/brain-0.0.0-py3.10.egg-info
+[7.623s] running install_scripts
+[7.726s] writing list of installed files to '/workspace/ph_sys_ws/build/brain/install.log'
+[7.941s] Invoked command in '/workspace/ph_sys_ws/src/brain' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/brain/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/brain/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/brain build --build-base /workspace/ph_sys_ws/build/brain/build install --record /workspace/ph_sys_ws/build/brain/install.log --single-version-externally-managed install_data

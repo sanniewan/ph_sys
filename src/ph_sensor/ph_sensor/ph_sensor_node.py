@@ -46,6 +46,7 @@ class WaterPhSensor(Node):
         self._sensor_is_configured = False
         self._temperature = self.DEFAULT_TEMPERATURE  # Initialize with default temperature
         self._init = True
+        self._simulated_data = 0
         
         # Create the service
         self._service = self.create_service(
@@ -166,6 +167,25 @@ class WaterPhSensor(Node):
         self._publish_status(err, msg, data)
         return err, msg, data
 
+    def _simulate_read_sensor(self) -> tuple[bool, str, float]:
+        """Uses made-up numbers and publishes the status.
+
+        Returns:
+            tuple: A tuple containing:
+                - bool: Error flag, True if an error occurred, False otherwise.
+                - str: Error message, or an empty string if no error occurred.
+                - float: Value from reading the sensor.
+        """
+        err = False
+        msg = "This is simulated data"
+        data = float(self._simulated_data)  # fabricated ph data
+        if self._simulated_data == 9:
+            self._simulated_data = 0.0
+        else:
+            self._simulated_data += 1
+        self._publish_status(err, msg, data)
+        return err, msg, data
+
     def _configure_sensor(self) -> tuple[bool, str]:
         """Configures the sensor.
 
@@ -220,7 +240,8 @@ class WaterPhSensor(Node):
 
     def _publish_callback(self):
         """Callback function to publish sensor data periodically."""
-        self._read_sensor()
+        # self._read_sensor()
+        self._simulate_read_sensor()
         self.get_logger().info('Sensor read successfully.')
 
 

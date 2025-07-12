@@ -3,12 +3,11 @@ from rclpy.callback_groups import ReentrantCallbackGroup, MutuallyExclusiveCallb
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 
-from interfaces.msg import PhControllerPumpCommand
-from interfaces.srv import PeristalticPumpService
+from interfaces.msg import PhControllerMessage
+from interfaces.srv import PhControllerService
 
 
 from interfaces.msg import SensorMessageFloat32
-from interfaces.srv import SensorServiceFloat32
 
 from ph_controller.controller_ph import Controller
 
@@ -37,7 +36,7 @@ class PhControllerNode(Node):
         self._target_ph = 6.0
         self._ph = self.DEFAULT_PH  # Initialize with default pH
         self._kp = self.DEFAULT_KP
-        self._init = True
+        self._controller_is_configured = False
         
         # Create the service
         self._service = self.create_service(
@@ -50,7 +49,7 @@ class PhControllerNode(Node):
 
         # Create pump command publisher
         self._publisher = self.create_publisher(
-            PhControllerPumpCommand,
+            PhControllerMessage,
             service_name,
             self.BUFFER_SIZE
         )
@@ -78,38 +77,59 @@ class PhControllerNode(Node):
             self.get_logger().warning(f'Received error from pH sensor: {msg.msg}')
         else:
             self._ph = msg.data
-            self._configure_controller()
+            if not self._controller_is_configured:
+                self._configure_controller()
+            self.get_logger().info(f'Computing volume.. {msg.data}')
             self._compute_volume(msg.data)
         
-    def _publish_command(self, error: bool, message: str, data: float) -> None:
-        command_msg = PhControllerPumpCommand()
-        command_msg.pump_id = 0x5a  # ** change this later to be dynamic
-        command_msg.err = error
+    def _publish_command(self, warning: bool, message: str, volume: float) -> None:
+        self.get_logger().info(f'Publishing command...')
+        command_msg = PhControllerMessage()
+        command_msg.pump_id = "1"  # ** change this later to be dynamic
+        command_msg.warning = warning
         command_msg.msg = message
-        command_msg.data = data
+        command_msg.volume = float(volume)
         self._publisher.publish(command_msg)
         
-    
-        return None
     def _configure_controller(self) -> None:
+        """Instantiates the controller."""
         self._controller = Controller(unit_name="pH", kp=float(self._kp))
+        self._controller_is_configured = True
         
     def _compute_volume(self, ph: float):
         warning, msg, out_vol = self._controller._compute(ph)
         if warning:
             self.get_logger().warning(f'Received warning from controller: {msg}')
             self._publish_command(True, msg, out_vol)
-            
         else:
-            self.get_logger().info(f'No error from controller.')
-            self._publish_command(False, "successfully published ph_controller_node command", out_vol)
+            self.get_logger().info(f"Successfully published ph_controller_node command: volume = {out_vol} mL")
+            self._publish_command(False, "Success", out_vol)
             
         
     def _service_callback(
-        # idrk
-    ):
-        return None
-
+        self,
+        request: PhControllerService.Request,
+        response: PhControllerService.Response,
+        ) -> PhControllerService.Response:
+        """Handles incoming service requests to compute volume to dispense
+        
+        Args:
+            request (PhControllerService.Request): The service request message.
+            response (PhControllerService.Response): The service response message.
+            
+        Returns:
+            PhControllerService.Response: The updated response with error flag, message, and volume data.
+        """
+        current_ph = request.ph
+        if not self._controller_is_configured:
+            self._configure_controller()
+            
+        warning, msg, volume = self._compute_volume(current_ph)
+        response.pump_id = request.pump_id
+        response.err = warning
+        response.msg = msg
+        response.volume = volume
+        return response
 
 def main(args=None):
     """Main entry point for the PhControllerNode node."""

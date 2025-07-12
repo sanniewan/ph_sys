@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from interfaces/srv/PhControllerService.srv
+// generated code does not contain a copyright notice
+
+
+module interfaces {
+  module srv {
+    struct PhControllerService_Request {
+      float ph;
+    };
+    struct PhControllerService_Response {
+      boolean warning;
+
+      string msg;
+
+      float volume;
+    };
+  };
+};

@@ -1,0 +1,19 @@
+[5.898s] Invoking command in '/workspace/ph_sys_ws/build/ph_sensor': PYTHONPATH=/workspace/ph_sys_ws/build/ph_sensor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/ph_sensor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/ph_sensor/build --no-deps symlink_data --force
+[7.948s] running develop
+[9.293s] running egg_info
+[9.294s] writing ph_sensor.egg-info/PKG-INFO
+[9.295s] writing dependency_links to ph_sensor.egg-info/dependency_links.txt
+[9.317s] writing entry points to ph_sensor.egg-info/entry_points.txt
+[9.323s] writing requirements to ph_sensor.egg-info/requires.txt
+[9.328s] writing top-level names to ph_sensor.egg-info/top_level.txt
+[9.329s] reading manifest file 'ph_sensor.egg-info/SOURCES.txt'
+[9.330s] writing manifest file 'ph_sensor.egg-info/SOURCES.txt'
+[9.334s] running build_ext
+[9.341s] Creating /workspace/ph_sys_ws/install/ph_sensor/lib/python3.10/site-packages/ph-sensor.egg-link (link to .)
+[9.342s] Installing ph_sensor_node script to /workspace/ph_sys_ws/install/ph_sensor/lib/ph_sensor
+[9.346s] 
+[9.346s] Installed /workspace/ph_sys_ws/build/ph_sensor
+[9.351s] running symlink_data
+[9.352s] symbolically linking /workspace/ph_sys_ws/build/ph_sensor/resource/ph_sensor -> /workspace/ph_sys_ws/install/ph_sensor/share/ament_index/resource_index/packages
+[9.354s] symbolically linking /workspace/ph_sys_ws/build/ph_sensor/package.xml -> /workspace/ph_sys_ws/install/ph_sensor/share/ph_sensor
+[9.616s] Invoked command in '/workspace/ph_sys_ws/build/ph_sensor' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/ph_sensor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/ph_sensor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/ph_sensor/build --no-deps symlink_data --force

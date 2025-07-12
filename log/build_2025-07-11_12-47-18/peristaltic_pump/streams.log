@@ -1,0 +1,21 @@
+[4.955s] Invoking command in '/workspace/ph_sys_ws/src/peristaltic_pump': PYTHONPATH=/workspace/ph_sys_ws/build/peristaltic_pump/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/peristaltic_pump build --build-base /workspace/ph_sys_ws/build/peristaltic_pump/build install --record /workspace/ph_sys_ws/build/peristaltic_pump/install.log --single-version-externally-managed install_data
+[6.200s] running egg_info
+[6.202s] writing ../../build/peristaltic_pump/peristaltic_pump.egg-info/PKG-INFO
+[6.206s] writing dependency_links to ../../build/peristaltic_pump/peristaltic_pump.egg-info/dependency_links.txt
+[6.208s] writing entry points to ../../build/peristaltic_pump/peristaltic_pump.egg-info/entry_points.txt
+[6.210s] writing requirements to ../../build/peristaltic_pump/peristaltic_pump.egg-info/requires.txt
+[6.212s] writing top-level names to ../../build/peristaltic_pump/peristaltic_pump.egg-info/top_level.txt
+[6.218s] reading manifest file '../../build/peristaltic_pump/peristaltic_pump.egg-info/SOURCES.txt'
+[6.222s] writing manifest file '../../build/peristaltic_pump/peristaltic_pump.egg-info/SOURCES.txt'
+[6.224s] running build
+[6.225s] running build_py
+[6.225s] running install
+[6.229s] running install_lib
+[6.233s] running install_data
+[6.235s] running install_egg_info
+[6.243s] removing '/workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages/peristaltic_pump-0.0.0-py3.10.egg-info' (and everything under it)
+[6.244s] Copying ../../build/peristaltic_pump/peristaltic_pump.egg-info to /workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages/peristaltic_pump-0.0.0-py3.10.egg-info
+[6.250s] running install_scripts
+[6.342s] Installing peristaltic_pump_node script to /workspace/ph_sys_ws/install/peristaltic_pump/lib/peristaltic_pump
+[6.346s] writing list of installed files to '/workspace/ph_sys_ws/build/peristaltic_pump/install.log'
+[6.519s] Invoked command in '/workspace/ph_sys_ws/src/peristaltic_pump' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/peristaltic_pump/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/peristaltic_pump build --build-base /workspace/ph_sys_ws/build/peristaltic_pump/build install --record /workspace/ph_sys_ws/build/peristaltic_pump/install.log --single-version-externally-managed install_data
