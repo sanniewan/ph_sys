@@ -1,0 +1,18 @@
+[3.440s] Invoking command in '/workspace/ph_sys_ws/build/utils': PYTHONPATH=/workspace/ph_sys_ws/build/utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/utils/build --no-deps symlink_data --force
+[4.919s] running develop
+[5.358s] running egg_info
+[5.368s] writing utils.egg-info/PKG-INFO
+[5.369s] writing dependency_links to utils.egg-info/dependency_links.txt
+[5.371s] writing entry points to utils.egg-info/entry_points.txt
+[5.373s] writing requirements to utils.egg-info/requires.txt
+[5.374s] writing top-level names to utils.egg-info/top_level.txt
+[5.381s] reading manifest file 'utils.egg-info/SOURCES.txt'
+[5.384s] writing manifest file 'utils.egg-info/SOURCES.txt'
+[5.390s] running build_ext
+[5.390s] Creating /workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages/utils.egg-link (link to .)
+[5.393s] 
+[5.394s] Installed /workspace/ph_sys_ws/build/utils
+[5.394s] running symlink_data
+[5.395s] symbolically linking /workspace/ph_sys_ws/build/utils/resource/utils -> /workspace/ph_sys_ws/install/utils/share/ament_index/resource_index/packages
+[5.397s] symbolically linking /workspace/ph_sys_ws/build/utils/package.xml -> /workspace/ph_sys_ws/install/utils/share/utils
+[5.531s] Invoked command in '/workspace/ph_sys_ws/build/utils' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/utils/build --no-deps symlink_data --force

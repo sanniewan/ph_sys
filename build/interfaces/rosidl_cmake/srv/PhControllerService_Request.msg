@@ -1,1 +1,2 @@
-float32 ph
+float32   ph
+string    pump_id

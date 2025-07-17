@@ -1,4 +1,4 @@
-string pump_id
-bool warning
-string msg
-float32 volume
+string   pump_id
+bool     warning
+string   msg
+float32  volume

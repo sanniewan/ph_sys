@@ -10,6 +10,7 @@ from interfaces.srv import PhControllerService
 from interfaces.msg import SensorMessageFloat32
 
 from ph_controller.controller_ph import Controller
+from utils.log import write_log
 
 # from hardware.config import WATER_PH_SENSORS, WATER_SENSOR_PERIOD, TANKS
 
@@ -24,7 +25,8 @@ class PhControllerNode(Node):
     
     DEFAULT_PH = 6.0
     DEFAULT_KP = 0.01
-    BUFFER_SIZE = 10
+    BUFFER_SIZE = 1
+    PH_CONTROLLER_PERIOD = 1*60  # seconds
     
     def __init__(self):
         super().__init__('ph_controller_node')
@@ -55,11 +57,17 @@ class PhControllerNode(Node):
         )
         self.get_logger().info(f'Created publisher for {service_name} topic.')
 
+        # Create periodic publish timer
+        self._publish_timer = self.create_timer(
+            self.PH_CONTROLLER_PERIOD,
+            self._publish_callback,
+            callback_group=callback_group
+        )
         # Create subscriber to ph_sensor topic
         self._ph_sensor_subscriber = self.create_subscription(
             SensorMessageFloat32,
             'cultivation_tank_ph_sensor',
-            self._ph_callback,
+            self._ph_sensor_callback,
             self.BUFFER_SIZE,
             callback_group=callback_group
         )
@@ -67,7 +75,7 @@ class PhControllerNode(Node):
         
         self.get_logger().info('Node created successfully.')
         
-    def _ph_callback(self, msg: SensorMessageFloat32):
+    def _ph_sensor_callback(self, msg: SensorMessageFloat32):
         """Callback function for the pH subscriber.
         
         Args:
@@ -76,20 +84,22 @@ class PhControllerNode(Node):
         if msg.err:
             self.get_logger().warning(f'Received error from pH sensor: {msg.msg}')
         else:
+            self.get_logger().info(f'Received reading from pH sensor: {msg.data}')
             self._ph = msg.data
-            if not self._controller_is_configured:
-                self._configure_controller()
-            self.get_logger().info(f'Computing volume.. {msg.data}')
-            self._compute_volume(msg.data)
-        
+            
     def _publish_command(self, warning: bool, message: str, volume: float) -> None:
-        self.get_logger().info(f'Publishing command...')
+        
+        which_pump = "1" if volume >= 0 else "2"  # ph_up pump (1) if positive volume, else ph_down pump (2)
+        abs_vol = abs(float(volume))
+                
         command_msg = PhControllerMessage()
-        command_msg.pump_id = "1"  # ** change this later to be dynamic
+        command_msg.pump_id = which_pump
         command_msg.warning = warning
         command_msg.msg = message
-        command_msg.volume = float(volume)
+        command_msg.volume = abs_vol
+        
         self._publisher.publish(command_msg)
+        self.get_logger().info(f'Published command: pump_id: {which_pump} | warning: {warning} | message: {message}| volume: {abs_vol}')
         
     def _configure_controller(self) -> None:
         """Instantiates the controller."""
@@ -99,12 +109,20 @@ class PhControllerNode(Node):
     def _compute_volume(self, ph: float):
         warning, msg, out_vol = self._controller._compute(ph)
         if warning:
-            self.get_logger().warning(f'Received warning from controller: {msg}')
+            self.get_logger().warning(f'🙄 Received warning from controller: {msg}')
             self._publish_command(True, msg, out_vol)
         else:
-            self.get_logger().info(f"Successfully published ph_controller_node command: volume = {out_vol} mL")
+            self.get_logger().info(f"🤩 Successfully published ph_controller_node command: volume = {out_vol} mL")
             self._publish_command(False, "Success", out_vol)
             
+        return warning, msg, out_vol
+    
+    def _publish_callback(self):
+        if not self._controller_is_configured:
+            self._configure_controller()
+        self.get_logger().info(f'✅ Publish callback computing volume.. pH={self._ph}')
+        write_log(f'Publishing to peristaltic pumps: pH={self._ph}')
+        self._compute_volume(self._ph)
         
     def _service_callback(
         self,
@@ -123,13 +141,15 @@ class PhControllerNode(Node):
         current_ph = request.ph
         if not self._controller_is_configured:
             self._configure_controller()
-            
+        
+        self.get_logger().info("🥶 service callback ph Controller Node activating")
         warning, msg, volume = self._compute_volume(current_ph)
         response.pump_id = request.pump_id
         response.err = warning
         response.msg = msg
         response.volume = volume
         return response
+    
 
 def main(args=None):
     """Main entry point for the PhControllerNode node."""

@@ -1,0 +1,17 @@
+[5.990s] Invoking command in '/workspace/ph_sys_ws/build/first_package': PYTHONPATH=/workspace/ph_sys_ws/build/first_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/first_package/build --no-deps symlink_data
+[7.566s] running develop
+[8.434s] running egg_info
+[8.438s] writing first_package.egg-info/PKG-INFO
+[8.439s] writing dependency_links to first_package.egg-info/dependency_links.txt
+[8.440s] writing entry points to first_package.egg-info/entry_points.txt
+[8.442s] writing requirements to first_package.egg-info/requires.txt
+[8.445s] writing top-level names to first_package.egg-info/top_level.txt
+[8.466s] reading manifest file 'first_package.egg-info/SOURCES.txt'
+[8.472s] writing manifest file 'first_package.egg-info/SOURCES.txt'
+[8.494s] running build_ext
+[8.495s] Creating /workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages/first-package.egg-link (link to .)
+[8.500s] Installing first_package_node script to /workspace/ph_sys_ws/install/first_package/lib/first_package
+[8.505s] 
+[8.510s] Installed /workspace/ph_sys_ws/build/first_package
+[8.511s] running symlink_data
+[8.913s] Invoked command in '/workspace/ph_sys_ws/build/first_package' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/first_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/first_package/build --no-deps symlink_data

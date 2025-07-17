@@ -1,0 +1,4 @@
+Invoking command in '/workspace/ph_sys_ws/build/interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspace/ph_sys_ws/build/interfaces -- -j4 -l4
+Invoked command in '/workspace/ph_sys_ws/build/interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspace/ph_sys_ws/build/interfaces -- -j4 -l4
+Invoking command in '/workspace/ph_sys_ws/build/interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspace/ph_sys_ws/build/interfaces
+Invoked command in '/workspace/ph_sys_ws/build/interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspace/ph_sys_ws/build/interfaces

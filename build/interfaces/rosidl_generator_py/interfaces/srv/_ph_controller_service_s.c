@@ -16,6 +16,9 @@
 #include "interfaces/srv/detail/ph_controller_service__struct.h"
 #include "interfaces/srv/detail/ph_controller_service__functions.h"
 
+#include "rosidl_runtime_c/string.h"
+#include "rosidl_runtime_c/string_functions.h"
+
 
 ROSIDL_GENERATOR_C_EXPORT
 bool interfaces__srv__ph_controller_service__request__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -59,6 +62,21 @@ bool interfaces__srv__ph_controller_service__request__convert_from_py(PyObject *
     ros_message->ph = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // pump_id
+    PyObject * field = PyObject_GetAttrString(_pymsg, "pump_id");
+    if (!field) {
+      return false;
+    }
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    rosidl_runtime_c__String__assign(&ros_message->pump_id, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -92,6 +110,23 @@ PyObject * interfaces__srv__ph_controller_service__request__convert_to_py(void *
       }
     }
   }
+  {  // pump_id
+    PyObject * field = NULL;
+    field = PyUnicode_DecodeUTF8(
+      ros_message->pump_id.data,
+      strlen(ros_message->pump_id.data),
+      "replace");
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "pump_id", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
 
   // ownership of _pymessage is transferred to the caller
   return _pymessage;
@@ -111,8 +146,10 @@ PyObject * interfaces__srv__ph_controller_service__request__convert_to_py(void *
 // already included above
 // #include "interfaces/srv/detail/ph_controller_service__functions.h"
 
-#include "rosidl_runtime_c/string.h"
-#include "rosidl_runtime_c/string_functions.h"
+// already included above
+// #include "rosidl_runtime_c/string.h"
+// already included above
+// #include "rosidl_runtime_c/string_functions.h"
 
 
 ROSIDL_GENERATOR_C_EXPORT
@@ -148,6 +185,21 @@ bool interfaces__srv__ph_controller_service__response__convert_from_py(PyObject 
     assert(strncmp("interfaces.srv._ph_controller_service.PhControllerService_Response", full_classname_dest, 66) == 0);
   }
   interfaces__srv__PhControllerService_Response * ros_message = _ros_message;
+  {  // pump_id
+    PyObject * field = PyObject_GetAttrString(_pymsg, "pump_id");
+    if (!field) {
+      return false;
+    }
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    rosidl_runtime_c__String__assign(&ros_message->pump_id, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
+    Py_DECREF(field);
+  }
   {  // warning
     PyObject * field = PyObject_GetAttrString(_pymsg, "warning");
     if (!field) {
@@ -203,6 +255,23 @@ PyObject * interfaces__srv__ph_controller_service__response__convert_to_py(void 
     }
   }
   interfaces__srv__PhControllerService_Response * ros_message = (interfaces__srv__PhControllerService_Response *)raw_ros_message;
+  {  // pump_id
+    PyObject * field = NULL;
+    field = PyUnicode_DecodeUTF8(
+      ros_message->pump_id.data,
+      strlen(ros_message->pump_id.data),
+      "replace");
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "pump_id", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // warning
     PyObject * field = NULL;
     field = PyBool_FromLong(ros_message->warning ? 1 : 0);

@@ -1,0 +1,17 @@
+[6.574s] Invoking command in '/workspace/ph_sys_ws/build/peristaltic_pump': PYTHONPATH=/workspace/ph_sys_ws/build/peristaltic_pump/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/peristaltic_pump/build --no-deps symlink_data
+[7.894s] running develop
+[8.707s] running egg_info
+[8.707s] writing peristaltic_pump.egg-info/PKG-INFO
+[8.707s] writing dependency_links to peristaltic_pump.egg-info/dependency_links.txt
+[8.708s] writing entry points to peristaltic_pump.egg-info/entry_points.txt
+[8.711s] writing requirements to peristaltic_pump.egg-info/requires.txt
+[8.711s] writing top-level names to peristaltic_pump.egg-info/top_level.txt
+[8.718s] reading manifest file 'peristaltic_pump.egg-info/SOURCES.txt'
+[8.723s] writing manifest file 'peristaltic_pump.egg-info/SOURCES.txt'
+[8.731s] running build_ext
+[8.737s] Creating /workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages/peristaltic-pump.egg-link (link to .)
+[8.740s] Installing peristaltic_pump_node script to /workspace/ph_sys_ws/install/peristaltic_pump/lib/peristaltic_pump
+[8.741s] 
+[8.741s] Installed /workspace/ph_sys_ws/build/peristaltic_pump
+[8.747s] running symlink_data
+[8.975s] Invoked command in '/workspace/ph_sys_ws/build/peristaltic_pump' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/peristaltic_pump/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/peristaltic_pump/build --no-deps symlink_data

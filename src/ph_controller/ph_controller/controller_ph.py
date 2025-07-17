@@ -39,8 +39,8 @@ class Controller:
             msg = f"Warning: {self.unit_name} value has reached a critical {'low.' if (self.crit_low > measurement) else 'high.'}"
             return True, msg, 0
         else:
-            # if control is negative, then ph_down pump 0x5b activates.
+            # If error is negative, then ph_down pump activates.
             mid_target = (self.target_low + self.target_high)/2
             error = mid_target - measurement
             control = self.kp * error
-            return False, "", float(control)
+            return False, "", round(float(control), 2)

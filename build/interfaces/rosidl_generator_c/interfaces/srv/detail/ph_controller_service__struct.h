@@ -17,10 +17,15 @@ extern "C"
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'pump_id'
+#include "rosidl_runtime_c/string.h"
+
 /// Struct defined in srv/PhControllerService in the package interfaces.
 typedef struct interfaces__srv__PhControllerService_Request
 {
   float ph;
+  rosidl_runtime_c__String pump_id;
 } interfaces__srv__PhControllerService_Request;
 
 // Struct for a sequence of interfaces__srv__PhControllerService_Request.
@@ -37,12 +42,15 @@ typedef struct interfaces__srv__PhControllerService_Request__Sequence
 // Constants defined in the message
 
 // Include directives for member types
+// Member 'pump_id'
 // Member 'msg'
-#include "rosidl_runtime_c/string.h"
+// already included above
+// #include "rosidl_runtime_c/string.h"
 
 /// Struct defined in srv/PhControllerService in the package interfaces.
 typedef struct interfaces__srv__PhControllerService_Response
 {
+  rosidl_runtime_c__String pump_id;
   bool warning;
   rosidl_runtime_c__String msg;
   float volume;

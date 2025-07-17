@@ -34,6 +34,8 @@ cdr_serialize(
 {
   // Member: ph
   cdr << ros_message.ph;
+  // Member: pump_id
+  cdr << ros_message.pump_id;
   return true;
 }
 
@@ -45,6 +47,9 @@ cdr_deserialize(
 {
   // Member: ph
   cdr >> ros_message.ph;
+
+  // Member: pump_id
+  cdr >> ros_message.pump_id;
 
   return true;
 }
@@ -68,6 +73,10 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // Member: pump_id
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.pump_id.size() + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -101,6 +110,19 @@ max_serialized_size_PhControllerService_Request(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
+  // Member: pump_id
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -109,7 +131,7 @@ max_serialized_size_PhControllerService_Request(
     using DataType = interfaces::srv::PhControllerService_Request;
     is_plain =
       (
-      offsetof(DataType, ph) +
+      offsetof(DataType, pump_id) +
       last_member_size
       ) == ret_val;
   }
@@ -245,6 +267,8 @@ cdr_serialize(
   const interfaces::srv::PhControllerService_Response & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
+  // Member: pump_id
+  cdr << ros_message.pump_id;
   // Member: warning
   cdr << (ros_message.warning ? true : false);
   // Member: msg
@@ -260,6 +284,9 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   interfaces::srv::PhControllerService_Response & ros_message)
 {
+  // Member: pump_id
+  cdr >> ros_message.pump_id;
+
   // Member: warning
   {
     uint8_t tmp;
@@ -289,6 +316,10 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
+  // Member: pump_id
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.pump_id.size() + 1);
   // Member: warning
   {
     size_t item_size = sizeof(ros_message.warning);
@@ -328,6 +359,19 @@ max_serialized_size_PhControllerService_Response(
   full_bounded = true;
   is_plain = true;
 
+
+  // Member: pump_id
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
 
   // Member: warning
   {

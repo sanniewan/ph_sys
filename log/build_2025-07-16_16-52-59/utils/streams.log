@@ -1,0 +1,35 @@
+[2.197s] Invoking command in '/workspace/ph_sys_ws/build/utils': PYTHONPATH=/workspace/ph_sys_ws/build/utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /workspace/ph_sys_ws/build/utils/build
+[3.155s] running develop
+[3.600s] Removing /workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages/utils.egg-link (link to .)
+[3.729s] Invoked command in '/workspace/ph_sys_ws/build/utils' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /workspace/ph_sys_ws/build/utils/build
+[3.735s] Invoking command in '/workspace/ph_sys_ws/src/utils': PYTHONPATH=/workspace/ph_sys_ws/build/utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/utils build --build-base /workspace/ph_sys_ws/build/utils/build install --record /workspace/ph_sys_ws/build/utils/install.log --single-version-externally-managed install_data --force
+[4.590s] running egg_info
+[4.592s] writing ../../build/utils/utils.egg-info/PKG-INFO
+[4.593s] writing dependency_links to ../../build/utils/utils.egg-info/dependency_links.txt
+[4.594s] writing entry points to ../../build/utils/utils.egg-info/entry_points.txt
+[4.595s] writing requirements to ../../build/utils/utils.egg-info/requires.txt
+[4.596s] writing top-level names to ../../build/utils/utils.egg-info/top_level.txt
+[4.602s] reading manifest file '../../build/utils/utils.egg-info/SOURCES.txt'
+[4.605s] writing manifest file '../../build/utils/utils.egg-info/SOURCES.txt'
+[4.606s] running build
+[4.606s] running build_py
+[4.607s] creating /workspace/ph_sys_ws/build/utils/build
+[4.607s] creating /workspace/ph_sys_ws/build/utils/build/lib
+[4.608s] creating /workspace/ph_sys_ws/build/utils/build/lib/utils
+[4.608s] copying utils/log.py -> /workspace/ph_sys_ws/build/utils/build/lib/utils
+[4.608s] copying utils/__init__.py -> /workspace/ph_sys_ws/build/utils/build/lib/utils
+[4.609s] running install
+[4.609s] running install_lib
+[4.612s] creating /workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages/utils
+[4.612s] copying /workspace/ph_sys_ws/build/utils/build/lib/utils/log.py -> /workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages/utils
+[4.613s] copying /workspace/ph_sys_ws/build/utils/build/lib/utils/__init__.py -> /workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages/utils
+[4.615s] byte-compiling /workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages/utils/log.py to log.cpython-310.pyc
+[4.616s] byte-compiling /workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages/utils/__init__.py to __init__.cpython-310.pyc
+[4.617s] running install_data
+[4.618s] copying resource/utils -> /workspace/ph_sys_ws/install/utils/share/ament_index/resource_index/packages
+[4.618s] copying package.xml -> /workspace/ph_sys_ws/install/utils/share/utils
+[4.619s] running install_egg_info
+[4.625s] Copying ../../build/utils/utils.egg-info to /workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages/utils-0.0.0-py3.10.egg-info
+[4.628s] running install_scripts
+[4.700s] writing list of installed files to '/workspace/ph_sys_ws/build/utils/install.log'
+[4.818s] Invoked command in '/workspace/ph_sys_ws/src/utils' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/utils build --build-base /workspace/ph_sys_ws/build/utils/build install --record /workspace/ph_sys_ws/build/utils/install.log --single-version-externally-managed install_data --force

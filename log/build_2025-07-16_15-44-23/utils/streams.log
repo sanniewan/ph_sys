@@ -1,0 +1,23 @@
+[3.368s] Invoking command in '/workspace/ph_sys_ws/build/utils': PYTHONPATH=/workspace/ph_sys_ws/build/utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/utils/build --no-deps symlink_data
+[4.835s] running develop
+[5.800s] running egg_info
+[5.800s] creating utils.egg-info
+[5.801s] writing utils.egg-info/PKG-INFO
+[5.802s] writing dependency_links to utils.egg-info/dependency_links.txt
+[5.802s] writing entry points to utils.egg-info/entry_points.txt
+[5.803s] writing requirements to utils.egg-info/requires.txt
+[5.804s] writing top-level names to utils.egg-info/top_level.txt
+[5.807s] writing manifest file 'utils.egg-info/SOURCES.txt'
+[5.813s] reading manifest file 'utils.egg-info/SOURCES.txt'
+[5.816s] writing manifest file 'utils.egg-info/SOURCES.txt'
+[5.823s] running build_ext
+[5.827s] Creating /workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages/utils.egg-link (link to .)
+[5.829s] 
+[5.835s] Installed /workspace/ph_sys_ws/build/utils
+[5.837s] running symlink_data
+[5.838s] creating /workspace/ph_sys_ws/install/utils/share/ament_index
+[5.839s] creating /workspace/ph_sys_ws/install/utils/share/ament_index/resource_index
+[5.840s] creating /workspace/ph_sys_ws/install/utils/share/ament_index/resource_index/packages
+[5.841s] symbolically linking /workspace/ph_sys_ws/build/utils/resource/utils -> /workspace/ph_sys_ws/install/utils/share/ament_index/resource_index/packages
+[5.842s] symbolically linking /workspace/ph_sys_ws/build/utils/package.xml -> /workspace/ph_sys_ws/install/utils/share/utils
+[6.077s] Invoked command in '/workspace/ph_sys_ws/build/utils' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/utils/build --no-deps symlink_data

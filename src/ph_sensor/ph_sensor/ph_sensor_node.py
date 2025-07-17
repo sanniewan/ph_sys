@@ -7,7 +7,7 @@ from interfaces.msg import SensorMessageFloat32
 from interfaces.srv import SensorServiceFloat32
 from hardware.config import WATER_PH_SENSORS, WATER_SENSOR_PERIOD, TANKS
 from ph_sensor.ezo_ph_sensor import AtlasEzoPhSensor
-
+from utils.log import write_log
 
 class WaterPhSensor(Node):
     """WaterPhSensor Node.
@@ -77,7 +77,7 @@ class WaterPhSensor(Node):
 
         # Create initialization timer
         self._init_timer = self.create_timer(
-            1.3,
+            60,
             self._init_callback,
             callback_group=callback_group
         )
@@ -179,10 +179,11 @@ class WaterPhSensor(Node):
         err = False
         msg = "This is simulated data"
         data = float(self._simulated_data)  # fabricated ph data
-        if self._simulated_data == 9:
-            self._simulated_data = 0.0
+        if self._simulated_data >= 9:
+            self._simulated_data = 0
         else:
             self._simulated_data += 1
+            
         self._publish_status(err, msg, data)
         return err, msg, data
 
@@ -232,6 +233,8 @@ class WaterPhSensor(Node):
             message (str): Error or status message.
             data (float): Electrical conductivity value.
         """
+        self.get_logger().info(f'ph_sensor reading: pH={data}')    # Log to the terminal
+        
         status_msg = SensorMessageFloat32()
         status_msg.err = error
         status_msg.msg = message
@@ -241,8 +244,10 @@ class WaterPhSensor(Node):
     def _publish_callback(self):
         """Callback function to publish sensor data periodically."""
         # self._read_sensor()
+        # self.get_logger().info('Sensor read successfully.')
+        
         self._simulate_read_sensor()
-        self.get_logger().info('Sensor read successfully.')
+        self.get_logger().info('Sensor readings simulated.')
 
 
 def main(args=None):

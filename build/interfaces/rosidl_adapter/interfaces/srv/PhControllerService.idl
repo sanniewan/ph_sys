@@ -7,8 +7,12 @@ module interfaces {
   module srv {
     struct PhControllerService_Request {
       float ph;
+
+      string pump_id;
     };
     struct PhControllerService_Response {
+      string pump_id;
+
       boolean warning;
 
       string msg;

@@ -1,0 +1,16 @@
+[6.079s] Invoking command in '/workspace/ph_sys_ws/build/external': PYTHONPATH=/workspace/ph_sys_ws/build/external/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/external/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/external/build --no-deps symlink_data
+[7.610s] running develop
+[8.556s] running egg_info
+[8.557s] writing external.egg-info/PKG-INFO
+[8.563s] writing dependency_links to external.egg-info/dependency_links.txt
+[8.565s] writing entry points to external.egg-info/entry_points.txt
+[8.566s] writing requirements to external.egg-info/requires.txt
+[8.566s] writing top-level names to external.egg-info/top_level.txt
+[8.582s] reading manifest file 'external.egg-info/SOURCES.txt'
+[8.589s] writing manifest file 'external.egg-info/SOURCES.txt'
+[8.606s] running build_ext
+[8.612s] Creating /workspace/ph_sys_ws/install/external/lib/python3.10/site-packages/external.egg-link (link to .)
+[8.624s] 
+[8.626s] Installed /workspace/ph_sys_ws/build/external
+[8.636s] running symlink_data
+[9.004s] Invoked command in '/workspace/ph_sys_ws/build/external' returned '0': PYTHONPATH=/workspace/ph_sys_ws/build/external/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/external/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /workspace/ph_sys_ws/build/external/build --no-deps symlink_data

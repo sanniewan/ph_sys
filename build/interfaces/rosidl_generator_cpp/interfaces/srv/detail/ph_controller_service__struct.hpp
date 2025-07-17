@@ -39,16 +39,18 @@ struct PhControllerService_Request_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->ph = 0.0f;
+      this->pump_id = "";
     }
   }
 
   explicit PhControllerService_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : pump_id(_alloc)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->ph = 0.0f;
+      this->pump_id = "";
     }
   }
 
@@ -56,12 +58,21 @@ struct PhControllerService_Request_
   using _ph_type =
     float;
   _ph_type ph;
+  using _pump_id_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _pump_id_type pump_id;
 
   // setters for named parameter idiom
   Type & set__ph(
     const float & _arg)
   {
     this->ph = _arg;
+    return *this;
+  }
+  Type & set__pump_id(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->pump_id = _arg;
     return *this;
   }
 
@@ -110,6 +121,9 @@ struct PhControllerService_Request_
     if (this->ph != other.ph) {
       return false;
     }
+    if (this->pump_id != other.pump_id) {
+      return false;
+    }
     return true;
   }
   bool operator!=(const PhControllerService_Request_ & other) const
@@ -152,6 +166,7 @@ struct PhControllerService_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->pump_id = "";
       this->warning = false;
       this->msg = "";
       this->volume = 0.0f;
@@ -159,11 +174,13 @@ struct PhControllerService_Response_
   }
 
   explicit PhControllerService_Response_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : msg(_alloc)
+  : pump_id(_alloc),
+    msg(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->pump_id = "";
       this->warning = false;
       this->msg = "";
       this->volume = 0.0f;
@@ -171,6 +188,9 @@ struct PhControllerService_Response_
   }
 
   // field types and members
+  using _pump_id_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _pump_id_type pump_id;
   using _warning_type =
     bool;
   _warning_type warning;
@@ -182,6 +202,12 @@ struct PhControllerService_Response_
   _volume_type volume;
 
   // setters for named parameter idiom
+  Type & set__pump_id(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->pump_id = _arg;
+    return *this;
+  }
   Type & set__warning(
     const bool & _arg)
   {
@@ -243,6 +269,9 @@ struct PhControllerService_Response_
   // comparison operators
   bool operator==(const PhControllerService_Response_ & other) const
   {
+    if (this->pump_id != other.pump_id) {
+      return false;
+    }
     if (this->warning != other.warning) {
       return false;
     }

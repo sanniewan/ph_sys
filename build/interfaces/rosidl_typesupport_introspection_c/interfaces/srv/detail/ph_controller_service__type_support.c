@@ -12,6 +12,10 @@
 #include "interfaces/srv/detail/ph_controller_service__struct.h"
 
 
+// Include directives for member types
+// Member `pump_id`
+#include "rosidl_runtime_c/string_functions.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -31,7 +35,7 @@ void interfaces__srv__PhControllerService_Request__rosidl_typesupport_introspect
   interfaces__srv__PhControllerService_Request__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember interfaces__srv__PhControllerService_Request__rosidl_typesupport_introspection_c__PhControllerService_Request_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember interfaces__srv__PhControllerService_Request__rosidl_typesupport_introspection_c__PhControllerService_Request_message_member_array[2] = {
   {
     "ph",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
@@ -48,13 +52,30 @@ static rosidl_typesupport_introspection_c__MessageMember interfaces__srv__PhCont
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "pump_id",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(interfaces__srv__PhControllerService_Request, pump_id),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers interfaces__srv__PhControllerService_Request__rosidl_typesupport_introspection_c__PhControllerService_Request_message_members = {
   "interfaces__srv",  // message namespace
   "PhControllerService_Request",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(interfaces__srv__PhControllerService_Request),
   interfaces__srv__PhControllerService_Request__rosidl_typesupport_introspection_c__PhControllerService_Request_message_member_array,  // message members
   interfaces__srv__PhControllerService_Request__rosidl_typesupport_introspection_c__PhControllerService_Request_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -101,8 +122,10 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 
 
 // Include directives for member types
+// Member `pump_id`
 // Member `msg`
-#include "rosidl_runtime_c/string_functions.h"
+// already included above
+// #include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -123,7 +146,24 @@ void interfaces__srv__PhControllerService_Response__rosidl_typesupport_introspec
   interfaces__srv__PhControllerService_Response__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember interfaces__srv__PhControllerService_Response__rosidl_typesupport_introspection_c__PhControllerService_Response_message_member_array[3] = {
+static rosidl_typesupport_introspection_c__MessageMember interfaces__srv__PhControllerService_Response__rosidl_typesupport_introspection_c__PhControllerService_Response_message_member_array[4] = {
+  {
+    "pump_id",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(interfaces__srv__PhControllerService_Response, pump_id),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
   {
     "warning",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
@@ -180,7 +220,7 @@ static rosidl_typesupport_introspection_c__MessageMember interfaces__srv__PhCont
 static const rosidl_typesupport_introspection_c__MessageMembers interfaces__srv__PhControllerService_Response__rosidl_typesupport_introspection_c__PhControllerService_Response_message_members = {
   "interfaces__srv",  // message namespace
   "PhControllerService_Response",  // message name
-  3,  // number of fields
+  4,  // number of fields
   sizeof(interfaces__srv__PhControllerService_Response),
   interfaces__srv__PhControllerService_Response__rosidl_typesupport_introspection_c__PhControllerService_Response_message_member_array,  // message members
   interfaces__srv__PhControllerService_Response__rosidl_typesupport_introspection_c__PhControllerService_Response_init_function,  // function to initialize message memory (memory has to be allocated)

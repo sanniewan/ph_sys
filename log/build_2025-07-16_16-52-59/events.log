@@ -1,0 +1,96 @@
+[0.000000] (-) TimerEvent: {}
+[0.001855] (-) JobUnselected: {'identifier': 'brain'}
+[0.002471] (-) JobUnselected: {'identifier': 'external'}
+[0.002555] (-) JobUnselected: {'identifier': 'first_package'}
+[0.003165] (-) JobUnselected: {'identifier': 'hardware'}
+[0.003345] (-) JobUnselected: {'identifier': 'interfaces'}
+[0.003479] (-) JobUnselected: {'identifier': 'peristaltic_pump'}
+[0.003602] (-) JobUnselected: {'identifier': 'ph_controller'}
+[0.003724] (-) JobUnselected: {'identifier': 'ph_sensor'}
+[0.003863] (utils) JobQueued: {'identifier': 'utils', 'dependencies': OrderedDict()}
+[0.003999] (utils) JobStarted: {'identifier': 'utils'}
+[0.098810] (-) TimerEvent: {}
+[0.199775] (-) TimerEvent: {}
+[0.300753] (-) TimerEvent: {}
+[0.401425] (-) TimerEvent: {}
+[0.502365] (-) TimerEvent: {}
+[0.603120] (-) TimerEvent: {}
+[0.704203] (-) TimerEvent: {}
+[0.805115] (-) TimerEvent: {}
+[0.906020] (-) TimerEvent: {}
+[1.007418] (-) TimerEvent: {}
+[1.108262] (-) TimerEvent: {}
+[1.208947] (-) TimerEvent: {}
+[1.309933] (-) TimerEvent: {}
+[1.411231] (-) TimerEvent: {}
+[1.516240] (-) TimerEvent: {}
+[1.617336] (-) TimerEvent: {}
+[1.718572] (-) TimerEvent: {}
+[1.819479] (-) TimerEvent: {}
+[1.920295] (-) TimerEvent: {}
+[2.021329] (-) TimerEvent: {}
+[2.122974] (-) TimerEvent: {}
+[2.198532] (utils) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--uninstall', '--editable', '--build-directory', '/workspace/ph_sys_ws/build/utils/build'], 'cwd': '/workspace/ph_sys_ws/build/utils', 'env': {'HOSTNAME': 'back1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/workspace/ph_sys_ws/install/interfaces/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/workspace/ph_sys_ws/src', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/ph_sys_ws/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PIP_BREAK_SYSTEM_PACKAGES': '1', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/workspace/ph_sys_ws/install/utils:/workspace/ph_sys_ws/install/ph_sensor:/workspace/ph_sys_ws/install/ph_controller:/workspace/ph_sys_ws/install/peristaltic_pump:/workspace/ph_sys_ws/install/interfaces:/workspace/ph_sys_ws/install/hardware:/workspace/ph_sys_ws/install/first_package:/workspace/ph_sys_ws/install/external:/workspace/ph_sys_ws/install/brain:/opt/ros/humble', 'PWD': '/workspace/ph_sys_ws/build/utils', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/workspace/ph_sys_ws/build/utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages:/workspace/ph_sys_ws/build/utils:/workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages:/workspace/ph_sys_ws/build/ph_sensor:/workspace/ph_sys_ws/install/ph_sensor/lib/python3.10/site-packages:/workspace/ph_sys_ws/build/ph_controller:/workspace/ph_sys_ws/install/ph_controller/lib/python3.10/site-packages:/workspace/ph_sys_ws/build/peristaltic_pump:/workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages:/workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages:/workspace/ph_sys_ws/build/hardware:/workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages:/workspace/ph_sys_ws/build/first_package:/workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages:/workspace/ph_sys_ws/build/external:/workspace/ph_sys_ws/install/external/lib/python3.10/site-packages:/workspace/ph_sys_ws/build/brain:/workspace/ph_sys_ws/install/brain/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/ph_sys_ws/install/interfaces'}, 'shell': False}
+[2.223105] (-) TimerEvent: {}
+[2.323955] (-) TimerEvent: {}
+[2.425342] (-) TimerEvent: {}
+[2.526343] (-) TimerEvent: {}
+[2.627371] (-) TimerEvent: {}
+[2.727954] (-) TimerEvent: {}
+[2.828858] (-) TimerEvent: {}
+[2.929666] (-) TimerEvent: {}
+[3.030468] (-) TimerEvent: {}
+[3.131304] (-) TimerEvent: {}
+[3.158733] (utils) StdoutLine: {'line': b'running develop\n'}
+[3.231454] (-) TimerEvent: {}
+[3.332319] (-) TimerEvent: {}
+[3.433044] (-) TimerEvent: {}
+[3.533895] (-) TimerEvent: {}
+[3.603806] (utils) StdoutLine: {'line': b'Removing /workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages/utils.egg-link (link to .)\n'}
+[3.634182] (-) TimerEvent: {}
+[3.732526] (utils) CommandEnded: {'returncode': 0}
+[3.734248] (-) TimerEvent: {}
+[3.737514] (utils) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/utils', 'build', '--build-base', '/workspace/ph_sys_ws/build/utils/build', 'install', '--record', '/workspace/ph_sys_ws/build/utils/install.log', '--single-version-externally-managed', 'install_data', '--force'], 'cwd': '/workspace/ph_sys_ws/src/utils', 'env': {'HOSTNAME': 'back1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/workspace/ph_sys_ws/install/interfaces/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/workspace/ph_sys_ws/src', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/ph_sys_ws/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PIP_BREAK_SYSTEM_PACKAGES': '1', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/workspace/ph_sys_ws/install/utils:/workspace/ph_sys_ws/install/ph_sensor:/workspace/ph_sys_ws/install/ph_controller:/workspace/ph_sys_ws/install/peristaltic_pump:/workspace/ph_sys_ws/install/interfaces:/workspace/ph_sys_ws/install/hardware:/workspace/ph_sys_ws/install/first_package:/workspace/ph_sys_ws/install/external:/workspace/ph_sys_ws/install/brain:/opt/ros/humble', 'PWD': '/workspace/ph_sys_ws/build/utils', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/workspace/ph_sys_ws/build/utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages:/workspace/ph_sys_ws/build/utils:/workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages:/workspace/ph_sys_ws/build/ph_sensor:/workspace/ph_sys_ws/install/ph_sensor/lib/python3.10/site-packages:/workspace/ph_sys_ws/build/ph_controller:/workspace/ph_sys_ws/install/ph_controller/lib/python3.10/site-packages:/workspace/ph_sys_ws/build/peristaltic_pump:/workspace/ph_sys_ws/install/peristaltic_pump/lib/python3.10/site-packages:/workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages:/workspace/ph_sys_ws/build/hardware:/workspace/ph_sys_ws/install/hardware/lib/python3.10/site-packages:/workspace/ph_sys_ws/build/first_package:/workspace/ph_sys_ws/install/first_package/lib/python3.10/site-packages:/workspace/ph_sys_ws/build/external:/workspace/ph_sys_ws/install/external/lib/python3.10/site-packages:/workspace/ph_sys_ws/build/brain:/workspace/ph_sys_ws/install/brain/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/ph_sys_ws/install/interfaces'}, 'shell': False}
+[3.834418] (-) TimerEvent: {}
+[3.935288] (-) TimerEvent: {}
+[4.035994] (-) TimerEvent: {}
+[4.136854] (-) TimerEvent: {}
+[4.237567] (-) TimerEvent: {}
+[4.338292] (-) TimerEvent: {}
+[4.439019] (-) TimerEvent: {}
+[4.539818] (-) TimerEvent: {}
+[4.593656] (utils) StdoutLine: {'line': b'running egg_info\n'}
+[4.595809] (utils) StdoutLine: {'line': b'writing ../../build/utils/utils.egg-info/PKG-INFO\n'}
+[4.596645] (utils) StdoutLine: {'line': b'writing dependency_links to ../../build/utils/utils.egg-info/dependency_links.txt\n'}
+[4.597632] (utils) StdoutLine: {'line': b'writing entry points to ../../build/utils/utils.egg-info/entry_points.txt\n'}
+[4.598477] (utils) StdoutLine: {'line': b'writing requirements to ../../build/utils/utils.egg-info/requires.txt\n'}
+[4.599288] (utils) StdoutLine: {'line': b'writing top-level names to ../../build/utils/utils.egg-info/top_level.txt\n'}
+[4.606165] (utils) StdoutLine: {'line': b"reading manifest file '../../build/utils/utils.egg-info/SOURCES.txt'\n"}
+[4.608804] (utils) StdoutLine: {'line': b"writing manifest file '../../build/utils/utils.egg-info/SOURCES.txt'\n"}
+[4.609420] (utils) StdoutLine: {'line': b'running build\n'}
+[4.609758] (utils) StdoutLine: {'line': b'running build_py\n'}
+[4.610415] (utils) StdoutLine: {'line': b'creating /workspace/ph_sys_ws/build/utils/build\n'}
+[4.610927] (utils) StdoutLine: {'line': b'creating /workspace/ph_sys_ws/build/utils/build/lib\n'}
+[4.611497] (utils) StdoutLine: {'line': b'creating /workspace/ph_sys_ws/build/utils/build/lib/utils\n'}
+[4.611822] (utils) StdoutLine: {'line': b'copying utils/log.py -> /workspace/ph_sys_ws/build/utils/build/lib/utils\n'}
+[4.612275] (utils) StdoutLine: {'line': b'copying utils/__init__.py -> /workspace/ph_sys_ws/build/utils/build/lib/utils\n'}
+[4.612605] (utils) StdoutLine: {'line': b'running install\n'}
+[4.613183] (utils) StdoutLine: {'line': b'running install_lib\n'}
+[4.615537] (utils) StdoutLine: {'line': b'creating /workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages/utils\n'}
+[4.616167] (utils) StdoutLine: {'line': b'copying /workspace/ph_sys_ws/build/utils/build/lib/utils/log.py -> /workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages/utils\n'}
+[4.616682] (utils) StdoutLine: {'line': b'copying /workspace/ph_sys_ws/build/utils/build/lib/utils/__init__.py -> /workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages/utils\n'}
+[4.618908] (utils) StdoutLine: {'line': b'byte-compiling /workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages/utils/log.py to log.cpython-310.pyc\n'}
+[4.620256] (utils) StdoutLine: {'line': b'byte-compiling /workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages/utils/__init__.py to __init__.cpython-310.pyc\n'}
+[4.620930] (utils) StdoutLine: {'line': b'running install_data\n'}
+[4.621440] (utils) StdoutLine: {'line': b'copying resource/utils -> /workspace/ph_sys_ws/install/utils/share/ament_index/resource_index/packages\n'}
+[4.621936] (utils) StdoutLine: {'line': b'copying package.xml -> /workspace/ph_sys_ws/install/utils/share/utils\n'}
+[4.622406] (utils) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.628882] (utils) StdoutLine: {'line': b'Copying ../../build/utils/utils.egg-info to /workspace/ph_sys_ws/install/utils/lib/python3.10/site-packages/utils-0.0.0-py3.10.egg-info\n'}
+[4.631512] (utils) StdoutLine: {'line': b'running install_scripts\n'}
+[4.639963] (-) TimerEvent: {}
+[4.703401] (utils) StdoutLine: {'line': b"writing list of installed files to '/workspace/ph_sys_ws/build/utils/install.log'\n"}
+[4.740227] (-) TimerEvent: {}
+[4.821414] (utils) CommandEnded: {'returncode': 0}
+[4.840330] (-) TimerEvent: {}
+[4.861547] (utils) JobEnded: {'identifier': 'utils', 'rc': 0}
+[4.864703] (-) EventReactorShutdown: {}

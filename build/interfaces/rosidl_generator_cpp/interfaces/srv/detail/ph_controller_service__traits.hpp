@@ -29,6 +29,13 @@ inline void to_flow_style_yaml(
   {
     out << "ph: ";
     rosidl_generator_traits::value_to_yaml(msg.ph, out);
+    out << ", ";
+  }
+
+  // member: pump_id
+  {
+    out << "pump_id: ";
+    rosidl_generator_traits::value_to_yaml(msg.pump_id, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -44,6 +51,16 @@ inline void to_block_style_yaml(
     }
     out << "ph: ";
     rosidl_generator_traits::value_to_yaml(msg.ph, out);
+    out << "\n";
+  }
+
+  // member: pump_id
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "pump_id: ";
+    rosidl_generator_traits::value_to_yaml(msg.pump_id, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
@@ -94,11 +111,11 @@ inline const char * name<interfaces::srv::PhControllerService_Request>()
 
 template<>
 struct has_fixed_size<interfaces::srv::PhControllerService_Request>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct has_bounded_size<interfaces::srv::PhControllerService_Request>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct is_message<interfaces::srv::PhControllerService_Request>
@@ -117,6 +134,13 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
+  // member: pump_id
+  {
+    out << "pump_id: ";
+    rosidl_generator_traits::value_to_yaml(msg.pump_id, out);
+    out << ", ";
+  }
+
   // member: warning
   {
     out << "warning: ";
@@ -143,6 +167,16 @@ inline void to_block_style_yaml(
   const PhControllerService_Response & msg,
   std::ostream & out, size_t indentation = 0)
 {
+  // member: pump_id
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "pump_id: ";
+    rosidl_generator_traits::value_to_yaml(msg.pump_id, out);
+    out << "\n";
+  }
+
   // member: warning
   {
     if (indentation > 0) {

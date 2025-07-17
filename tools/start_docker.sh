@@ -10,6 +10,7 @@ docker run \
     --network host \
     -v /etc/localtime:/etc/localtime:ro \
     --mount type=bind,source=$HOME/ph_sys,target=/workspace/ph_sys_ws \
+    --mount type=bind,source=$HOME/ph_sys/logs,target=/logs \
     -w /workspace/ph_sys_ws \
     --privileged \
     --device /dev/i2c-1 \
