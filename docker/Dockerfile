@@ -23,7 +23,7 @@ ENV PIP_BREAK_SYSTEM_PACKAGES=1
 RUN pip3 install --upgrade pip && \
     pip3 install -r /tmp/requirements.txt
 
-# # Dependencies
+# # Dependencies (didn't work for me)
 # COPY ./docker/30-custom.list /etc/ros/rosdep/sources.list.d/30-custom.list
 # COPY ./docker/custom-rosdep.yaml /etc/ros/rosdep/sources.list.d/custom-rosdep.yaml
 

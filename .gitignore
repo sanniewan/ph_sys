@@ -1,1 +1,4 @@
+# Logs and cache
 logs/
+__pycache__/
+*.log

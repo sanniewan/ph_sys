@@ -26,7 +26,7 @@ class PhControllerNode(Node):
     DEFAULT_PH = 6.0
     DEFAULT_KP = 0.01
     BUFFER_SIZE = 1
-    PH_CONTROLLER_PERIOD = 1*60  # seconds
+    PH_CONTROLLER_PERIOD = 3*60  # seconds
     
     def __init__(self):
         super().__init__('ph_controller_node')
@@ -73,7 +73,9 @@ class PhControllerNode(Node):
         )
         self.get_logger().info(f'Subscribed to cultivation_tank_ph_sensor topic')
         
-        self.get_logger().info('Node created successfully.')
+        to_log = '🎋 CTRL: Node created successfully.'
+        write_log(to_log)
+        self.get_logger().info(to_log)
         
     def _ph_sensor_callback(self, msg: SensorMessageFloat32):
         """Callback function for the pH subscriber.
@@ -91,37 +93,38 @@ class PhControllerNode(Node):
         
         which_pump = "1" if volume >= 0 else "2"  # ph_up pump (1) if positive volume, else ph_down pump (2)
         abs_vol = abs(float(volume))
-                
+        
         command_msg = PhControllerMessage()
         command_msg.pump_id = which_pump
         command_msg.warning = warning
         command_msg.msg = message
         command_msg.volume = abs_vol
         
+        # Publish the command
         self._publisher.publish(command_msg)
-        self.get_logger().info(f'Published command: pump_id: {which_pump} | warning: {warning} | message: {message}| volume: {abs_vol}')
+        
+        # Write to logs
+        to_log = f'🧮 CTRL: Published command: pump_id: {which_pump} | warning: {warning} | message: {message}| volume: {abs_vol}'
+        write_log(to_log)
+        self.get_logger().info(to_log)
         
     def _configure_controller(self) -> None:
         """Instantiates the controller."""
         self._controller = Controller(unit_name="pH", kp=float(self._kp))
         self._controller_is_configured = True
         
-    def _compute_volume(self, ph: float):
+    def _compute_volume(self, ph: float) -> tuple[bool,str,float]:
         warning, msg, out_vol = self._controller._compute(ph)
-        if warning:
-            self.get_logger().warning(f'🙄 Received warning from controller: {msg}')
-            self._publish_command(True, msg, out_vol)
-        else:
-            self.get_logger().info(f"🤩 Successfully published ph_controller_node command: volume = {out_vol} mL")
-            self._publish_command(False, "Success", out_vol)
-            
+        self._publish_command(warning, msg, out_vol)
         return warning, msg, out_vol
     
     def _publish_callback(self):
         if not self._controller_is_configured:
             self._configure_controller()
-        self.get_logger().info(f'✅ Publish callback computing volume.. pH={self._ph}')
-        write_log(f'Publishing to peristaltic pumps: pH={self._ph}')
+            
+        to_log = f'📝 CTRL: Publishing to peristaltic pumps: pH={self._ph}'
+        self.get_logger().info(to_log)
+        write_log(to_log)
         self._compute_volume(self._ph)
         
     def _service_callback(

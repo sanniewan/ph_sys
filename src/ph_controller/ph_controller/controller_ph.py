@@ -43,4 +43,4 @@ class Controller:
             mid_target = (self.target_low + self.target_high)/2
             error = mid_target - measurement
             control = self.kp * error
-            return False, "", round(float(control), 2)
+            return False, "Operating range, successfully computed volume to dispense.", round(float(control), 2)

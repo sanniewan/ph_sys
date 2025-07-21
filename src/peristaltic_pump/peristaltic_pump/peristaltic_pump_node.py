@@ -17,8 +17,8 @@ class PeristalticPump(Node):
 
     """
     
-    BUFFER_SIZE = 10
-    INIT_TIMER_PERIOD = 60  # Time in seconds for the initialization timer
+    BUFFER_SIZE = 1
+    INIT_TIMER_PERIOD = 6*60  # Time in seconds for the initialization timer
     
     def __init__(self):
         super().__init__(f'peristaltic_pump')
@@ -30,6 +30,7 @@ class PeristalticPump(Node):
         self._pumps = {
             '1': {'configured': False, 'device': None, 'type': 'ph_up'},
             '2': {'configured': False, 'device': None, 'type': 'ph_down'},
+            '3': {'configured': False, 'device': None, 'type': 'ec_up'},
         }
         self._init = True
         
@@ -54,7 +55,7 @@ class PeristalticPump(Node):
         
         # Create initialization timer
         self._init_timer = self.create_timer(
-            5*60,
+            self.INIT_TIMER_PERIOD,
             self._init_callback,
             callback_group=callback_group
         )
@@ -62,15 +63,12 @@ class PeristalticPump(Node):
         # Call once immediately
         self._init_callback()
         
-        self.get_logger().info('Node created successfully.')
+        to_log = '🎋 PMP: Node created successfully.'
+        write_log(to_log)
+        self.get_logger().info(to_log)
 
     def _ph_controller_callback(self, msg: PhControllerMessage):
         """Callback for the pH controller to send commands to the pump.
-        
-        string   pump_id
-        bool     warning
-        string   msg
-        float32  volume
         
         Args:
             msg (PhControllerMessage): The received command from the pH controller.
@@ -78,8 +76,9 @@ class PeristalticPump(Node):
         self.get_logger().info(f'Received controller message to pump id: {msg.pump_id}')
         
         if msg.warning:
-            self.get_logger().warning(f'Received warning from ph controller: {msg.msg}')
-            write_log(f'Received warning from ph controller: {msg.msg}. Dispensing operation skipped.')
+            to_log = f"    ☄️  CTRL: Warning from pH controller: {msg.msg}. Dispensing operation skipped."
+            self.get_logger().warning(to_log)
+            write_log(to_log)
         self._dispense_volume(msg.volume, msg.pump_id)
     
     def _service_callback(
@@ -96,7 +95,7 @@ class PeristalticPump(Node):
         Returns:
             PeristalticPumpService.Response: The updated response with error flag, message, and volume dispensed.
         """
-        error, message, volume = self._dispense_volume()
+        error, message = self._dispense_volume()
         return response
         
     def _init_callback(self) -> None:
@@ -128,42 +127,42 @@ class PeristalticPump(Node):
         Args:
             volume: in mL
             pump_id: which pump to use. if pump_id == "0" then dispense 0 to all
+            
         Returns:
             bool: error flag - True if an error occured, False otherwise.
-            str: dispense status ?D,-40.50,0
+            str: message
         """
         all_pumps_clear = True
         # If not all pumps are configured:
         if not all(pump['configured'] for pump in self._pumps.values()):
             err = self._configure_device()  # Configure all pumps
-            self.get_logger().info(f"Configuring the following pump(s): {self._pumps.values()}")
             if err:
                 all_pumps_clear = False
                 # Find keys where 'configured' is False
                 error_keys = [key for key, pump in self._pumps.items() if not pump['configured']]
-                
                 # Log pumps which are not correctly configured
-                self.get_logger().warning(f"Error configuring the following pump(s): {error_keys}")
-                
+                to_log = f"    ☄️ PMP: Error configuring the following pump(s): {error_keys}. Please check wiring."
+                write_log(to_log)
+                self.get_logger().warning(to_log)
+        
+        # Check pump id:
         if pump_id == "0":
             return all_pumps_clear, "All pumps configured" if all_pumps_clear else "Some pump not configured correct."
+        elif pump_id not in self._pumps:
+            to_log = f"    ☄️ PMP: Error; pump_id '{pump_id}' not found."
+            self.get_logger().info(to_log)
+            return True, to_log
         
-        # Check if pump_id exists
-        if pump_id not in self._pumps:
-            self.get_logger().info(f"Error: pump_id '{pump_id}' not found.")
-            return True, f"Error: pump_id '{pump_id}' not found."
-
         pump = self._pumps[pump_id]  # The value at pump_id key
         if pump['configured'] and pump['device'] is not None:
                 # Call the pump object to dispense volume
                 err, msg = pump['device']._dispense_volume(volume)
                 self.get_logger().info(f"Trying to dispense...")
                 if err:
-                    self.get_logger().info(f"Error dispensing at {self._solution_type} pump, address {pump['device']._i2c_address}.\n\n\n")
-                
-                self.get_logger().info(f"Successfully dispensed {volume:.2f} mL at address {hex(pump['device']._i2c_address)}.\n\n\n")
-                self.get_logger().info("About to write to log...")
-                write_log(f"Dispensed {volume:.5f} mL of {pump['type']}")
+                    self.get_logger().info(f"Error dispensing at address {pump['device']._i2c_address}.\n\n\n")
+                to_log = f"⚙️ PMP: Dispensed {volume:.5f} mL of {pump['type']} at address {hex(pump['device']._i2c_address)}"
+                self.get_logger().info(f"{to_log}\n\n\n")
+                write_log(to_log)
                 return err, msg
             
         return True, f"Error: pump[{pump_id}] could not be configured. Check wiring to troubleshoot further."
@@ -180,18 +179,21 @@ class PeristalticPump(Node):
         pump1 = AtlasEzoPeristalticPump(0x5a)
         pump2 = AtlasEzoPeristalticPump(0x5b)
         
-        # Store both the pump object and metadata in one dict
-        self._pumps['1']['configured'] = not pump1.error
-        self._pumps['1']['device'] = pump1
         
-        self._pumps['2']['configured'] = not pump2.error
+        # Detect I2C bus and detect device
+        err1, msg1 = pump1._dispense_volume()
+        err2, msg2 = pump2._dispense_volume()
+        
+        # Store both the pump object and metadata in one dict
+        self._pumps['1']['configured'] = not err1
+        self._pumps['1']['device'] = pump1
+        self._pumps['2']['configured'] = not err2
         self._pumps['2']['device'] = pump2
         
-        
         # Check for errors
-        if pump1.error or pump2.error:
+        if err1 or err2:
             return True  # ERROR
-
+        
         return False
 
 

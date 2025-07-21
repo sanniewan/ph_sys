@@ -5,48 +5,47 @@ from rclpy.node import Node
 
 from interfaces.msg import SensorMessageFloat32
 from interfaces.srv import SensorServiceFloat32
-from hardware.config import WATER_PH_SENSORS, WATER_SENSOR_PERIOD, TANKS
-from ph_sensor.ezo_ph_sensor import AtlasEzoPhSensor
-from utils.log import write_log
+from hardware.config import WATER_EC_SENSORS, WATER_SENSOR_PERIOD, TANKS
+from water_ec_sensor.atlas_ezo_ec_sensor import AtlasEzoEcSensor
 
-class WaterPhSensor(Node):
-    """WaterPhSensor Node.
 
-    This class represents a water pH sensor node in a ROS2 system.
-    The node is responsible for reading pH data from the Atlas Scientific pH probe.
+class WaterEcSensor(Node):
+    """WaterEcSensor Node.
+
+    This class represents a water electrical conductivity (EC) sensor node in a ROS2 system.
+    The node is responsible for reading EC data from the Atlas Scientific EC probe.
     It provides a service to read the sensor status and publishes the sensor data at regular intervals.
 
     Attributes:
         BUFFER_SIZE (int): The size of the buffer for the status publisher.
-        INVALID_PH (float): Placeholder value for invalid pH readings.
+        INVALID_EC (float): Placeholder value for invalid EC readings.
         SENSOR_ADDRESSES (dict): Mapping of sensor names to I2C addresses.
         DEFAULT_TEMPERATURE (float): Default temperature value if actual temperature is unavailable.
     """
 
     BUFFER_SIZE = 10
-    INVALID_PH = -99.9
-    SENSOR_ADDRESSES = WATER_PH_SENSORS
+    INVALID_EC = -99.9
+    SENSOR_ADDRESSES = WATER_EC_SENSORS
     INIT_TIMER_PERIOD = 60  # Time in seconds for the initialization timer
     DEFAULT_TEMPERATURE = 25.0  # Degrees Celsius
 
     def __init__(self, tank: str):
-        """Initializes the WaterPhSensor node for the given water tank.
+        """Initializes the WaterEcSensor node for the given water tank.
 
         Args:
-            tank (str): The name of the tank where the pH sensor is located.
+            tank (str): The name of the tank where the EC sensor is located.
                 Valid values are 'nursery', 'cultivation'.
         """
-        super().__init__(f'{tank}_tank_ph_sensor')
+        super().__init__(f'{tank}_tank_ec_sensor')
         self.get_logger().info('Creating node...')
 
-        service_name = f'{tank}_tank_ph_sensor'
+        service_name = f'{tank}_tank_ec_sensor'
         callback_group = ReentrantCallbackGroup()
 
         self._tank = tank
         self._sensor_is_configured = False
         self._temperature = self.DEFAULT_TEMPERATURE  # Initialize with default temperature
         self._init = True
-        self._simulated_data = 0
         
         # Create the service
         self._service = self.create_service(
@@ -57,7 +56,7 @@ class WaterPhSensor(Node):
         )
         self.get_logger().info(f'Created server for {service_name} service.')
 
-        # Create status publisher
+        # Create periodic publish timer
         self._publisher = self.create_publisher(
             SensorMessageFloat32,
             service_name,
@@ -77,20 +76,19 @@ class WaterPhSensor(Node):
 
         # Create initialization timer
         self._init_timer = self.create_timer(
-            60,
+            self.INIT_TIMER_PERIOD,
             self._init_callback,
             callback_group=callback_group
         )
 
-        # Create periodic publish timer
+        # Create publish status timer
         self._publish_timer = self.create_timer(
             WATER_SENSOR_PERIOD,
             self._publish_callback,
             callback_group=callback_group
         )
-        to_log = '🎋 PH_S: Node created successfully.'
-        write_log(to_log)
-        self.get_logger().info(to_log)
+
+        self.get_logger().info('Node created successfully.')
 
     def _temperature_callback(self, msg: SensorMessageFloat32):
         """Callback function for the temperature subscriber.
@@ -108,14 +106,14 @@ class WaterPhSensor(Node):
         request: SensorServiceFloat32.Request,
         response: SensorServiceFloat32.Response,
         ) -> SensorServiceFloat32.Response:
-        """Handles incoming service requests to read the sensor data.
+        """Handles incoming service requests for sensor readings.
 
         Args:
             request (SensorServiceFloat32.Request): The service request message.
             response (SensorServiceFloat32.Response): The service response message.
 
         Returns:
-            SensorServiceFloat32.Response: The updated response with error flag, message, and pH data.
+            SensorServiceFloat32.Response: The updated response with error flag, message, and EC data.
         """
         error, message, data = self._read_sensor()
         response.err = error
@@ -125,7 +123,7 @@ class WaterPhSensor(Node):
 
     def _init_callback(self) -> None:
         """Initialization callback to configure the sensor.
-        
+
         If the sensor is successfully configured, this callback cancels itself.
         """
         if self._init:
@@ -153,39 +151,19 @@ class WaterPhSensor(Node):
         if not self._sensor_is_configured:
             err, msg = self._configure_sensor()
             if err:
-                write_log(f"    ☄️  PH: Warning from pH sensor: {msg}")
                 return self._handle_sensor_error(msg)
+
             else:
                 self._sensor_is_configured = True
                 self.get_logger().info('Sensor configured successfully.')
 
-        # Use the latest temperature value for pH compensation
+        # Use the latest temperature value for EC compensation
         temperature = self._temperature
 
         err, msg, data = self._sensor.read(temperature)
         if err:
             return self._handle_sensor_error(msg)
 
-        self._publish_status(err, msg, data)
-        return err, msg, data
-
-    def _simulate_read_sensor(self) -> tuple[bool, str, float]:
-        """Uses made-up numbers and publishes the status.
-
-        Returns:
-            tuple: A tuple containing:
-                - bool: Error flag, True if an error occurred, False otherwise.
-                - str: Error message, or an empty string if no error occurred.
-                - float: Value from reading the sensor.
-        """
-        err = False
-        msg = "This is simulated data"
-        data = float(self._simulated_data)  # fabricated ph data
-        if self._simulated_data >= 9:
-            self._simulated_data = 0
-        else:
-            self._simulated_data += 0.12
-            
         self._publish_status(err, msg, data)
         return err, msg, data
 
@@ -204,8 +182,7 @@ class WaterPhSensor(Node):
             msg = f'Invalid tank name: {self._tank} ({e})'
             return True, msg
         
-        self._sensor = AtlasEzoPhSensor(address)
-        
+        self._sensor = AtlasEzoEcSensor(address)
         if self._sensor.error:
             return True, self._sensor.message
         
@@ -221,11 +198,11 @@ class WaterPhSensor(Node):
             tuple: A tuple containing:
                 - bool: Error flag, set to True.
                 - str: The error message.
-                - float: An error pH value of -99.9.
+                - float: An error EC value of -99.9.
         """
         self.get_logger().error(message)
-        self._publish_status(True, message, self.INVALID_PH)
-        return True, message, self.INVALID_PH
+        self._publish_status(True, message, self.INVALID_EC)
+        return True, message, self.INVALID_EC
 
     def _publish_status(self, error: bool, message: str, data: float) -> None:
         """Publishes the sensor's status.
@@ -235,10 +212,6 @@ class WaterPhSensor(Node):
             message (str): Error or status message.
             data (float): Electrical conductivity value.
         """
-        to_log = f'🌱 PH_S: pH sensor reading: pH={data}'
-        write_log(to_log)
-        self.get_logger().info(to_log)
-        
         status_msg = SensorMessageFloat32()
         status_msg.err = error
         status_msg.msg = message
@@ -248,17 +221,13 @@ class WaterPhSensor(Node):
     def _publish_callback(self):
         """Callback function to publish sensor data periodically."""
         self._read_sensor()
-        self.get_logger().info('Sensor read successfully.')
-        
-        # self._simulate_read_sensor()
-        # self.get_logger().info('Sensor readings simulated.')
 
 
 def main(args=None):
-    """Main entry point for the WaterPhSensor node."""
+    """Main entry point for the WaterEcSensor node."""
     rclpy.init(args=args)
 
-    node = WaterPhSensor('cultivation')
+    node = WaterEcSensor('cultivation')
 
     executor = MultiThreadedExecutor(num_threads=4)
     executor.add_node(node)
