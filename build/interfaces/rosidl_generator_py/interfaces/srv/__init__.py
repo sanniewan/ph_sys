@@ -3,6 +3,7 @@ from interfaces.srv._actuator_service_rwc import ActuatorServiceRWC  # noqa: F40
 from interfaces.srv._air_sensor_service import AirSensorService  # noqa: F401
 from interfaces.srv._air_sensor_svc import AirSensorSvc  # noqa: F401
 from interfaces.srv._conveyor_service import ConveyorService  # noqa: F401
+from interfaces.srv._ec_controller_service import ECControllerService  # noqa: F401
 from interfaces.srv._expander_service import ExpanderService  # noqa: F401
 from interfaces.srv._flow_meter_service import FlowMeterService  # noqa: F401
 from interfaces.srv._get_bool import GetBool  # noqa: F401

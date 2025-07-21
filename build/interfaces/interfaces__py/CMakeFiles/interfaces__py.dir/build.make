@@ -88,8 +88,9 @@ interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_li
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_lift_service.py
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_peristaltic_pump_message.py
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_peristaltic_pump_service.py
-interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_ph_controller_message.py
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_controller_message.py
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_ph_controller_service.py
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_ec_controller_service.py
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_sensor_message_int16.py
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_sensor_service_int16.py
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_sensor_message_float32.py
@@ -137,8 +138,9 @@ interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_li
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_lift_service_s.c
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_peristaltic_pump_message_s.c
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_peristaltic_pump_service_s.c
-interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_ph_controller_message_s.c
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_controller_message_s.c
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_ph_controller_service_s.c
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_ec_controller_service_s.c
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_sensor_message_int16_s.c
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_sensor_service_int16_s.c
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/msg/_sensor_message_float32_s.c
@@ -198,8 +200,9 @@ rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c:
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/srv/LiftService.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/msg/PeristalticPumpMessage.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/srv/PeristalticPumpService.idl
-rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/msg/PhControllerMessage.idl
+rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/msg/ControllerMessage.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/srv/PhControllerService.idl
+rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/srv/ECControllerService.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/msg/SensorMessageInt16.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/srv/SensorServiceInt16.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/msg/SensorMessageFloat32.idl
@@ -294,11 +297,14 @@ rosidl_generator_py/interfaces/msg/_peristaltic_pump_message.py: rosidl_generato
 rosidl_generator_py/interfaces/srv/_peristaltic_pump_service.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/srv/_peristaltic_pump_service.py
 
-rosidl_generator_py/interfaces/msg/_ph_controller_message.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_ph_controller_message.py
+rosidl_generator_py/interfaces/msg/_controller_message.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_controller_message.py
 
 rosidl_generator_py/interfaces/srv/_ph_controller_service.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/srv/_ph_controller_service.py
+
+rosidl_generator_py/interfaces/srv/_ec_controller_service.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/srv/_ec_controller_service.py
 
 rosidl_generator_py/interfaces/msg/_sensor_message_int16.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_sensor_message_int16.py
@@ -441,11 +447,14 @@ rosidl_generator_py/interfaces/msg/_peristaltic_pump_message_s.c: rosidl_generat
 rosidl_generator_py/interfaces/srv/_peristaltic_pump_service_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/srv/_peristaltic_pump_service_s.c
 
-rosidl_generator_py/interfaces/msg/_ph_controller_message_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_ph_controller_message_s.c
+rosidl_generator_py/interfaces/msg/_controller_message_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_controller_message_s.c
 
 rosidl_generator_py/interfaces/srv/_ph_controller_service_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/srv/_ph_controller_service_s.c
+
+rosidl_generator_py/interfaces/srv/_ec_controller_service_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/srv/_ec_controller_service_s.c
 
 rosidl_generator_py/interfaces/msg/_sensor_message_int16_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/msg/_sensor_message_int16_s.c
@@ -546,6 +555,8 @@ interfaces__py: rosidl_generator_py/interfaces/msg/_camera_instruction.py
 interfaces__py: rosidl_generator_py/interfaces/msg/_camera_instruction_s.c
 interfaces__py: rosidl_generator_py/interfaces/msg/_camera_status.py
 interfaces__py: rosidl_generator_py/interfaces/msg/_camera_status_s.c
+interfaces__py: rosidl_generator_py/interfaces/msg/_controller_message.py
+interfaces__py: rosidl_generator_py/interfaces/msg/_controller_message_s.c
 interfaces__py: rosidl_generator_py/interfaces/msg/_conveyor_message.py
 interfaces__py: rosidl_generator_py/interfaces/msg/_conveyor_message_s.c
 interfaces__py: rosidl_generator_py/interfaces/msg/_flow_meter_message.py
@@ -568,8 +579,6 @@ interfaces__py: rosidl_generator_py/interfaces/msg/_light_status.py
 interfaces__py: rosidl_generator_py/interfaces/msg/_light_status_s.c
 interfaces__py: rosidl_generator_py/interfaces/msg/_peristaltic_pump_message.py
 interfaces__py: rosidl_generator_py/interfaces/msg/_peristaltic_pump_message_s.c
-interfaces__py: rosidl_generator_py/interfaces/msg/_ph_controller_message.py
-interfaces__py: rosidl_generator_py/interfaces/msg/_ph_controller_message_s.c
 interfaces__py: rosidl_generator_py/interfaces/msg/_potentiometer_message.py
 interfaces__py: rosidl_generator_py/interfaces/msg/_potentiometer_message_s.c
 interfaces__py: rosidl_generator_py/interfaces/msg/_sensor_message_float32.py
@@ -599,6 +608,8 @@ interfaces__py: rosidl_generator_py/interfaces/srv/_air_sensor_svc.py
 interfaces__py: rosidl_generator_py/interfaces/srv/_air_sensor_svc_s.c
 interfaces__py: rosidl_generator_py/interfaces/srv/_conveyor_service.py
 interfaces__py: rosidl_generator_py/interfaces/srv/_conveyor_service_s.c
+interfaces__py: rosidl_generator_py/interfaces/srv/_ec_controller_service.py
+interfaces__py: rosidl_generator_py/interfaces/srv/_ec_controller_service_s.c
 interfaces__py: rosidl_generator_py/interfaces/srv/_expander_service.py
 interfaces__py: rosidl_generator_py/interfaces/srv/_expander_service_s.c
 interfaces__py: rosidl_generator_py/interfaces/srv/_flow_meter_service.py

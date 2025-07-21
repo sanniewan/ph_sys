@@ -1,2 +1,2 @@
 float32   ph
-string    pump_id
+string    pump_type

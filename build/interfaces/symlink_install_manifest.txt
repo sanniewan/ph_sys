@@ -7,6 +7,7 @@
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/air_status.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/camera_instruction.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/camera_status.h
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/controller_message.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/conveyor_message.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/actuator_message__functions.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/actuator_message__struct.h
@@ -32,6 +33,9 @@
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/camera_status__functions.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/camera_status__struct.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/camera_status__type_support.h
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/controller_message__functions.h
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/controller_message__struct.h
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/controller_message__type_support.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/conveyor_message__functions.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/conveyor_message__struct.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/conveyor_message__type_support.h
@@ -136,6 +140,9 @@
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/conveyor_service__functions.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/conveyor_service__struct.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/conveyor_service__type_support.h
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/ec_controller_service__functions.h
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/ec_controller_service__struct.h
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/ec_controller_service__type_support.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/expander_service__functions.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/expander_service__struct.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/expander_service__type_support.h
@@ -175,6 +182,7 @@
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/water_level_detector_svc__functions.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/water_level_detector_svc__struct.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/water_level_detector_svc__type_support.h
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/ec_controller_service.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/expander_service.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/flow_meter_service.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/get_bool.h
@@ -198,6 +206,7 @@
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/air_status__rosidl_typesupport_fastrtps_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/camera_instruction__rosidl_typesupport_fastrtps_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/camera_status__rosidl_typesupport_fastrtps_c.h
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/controller_message__rosidl_typesupport_fastrtps_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/conveyor_message__rosidl_typesupport_fastrtps_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/flow_meter_message__rosidl_typesupport_fastrtps_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/irrigation_instruction__rosidl_typesupport_fastrtps_c.h
@@ -225,6 +234,7 @@
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/air_sensor_service__rosidl_typesupport_fastrtps_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/air_sensor_svc__rosidl_typesupport_fastrtps_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/conveyor_service__rosidl_typesupport_fastrtps_c.h
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/ec_controller_service__rosidl_typesupport_fastrtps_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/expander_service__rosidl_typesupport_fastrtps_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/flow_meter_service__rosidl_typesupport_fastrtps_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/get_bool__rosidl_typesupport_fastrtps_c.h
@@ -246,6 +256,7 @@
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/air_status__rosidl_typesupport_introspection_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/camera_instruction__rosidl_typesupport_introspection_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/camera_status__rosidl_typesupport_introspection_c.h
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/controller_message__rosidl_typesupport_introspection_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/conveyor_message__rosidl_typesupport_introspection_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/flow_meter_message__rosidl_typesupport_introspection_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/irrigation_instruction__rosidl_typesupport_introspection_c.h
@@ -273,6 +284,7 @@
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/air_sensor_service__rosidl_typesupport_introspection_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/air_sensor_svc__rosidl_typesupport_introspection_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/conveyor_service__rosidl_typesupport_introspection_c.h
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/ec_controller_service__rosidl_typesupport_introspection_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/expander_service__rosidl_typesupport_introspection_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/flow_meter_service__rosidl_typesupport_introspection_c.h
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/get_bool__rosidl_typesupport_introspection_c.h
@@ -294,6 +306,7 @@
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/air_status.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/camera_instruction.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/camera_status.hpp
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/controller_message.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/conveyor_message.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/actuator_message__builder.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/actuator_message__struct.hpp
@@ -327,6 +340,10 @@
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/camera_status__struct.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/camera_status__traits.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/camera_status__type_support.hpp
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/controller_message__builder.hpp
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/controller_message__struct.hpp
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/controller_message__traits.hpp
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/controller_message__type_support.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/conveyor_message__builder.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/conveyor_message__struct.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/conveyor_message__traits.hpp
@@ -457,6 +474,10 @@
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/conveyor_service__struct.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/conveyor_service__traits.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/conveyor_service__type_support.hpp
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/ec_controller_service__builder.hpp
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/ec_controller_service__struct.hpp
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/ec_controller_service__traits.hpp
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/ec_controller_service__type_support.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/expander_service__builder.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/expander_service__struct.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/expander_service__traits.hpp
@@ -509,6 +530,7 @@
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/water_level_detector_svc__struct.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/water_level_detector_svc__traits.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/water_level_detector_svc__type_support.hpp
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/ec_controller_service.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/expander_service.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/flow_meter_service.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/get_bool.hpp
@@ -530,6 +552,7 @@
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/air_status__rosidl_typesupport_fastrtps_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/camera_instruction__rosidl_typesupport_fastrtps_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/camera_status__rosidl_typesupport_fastrtps_cpp.hpp
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/controller_message__rosidl_typesupport_fastrtps_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/conveyor_message__rosidl_typesupport_fastrtps_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/flow_meter_message__rosidl_typesupport_fastrtps_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/irrigation_instruction__rosidl_typesupport_fastrtps_cpp.hpp
@@ -557,6 +580,7 @@
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/air_sensor_service__rosidl_typesupport_fastrtps_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/air_sensor_svc__rosidl_typesupport_fastrtps_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/conveyor_service__rosidl_typesupport_fastrtps_cpp.hpp
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/ec_controller_service__rosidl_typesupport_fastrtps_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/expander_service__rosidl_typesupport_fastrtps_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/flow_meter_service__rosidl_typesupport_fastrtps_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/get_bool__rosidl_typesupport_fastrtps_cpp.hpp
@@ -578,6 +602,7 @@
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/air_status__rosidl_typesupport_introspection_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/camera_instruction__rosidl_typesupport_introspection_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/camera_status__rosidl_typesupport_introspection_cpp.hpp
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/controller_message__rosidl_typesupport_introspection_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/conveyor_message__rosidl_typesupport_introspection_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/flow_meter_message__rosidl_typesupport_introspection_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/msg/detail/irrigation_instruction__rosidl_typesupport_introspection_cpp.hpp
@@ -604,6 +629,7 @@
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/air_sensor_service__rosidl_typesupport_introspection_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/air_sensor_svc__rosidl_typesupport_introspection_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/conveyor_service__rosidl_typesupport_introspection_cpp.hpp
+/workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/ec_controller_service__rosidl_typesupport_introspection_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/expander_service__rosidl_typesupport_introspection_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/flow_meter_service__rosidl_typesupport_introspection_cpp.hpp
 /workspace/ph_sys_ws/install/interfaces/include/interfaces/interfaces/srv/detail/get_bool__rosidl_typesupport_introspection_cpp.hpp
@@ -648,6 +674,8 @@
 /workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_camera_instruction_s.c
 /workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_camera_status.py
 /workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_camera_status_s.c
+/workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_controller_message.py
+/workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_controller_message_s.c
 /workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_conveyor_message.py
 /workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_conveyor_message_s.c
 /workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_flow_meter_message.py
@@ -701,6 +729,8 @@
 /workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_air_sensor_svc_s.c
 /workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_conveyor_service.py
 /workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_conveyor_service_s.c
+/workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_ec_controller_service.py
+/workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_ec_controller_service_s.c
 /workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_expander_service.py
 /workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_expander_service_s.c
 /workspace/ph_sys_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_flow_meter_service.py
@@ -749,8 +779,9 @@
 /workspace/ph_sys_ws/install/interfaces/share/interfaces/srv/LiftService.idl
 /workspace/ph_sys_ws/install/interfaces/share/interfaces/msg/PeristalticPumpMessage.idl
 /workspace/ph_sys_ws/install/interfaces/share/interfaces/srv/PeristalticPumpService.idl
-/workspace/ph_sys_ws/install/interfaces/share/interfaces/msg/PhControllerMessage.idl
+/workspace/ph_sys_ws/install/interfaces/share/interfaces/msg/ControllerMessage.idl
 /workspace/ph_sys_ws/install/interfaces/share/interfaces/srv/PhControllerService.idl
+/workspace/ph_sys_ws/install/interfaces/share/interfaces/srv/ECControllerService.idl
 /workspace/ph_sys_ws/install/interfaces/share/interfaces/msg/SensorMessageInt16.idl
 /workspace/ph_sys_ws/install/interfaces/share/interfaces/srv/SensorServiceInt16.idl
 /workspace/ph_sys_ws/install/interfaces/share/interfaces/msg/SensorMessageFloat32.idl
@@ -816,10 +847,13 @@
 /workspace/ph_sys_ws/install/interfaces/share/interfaces/srv/PeristalticPumpService.srv
 /workspace/ph_sys_ws/install/interfaces/share/interfaces/srv/PeristalticPumpService_Request.msg
 /workspace/ph_sys_ws/install/interfaces/share/interfaces/srv/PeristalticPumpService_Response.msg
-/workspace/ph_sys_ws/install/interfaces/share/interfaces/msg/PhControllerMessage.msg
+/workspace/ph_sys_ws/install/interfaces/share/interfaces/msg/ControllerMessage.msg
 /workspace/ph_sys_ws/install/interfaces/share/interfaces/srv/PhControllerService.srv
 /workspace/ph_sys_ws/install/interfaces/share/interfaces/srv/PhControllerService_Request.msg
 /workspace/ph_sys_ws/install/interfaces/share/interfaces/srv/PhControllerService_Response.msg
+/workspace/ph_sys_ws/install/interfaces/share/interfaces/srv/ECControllerService.srv
+/workspace/ph_sys_ws/install/interfaces/share/interfaces/srv/ECControllerService_Request.msg
+/workspace/ph_sys_ws/install/interfaces/share/interfaces/srv/ECControllerService_Response.msg
 /workspace/ph_sys_ws/install/interfaces/share/interfaces/msg/SensorMessageInt16.msg
 /workspace/ph_sys_ws/install/interfaces/share/interfaces/srv/SensorServiceInt16.srv
 /workspace/ph_sys_ws/install/interfaces/share/interfaces/srv/SensorServiceInt16_Request.msg

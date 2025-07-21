@@ -161,16 +161,21 @@ CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/peristalt
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/peristaltic_pump_service__struct.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/peristaltic_pump_service__traits.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/peristaltic_pump_service__type_support.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/ph_controller_message.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/ph_controller_message__builder.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/ph_controller_message__struct.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/ph_controller_message__traits.hpp
-CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/ph_controller_message__type_support.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/controller_message.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/controller_message__builder.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/controller_message__struct.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/controller_message__traits.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/controller_message__type_support.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/ph_controller_service.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/ph_controller_service__builder.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/ph_controller_service__struct.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/ph_controller_service__traits.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/ph_controller_service__type_support.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/ec_controller_service.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/ec_controller_service__builder.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/ec_controller_service__struct.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/ec_controller_service__traits.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/ec_controller_service__type_support.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/sensor_message_int16.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/sensor_message_int16__builder.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/sensor_message_int16__struct.hpp
@@ -337,8 +342,9 @@ rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfa
 rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/srv/LiftService.idl
 rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/msg/PeristalticPumpMessage.idl
 rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/srv/PeristalticPumpService.idl
-rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/msg/PhControllerMessage.idl
+rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/msg/ControllerMessage.idl
 rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/srv/PhControllerService.idl
+rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/srv/ECControllerService.idl
 rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/msg/SensorMessageInt16.idl
 rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/srv/SensorServiceInt16.idl
 rosidl_generator_cpp/interfaces/msg/actuator_message.hpp: rosidl_adapter/interfaces/msg/SensorMessageFloat32.idl
@@ -652,20 +658,20 @@ rosidl_generator_cpp/interfaces/srv/detail/peristaltic_pump_service__traits.hpp:
 rosidl_generator_cpp/interfaces/srv/detail/peristaltic_pump_service__type_support.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/peristaltic_pump_service__type_support.hpp
 
-rosidl_generator_cpp/interfaces/msg/ph_controller_message.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/ph_controller_message.hpp
+rosidl_generator_cpp/interfaces/msg/controller_message.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/controller_message.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/ph_controller_message__builder.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/ph_controller_message__builder.hpp
+rosidl_generator_cpp/interfaces/msg/detail/controller_message__builder.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/controller_message__builder.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/ph_controller_message__struct.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/ph_controller_message__struct.hpp
+rosidl_generator_cpp/interfaces/msg/detail/controller_message__struct.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/controller_message__struct.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/ph_controller_message__traits.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/ph_controller_message__traits.hpp
+rosidl_generator_cpp/interfaces/msg/detail/controller_message__traits.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/controller_message__traits.hpp
 
-rosidl_generator_cpp/interfaces/msg/detail/ph_controller_message__type_support.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/ph_controller_message__type_support.hpp
+rosidl_generator_cpp/interfaces/msg/detail/controller_message__type_support.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/detail/controller_message__type_support.hpp
 
 rosidl_generator_cpp/interfaces/srv/ph_controller_service.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/ph_controller_service.hpp
@@ -681,6 +687,21 @@ rosidl_generator_cpp/interfaces/srv/detail/ph_controller_service__traits.hpp: ro
 
 rosidl_generator_cpp/interfaces/srv/detail/ph_controller_service__type_support.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/ph_controller_service__type_support.hpp
+
+rosidl_generator_cpp/interfaces/srv/ec_controller_service.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/ec_controller_service.hpp
+
+rosidl_generator_cpp/interfaces/srv/detail/ec_controller_service__builder.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/ec_controller_service__builder.hpp
+
+rosidl_generator_cpp/interfaces/srv/detail/ec_controller_service__struct.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/ec_controller_service__struct.hpp
+
+rosidl_generator_cpp/interfaces/srv/detail/ec_controller_service__traits.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/ec_controller_service__traits.hpp
+
+rosidl_generator_cpp/interfaces/srv/detail/ec_controller_service__type_support.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/ec_controller_service__type_support.hpp
 
 rosidl_generator_cpp/interfaces/msg/sensor_message_int16.hpp: rosidl_generator_cpp/interfaces/msg/actuator_message.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/msg/sensor_message_int16.hpp
@@ -1081,6 +1102,7 @@ interfaces__cpp: rosidl_generator_cpp/interfaces/msg/air_sensor_message.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/air_status.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/camera_instruction.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/camera_status.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/controller_message.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/conveyor_message.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/actuator_message__builder.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/actuator_message__struct.hpp
@@ -1114,6 +1136,10 @@ interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_status__build
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_status__struct.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_status__traits.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/camera_status__type_support.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/controller_message__builder.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/controller_message__struct.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/controller_message__traits.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/controller_message__type_support.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/conveyor_message__builder.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/conveyor_message__struct.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/conveyor_message__traits.hpp
@@ -1158,10 +1184,6 @@ interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_mes
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__struct.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__traits.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/peristaltic_pump_message__type_support.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/ph_controller_message__builder.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/ph_controller_message__struct.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/ph_controller_message__traits.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/ph_controller_message__type_support.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/potentiometer_message__builder.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/potentiometer_message__struct.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/detail/potentiometer_message__traits.hpp
@@ -1208,7 +1230,6 @@ interfaces__cpp: rosidl_generator_cpp/interfaces/msg/lift_status.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/light_instruction.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/light_status.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/peristaltic_pump_message.hpp
-interfaces__cpp: rosidl_generator_cpp/interfaces/msg/ph_controller_message.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/potentiometer_message.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/sensor_message_float32.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/msg/sensor_message_int16.hpp
@@ -1243,6 +1264,10 @@ interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/conveyor_service__bu
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/conveyor_service__struct.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/conveyor_service__traits.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/conveyor_service__type_support.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/ec_controller_service__builder.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/ec_controller_service__struct.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/ec_controller_service__traits.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/ec_controller_service__type_support.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/expander_service__builder.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/expander_service__struct.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/expander_service__traits.hpp
@@ -1295,6 +1320,7 @@ interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/water_level_detector
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/water_level_detector_svc__struct.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/water_level_detector_svc__traits.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/water_level_detector_svc__type_support.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/srv/ec_controller_service.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/expander_service.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/flow_meter_service.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/get_bool.hpp

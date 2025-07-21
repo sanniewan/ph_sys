@@ -3,7 +3,7 @@ from rclpy.callback_groups import ReentrantCallbackGroup, MutuallyExclusiveCallb
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 
-from interfaces.msg import PhControllerMessage
+from interfaces.msg import ControllerMessage
 from interfaces.srv import PeristalticPumpService
 # from hardware.config import WATER_PH_SENSORS, WATER_SENSOR_PERIOD, TANKS
 from peristaltic_pump.ezo_peristaltic_pump import AtlasEzoPeristalticPump
@@ -17,7 +17,7 @@ class PeristalticPump(Node):
 
     """
     
-    BUFFER_SIZE = 1
+    BUFFER_SIZE = 4
     INIT_TIMER_PERIOD = 6*60  # Time in seconds for the initialization timer
     
     def __init__(self):
@@ -28,9 +28,9 @@ class PeristalticPump(Node):
         callback_group = ReentrantCallbackGroup()
         
         self._pumps = {
-            '1': {'configured': False, 'device': None, 'type': 'ph_up'},
-            '2': {'configured': False, 'device': None, 'type': 'ph_down'},
-            '3': {'configured': False, 'device': None, 'type': 'ec_up'},
+            'ph_up': {'configured': False, 'device': None, 'id': '1'},
+            'ph_down': {'configured': False, 'device': None, 'id': '2'},
+            'ec_up': {'configured': False, 'device': None, 'id': '3'},
         }
         self._init = True
         
@@ -44,14 +44,23 @@ class PeristalticPump(Node):
         
         # Create subscriber to ph_controller topic
         self._ph_controller_subscriber = self.create_subscription(
-            PhControllerMessage,
+            ControllerMessage,
             'ph_controller_node',
-            self._ph_controller_callback,
+            self._controller_callback,
             self.BUFFER_SIZE,
             callback_group=callback_group
         )
         self.get_logger().info(f'Subscribed to ph_controller_node')
         
+        # Create subscriber to ec_controller topic
+        self._ec_controller_subscriber = self.create_subscription(
+            ControllerMessage,
+            'ec_controller_node',
+            self._controller_callback,
+            self.BUFFER_SIZE,
+            callback_group=callback_group
+        )
+        self.get_logger().info(f'Subscribed to ec_controller_node')
         
         # Create initialization timer
         self._init_timer = self.create_timer(
@@ -67,19 +76,19 @@ class PeristalticPump(Node):
         write_log(to_log)
         self.get_logger().info(to_log)
 
-    def _ph_controller_callback(self, msg: PhControllerMessage):
-        """Callback for the pH controller to send commands to the pump.
+    def _controller_callback(self, msg: ControllerMessage):
+        """Callback for the controller to send commands to the pump.
         
         Args:
-            msg (PhControllerMessage): The received command from the pH controller.
+            msg (ControllerMessage): The received command from the controller.
         """
-        self.get_logger().info(f'Received controller message to pump id: {msg.pump_id}')
+        self.get_logger().info(f'Received controller message to pump type: {msg.pump_type}')
         
         if msg.warning:
-            to_log = f"    ☄️  CTRL: Warning from pH controller: {msg.msg}. Dispensing operation skipped."
+            to_log = f"    ☄️  CTRL: Warning from controller: {msg.msg}. Dispensing operation skipped."
             self.get_logger().warning(to_log)
             write_log(to_log)
-        self._dispense_volume(msg.volume, msg.pump_id)
+        self._dispense_volume(msg.volume, msg.pump_type)
     
     def _service_callback(
         self,
@@ -121,12 +130,12 @@ class PeristalticPump(Node):
         return None
         ## do this later
     
-    def _dispense_volume(self, volume: float=0.00, pump_id: str="0") -> tuple[bool,str]:
+    def _dispense_volume(self, volume: float=0.00, pump_type: str="0") -> tuple[bool,str]:
         """Dispense specified volume.
 
         Args:
             volume: in mL
-            pump_id: which pump to use. if pump_id == "0" then dispense 0 to all
+            pump_type: which pump to use. if pump_type == "0" then check if all pumps configured
             
         Returns:
             bool: error flag - True if an error occured, False otherwise.
@@ -145,27 +154,27 @@ class PeristalticPump(Node):
                 write_log(to_log)
                 self.get_logger().warning(to_log)
         
-        # Check pump id:
-        if pump_id == "0":
+        # Check pump type:
+        if pump_type == "0":
             return all_pumps_clear, "All pumps configured" if all_pumps_clear else "Some pump not configured correct."
-        elif pump_id not in self._pumps:
-            to_log = f"    ☄️ PMP: Error; pump_id '{pump_id}' not found."
+        elif pump_type not in self._pumps:
+            to_log = f"    ☄️ PMP: Error; pump_type '{pump_type}' not found."
             self.get_logger().info(to_log)
             return True, to_log
         
-        pump = self._pumps[pump_id]  # The value at pump_id key
+        pump = self._pumps[pump_type]  # The value at [pump_type] key
         if pump['configured'] and pump['device'] is not None:
                 # Call the pump object to dispense volume
                 err, msg = pump['device']._dispense_volume(volume)
                 self.get_logger().info(f"Trying to dispense...")
                 if err:
                     self.get_logger().info(f"Error dispensing at address {pump['device']._i2c_address}.\n\n\n")
-                to_log = f"⚙️ PMP: Dispensed {volume:.5f} mL of {pump['type']} at address {hex(pump['device']._i2c_address)}"
+                to_log = f"⚙️ PMP: Dispensed {volume:.5f} mL of {pump_type} at address {hex(pump['device']._i2c_address)}"
                 self.get_logger().info(f"{to_log}\n\n\n")
                 write_log(to_log)
                 return err, msg
             
-        return True, f"Error: pump[{pump_id}] could not be configured. Check wiring to troubleshoot further."
+        return True, f"Error: pump[{pump_type}] at ID '{pump['id']}' could not be configured. Check wiring to troubleshoot further."
                 
     
     def _configure_device(self) -> bool:
@@ -178,20 +187,26 @@ class PeristalticPump(Node):
        # Create pump objects
         pump1 = AtlasEzoPeristalticPump(0x5a)
         pump2 = AtlasEzoPeristalticPump(0x5b)
+        pump3 = AtlasEzoPeristalticPump(0x5c)
+        
         
         
         # Detect I2C bus and detect device
         err1, msg1 = pump1._dispense_volume()
         err2, msg2 = pump2._dispense_volume()
+        err3, msg3 = pump3._dispense_volume()
+        
         
         # Store both the pump object and metadata in one dict
-        self._pumps['1']['configured'] = not err1
-        self._pumps['1']['device'] = pump1
-        self._pumps['2']['configured'] = not err2
-        self._pumps['2']['device'] = pump2
+        self._pumps['ph_up']['configured'] = not err1
+        self._pumps['ph_up']['device'] = pump1
+        self._pumps['ph_down']['configured'] = not err2
+        self._pumps['ph_down']['device'] = pump2
+        self._pumps['ec_up']['configured'] = not err3
+        self._pumps['ec_up']['device'] = pump3
         
         # Check for errors
-        if err1 or err2:
+        if err1 or err2 or err3:
             return True  # ERROR
         
         return False

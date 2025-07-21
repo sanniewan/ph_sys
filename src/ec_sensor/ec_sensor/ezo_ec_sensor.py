@@ -5,7 +5,7 @@ from typing import Tuple
 import board
 from busio import I2C
 
-from external.AtlasI2C import AtlasI2C
+from external.atlas import AtlasI2C
 
 
 class AtlasEzoEcSensor:

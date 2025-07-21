@@ -3,7 +3,7 @@ from rclpy.callback_groups import ReentrantCallbackGroup, MutuallyExclusiveCallb
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 
-from interfaces.msg import PhControllerMessage
+from interfaces.msg import ControllerMessage
 from interfaces.srv import PhControllerService
 
 
@@ -11,8 +11,6 @@ from interfaces.msg import SensorMessageFloat32
 
 from ph_controller.controller_ph import Controller
 from utils.log import write_log
-
-# from hardware.config import WATER_PH_SENSORS, WATER_SENSOR_PERIOD, TANKS
 
 
 class PhControllerNode(Node):
@@ -26,7 +24,8 @@ class PhControllerNode(Node):
     DEFAULT_PH = 6.0
     DEFAULT_KP = 0.01
     BUFFER_SIZE = 1
-    PH_CONTROLLER_PERIOD = 3*60  # seconds
+    PH_CONTROLLER_PERIOD = 0.5*60  # seconds   DEVELOPMENT
+    # PH_CONTROLLER_PERIOD = 60*60   # 1 hour    TESTING
     
     def __init__(self):
         super().__init__('ph_controller_node')
@@ -42,7 +41,7 @@ class PhControllerNode(Node):
         
         # Create the service
         self._service = self.create_service(
-            PhControllerService,  # ** Add this service
+            PhControllerService,
             service_name,
             self._service_callback,
             callback_group=callback_group
@@ -51,7 +50,7 @@ class PhControllerNode(Node):
 
         # Create pump command publisher
         self._publisher = self.create_publisher(
-            PhControllerMessage,
+            ControllerMessage,
             service_name,
             self.BUFFER_SIZE
         )
@@ -73,7 +72,7 @@ class PhControllerNode(Node):
         )
         self.get_logger().info(f'Subscribed to cultivation_tank_ph_sensor topic')
         
-        to_log = '🎋 CTRL: Node created successfully.'
+        to_log = '🎋 CTRL_PH: Node created successfully.'
         write_log(to_log)
         self.get_logger().info(to_log)
         
@@ -91,11 +90,11 @@ class PhControllerNode(Node):
             
     def _publish_command(self, warning: bool, message: str, volume: float) -> None:
         
-        which_pump = "1" if volume >= 0 else "2"  # ph_up pump (1) if positive volume, else ph_down pump (2)
-        abs_vol = abs(float(volume))
+        which_pump = "ph_up" if volume >= 0 else "ph_down"  # ph_up pump (1) if positive volume, else ph_down pump (2)
+        abs_vol = round(abs(float(volume)), 3)
         
-        command_msg = PhControllerMessage()
-        command_msg.pump_id = which_pump
+        command_msg = ControllerMessage()
+        command_msg.pump_type = which_pump
         command_msg.warning = warning
         command_msg.msg = message
         command_msg.volume = abs_vol
@@ -104,7 +103,7 @@ class PhControllerNode(Node):
         self._publisher.publish(command_msg)
         
         # Write to logs
-        to_log = f'🧮 CTRL: Published command: pump_id: {which_pump} | warning: {warning} | message: {message}| volume: {abs_vol}'
+        to_log = f'🧮 CTRL_PH: Published command: pump_type: {which_pump} | warning: {warning} | message: {message}| volume: {abs_vol}'
         write_log(to_log)
         self.get_logger().info(to_log)
         
@@ -122,7 +121,7 @@ class PhControllerNode(Node):
         if not self._controller_is_configured:
             self._configure_controller()
             
-        to_log = f'📝 CTRL: Publishing to peristaltic pumps: pH={self._ph}'
+        to_log = f'📝 CTRL_PH: Publishing to peristaltic pumps: pH={round(self._ph, 3)}'
         self.get_logger().info(to_log)
         write_log(to_log)
         self._compute_volume(self._ph)
@@ -147,7 +146,7 @@ class PhControllerNode(Node):
         
         self.get_logger().info("🥶 service callback ph Controller Node activating")
         warning, msg, volume = self._compute_volume(current_ph)
-        response.pump_id = request.pump_id
+        response.pump_type = request.pump_type
         response.err = warning
         response.msg = msg
         response.volume = volume

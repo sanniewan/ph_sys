@@ -34,8 +34,8 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // pump_id
-#include "rosidl_runtime_c/string_functions.h"  // pump_id
+#include "rosidl_runtime_c/string.h"  // pump_type
+#include "rosidl_runtime_c/string_functions.h"  // pump_type
 
 // forward declare type support functions
 
@@ -56,9 +56,9 @@ static bool _PhControllerService_Request__cdr_serialize(
     cdr << ros_message->ph;
   }
 
-  // Field name: pump_id
+  // Field name: pump_type
   {
-    const rosidl_runtime_c__String * str = &ros_message->pump_id;
+    const rosidl_runtime_c__String * str = &ros_message->pump_type;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -87,18 +87,18 @@ static bool _PhControllerService_Request__cdr_deserialize(
     cdr >> ros_message->ph;
   }
 
-  // Field name: pump_id
+  // Field name: pump_type
   {
     std::string tmp;
     cdr >> tmp;
-    if (!ros_message->pump_id.data) {
-      rosidl_runtime_c__String__init(&ros_message->pump_id);
+    if (!ros_message->pump_type.data) {
+      rosidl_runtime_c__String__init(&ros_message->pump_type);
     }
     bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->pump_id,
+      &ros_message->pump_type,
       tmp.c_str());
     if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'pump_id'\n");
+      fprintf(stderr, "failed to assign string into field 'pump_type'\n");
       return false;
     }
   }
@@ -126,10 +126,10 @@ size_t get_serialized_size_interfaces__srv__PhControllerService_Request(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name pump_id
+  // field.name pump_type
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->pump_id.size + 1);
+    (ros_message->pump_type.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -167,7 +167,7 @@ size_t max_serialized_size_interfaces__srv__PhControllerService_Request(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
-  // member: pump_id
+  // member: pump_type
   {
     size_t array_size = 1;
 
@@ -188,7 +188,7 @@ size_t max_serialized_size_interfaces__srv__PhControllerService_Request(
     using DataType = interfaces__srv__PhControllerService_Request;
     is_plain =
       (
-      offsetof(DataType, pump_id) +
+      offsetof(DataType, pump_type) +
       last_member_size
       ) == ret_val;
   }
@@ -277,9 +277,9 @@ extern "C"
 #endif
 
 // already included above
-// #include "rosidl_runtime_c/string.h"  // msg, pump_id
+// #include "rosidl_runtime_c/string.h"  // msg, pump_type
 // already included above
-// #include "rosidl_runtime_c/string_functions.h"  // msg, pump_id
+// #include "rosidl_runtime_c/string_functions.h"  // msg, pump_type
 
 // forward declare type support functions
 
@@ -295,9 +295,9 @@ static bool _PhControllerService_Response__cdr_serialize(
     return false;
   }
   const _PhControllerService_Response__ros_msg_type * ros_message = static_cast<const _PhControllerService_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: pump_id
+  // Field name: pump_type
   {
-    const rosidl_runtime_c__String * str = &ros_message->pump_id;
+    const rosidl_runtime_c__String * str = &ros_message->pump_type;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -345,18 +345,18 @@ static bool _PhControllerService_Response__cdr_deserialize(
     return false;
   }
   _PhControllerService_Response__ros_msg_type * ros_message = static_cast<_PhControllerService_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: pump_id
+  // Field name: pump_type
   {
     std::string tmp;
     cdr >> tmp;
-    if (!ros_message->pump_id.data) {
-      rosidl_runtime_c__String__init(&ros_message->pump_id);
+    if (!ros_message->pump_type.data) {
+      rosidl_runtime_c__String__init(&ros_message->pump_type);
     }
     bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->pump_id,
+      &ros_message->pump_type,
       tmp.c_str());
     if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'pump_id'\n");
+      fprintf(stderr, "failed to assign string into field 'pump_type'\n");
       return false;
     }
   }
@@ -406,10 +406,10 @@ size_t get_serialized_size_interfaces__srv__PhControllerService_Response(
   (void)padding;
   (void)wchar_size;
 
-  // field.name pump_id
+  // field.name pump_type
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->pump_id.size + 1);
+    (ros_message->pump_type.size + 1);
   // field.name warning
   {
     size_t item_size = sizeof(ros_message->warning);
@@ -455,7 +455,7 @@ size_t max_serialized_size_interfaces__srv__PhControllerService_Response(
   full_bounded = true;
   is_plain = true;
 
-  // member: pump_id
+  // member: pump_type
   {
     size_t array_size = 1;
 

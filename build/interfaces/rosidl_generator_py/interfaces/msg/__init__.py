@@ -6,6 +6,7 @@ from interfaces.msg._air_sensor_message import AirSensorMessage  # noqa: F401
 from interfaces.msg._air_status import AirStatus  # noqa: F401
 from interfaces.msg._camera_instruction import CameraInstruction  # noqa: F401
 from interfaces.msg._camera_status import CameraStatus  # noqa: F401
+from interfaces.msg._controller_message import ControllerMessage  # noqa: F401
 from interfaces.msg._conveyor_message import ConveyorMessage  # noqa: F401
 from interfaces.msg._flow_meter_message import FlowMeterMessage  # noqa: F401
 from interfaces.msg._irrigation_instruction import IrrigationInstruction  # noqa: F401
@@ -17,7 +18,6 @@ from interfaces.msg._lift_status import LiftStatus  # noqa: F401
 from interfaces.msg._light_instruction import LightInstruction  # noqa: F401
 from interfaces.msg._light_status import LightStatus  # noqa: F401
 from interfaces.msg._peristaltic_pump_message import PeristalticPumpMessage  # noqa: F401
-from interfaces.msg._ph_controller_message import PhControllerMessage  # noqa: F401
 from interfaces.msg._potentiometer_message import PotentiometerMessage  # noqa: F401
 from interfaces.msg._sensor_message_float32 import SensorMessageFloat32  # noqa: F401
 from interfaces.msg._sensor_message_int16 import SensorMessageInt16  # noqa: F401

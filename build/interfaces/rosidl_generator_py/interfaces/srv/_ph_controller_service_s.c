@@ -62,8 +62,8 @@ bool interfaces__srv__ph_controller_service__request__convert_from_py(PyObject *
     ros_message->ph = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // pump_id
-    PyObject * field = PyObject_GetAttrString(_pymsg, "pump_id");
+  {  // pump_type
+    PyObject * field = PyObject_GetAttrString(_pymsg, "pump_type");
     if (!field) {
       return false;
     }
@@ -73,7 +73,7 @@ bool interfaces__srv__ph_controller_service__request__convert_from_py(PyObject *
       Py_DECREF(field);
       return false;
     }
-    rosidl_runtime_c__String__assign(&ros_message->pump_id, PyBytes_AS_STRING(encoded_field));
+    rosidl_runtime_c__String__assign(&ros_message->pump_type, PyBytes_AS_STRING(encoded_field));
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
@@ -110,17 +110,17 @@ PyObject * interfaces__srv__ph_controller_service__request__convert_to_py(void *
       }
     }
   }
-  {  // pump_id
+  {  // pump_type
     PyObject * field = NULL;
     field = PyUnicode_DecodeUTF8(
-      ros_message->pump_id.data,
-      strlen(ros_message->pump_id.data),
+      ros_message->pump_type.data,
+      strlen(ros_message->pump_type.data),
       "replace");
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "pump_id", field);
+      int rc = PyObject_SetAttrString(_pymessage, "pump_type", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -185,8 +185,8 @@ bool interfaces__srv__ph_controller_service__response__convert_from_py(PyObject 
     assert(strncmp("interfaces.srv._ph_controller_service.PhControllerService_Response", full_classname_dest, 66) == 0);
   }
   interfaces__srv__PhControllerService_Response * ros_message = _ros_message;
-  {  // pump_id
-    PyObject * field = PyObject_GetAttrString(_pymsg, "pump_id");
+  {  // pump_type
+    PyObject * field = PyObject_GetAttrString(_pymsg, "pump_type");
     if (!field) {
       return false;
     }
@@ -196,7 +196,7 @@ bool interfaces__srv__ph_controller_service__response__convert_from_py(PyObject 
       Py_DECREF(field);
       return false;
     }
-    rosidl_runtime_c__String__assign(&ros_message->pump_id, PyBytes_AS_STRING(encoded_field));
+    rosidl_runtime_c__String__assign(&ros_message->pump_type, PyBytes_AS_STRING(encoded_field));
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
@@ -255,17 +255,17 @@ PyObject * interfaces__srv__ph_controller_service__response__convert_to_py(void 
     }
   }
   interfaces__srv__PhControllerService_Response * ros_message = (interfaces__srv__PhControllerService_Response *)raw_ros_message;
-  {  // pump_id
+  {  // pump_type
     PyObject * field = NULL;
     field = PyUnicode_DecodeUTF8(
-      ros_message->pump_id.data,
-      strlen(ros_message->pump_id.data),
+      ros_message->pump_type.data,
+      strlen(ros_message->pump_type.data),
       "replace");
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "pump_id", field);
+      int rc = PyObject_SetAttrString(_pymessage, "pump_type", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

@@ -301,6 +301,44 @@ CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/
   /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/message_type_support_dispatch.h \
   /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/type_support_map.h
 
+CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/controller_message__type_support.cpp.o: rosidl_typesupport_c/interfaces/msg/controller_message__type_support.cpp \
+  /usr/include/stdc-predef.h \
+  /usr/include/c++/11/cstddef \
+  /usr/include/aarch64-linux-gnu/c++/11/bits/c++config.h \
+  /usr/include/aarch64-linux-gnu/c++/11/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
+  /usr/include/aarch64-linux-gnu/bits/timesize.h \
+  /usr/include/aarch64-linux-gnu/sys/cdefs.h \
+  /usr/include/aarch64-linux-gnu/bits/long-double.h \
+  /usr/include/aarch64-linux-gnu/gnu/stubs.h \
+  /usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h \
+  /usr/include/aarch64-linux-gnu/c++/11/bits/cpu_defines.h \
+  /usr/lib/gcc/aarch64-linux-gnu/11/include/stddef.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
+  /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
+  rosidl_generator_c/interfaces/msg/detail/controller_message__struct.h \
+  /usr/lib/gcc/aarch64-linux-gnu/11/include/stdbool.h \
+  /usr/lib/gcc/aarch64-linux-gnu/11/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/aarch64-linux-gnu/bits/types.h \
+  /usr/include/aarch64-linux-gnu/bits/typesizes.h \
+  /usr/include/aarch64-linux-gnu/bits/time64.h \
+  /usr/include/aarch64-linux-gnu/bits/wchar.h \
+  /usr/include/aarch64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  rosidl_generator_c/interfaces/msg/detail/controller_message__type_support.h \
+  rosidl_generator_c/interfaces/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/identifier.h \
+  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/visibility_control.h \
+  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/message_type_support_dispatch.h \
+  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/type_support_map.h
+
 CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/conveyor_message__type_support.cpp.o: rosidl_typesupport_c/interfaces/msg/conveyor_message__type_support.cpp \
   /usr/include/stdc-predef.h \
   /usr/include/c++/11/cstddef \
@@ -711,44 +749,6 @@ CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__type_support.h \
-  rosidl_generator_c/interfaces/msg/rosidl_generator_c__visibility_control.h \
-  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/identifier.h \
-  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/visibility_control.h \
-  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/message_type_support_dispatch.h \
-  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/type_support_map.h
-
-CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/ph_controller_message__type_support.cpp.o: rosidl_typesupport_c/interfaces/msg/ph_controller_message__type_support.cpp \
-  /usr/include/stdc-predef.h \
-  /usr/include/c++/11/cstddef \
-  /usr/include/aarch64-linux-gnu/c++/11/bits/c++config.h \
-  /usr/include/aarch64-linux-gnu/c++/11/bits/os_defines.h \
-  /usr/include/features.h \
-  /usr/include/features-time64.h \
-  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
-  /usr/include/aarch64-linux-gnu/bits/timesize.h \
-  /usr/include/aarch64-linux-gnu/sys/cdefs.h \
-  /usr/include/aarch64-linux-gnu/bits/long-double.h \
-  /usr/include/aarch64-linux-gnu/gnu/stubs.h \
-  /usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h \
-  /usr/include/aarch64-linux-gnu/c++/11/bits/cpu_defines.h \
-  /usr/lib/gcc/aarch64-linux-gnu/11/include/stddef.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
-  /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
-  rosidl_generator_c/interfaces/msg/detail/ph_controller_message__struct.h \
-  /usr/lib/gcc/aarch64-linux-gnu/11/include/stdbool.h \
-  /usr/lib/gcc/aarch64-linux-gnu/11/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/aarch64-linux-gnu/bits/types.h \
-  /usr/include/aarch64-linux-gnu/bits/typesizes.h \
-  /usr/include/aarch64-linux-gnu/bits/time64.h \
-  /usr/include/aarch64-linux-gnu/bits/wchar.h \
-  /usr/include/aarch64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
-  rosidl_generator_c/interfaces/msg/detail/ph_controller_message__type_support.h \
   rosidl_generator_c/interfaces/msg/rosidl_generator_c__visibility_control.h \
   /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/identifier.h \
   /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/visibility_control.h \
@@ -1287,6 +1287,46 @@ CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   rosidl_generator_c/interfaces/srv/detail/conveyor_service__type_support.h \
+  rosidl_generator_c/interfaces/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
+  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/identifier.h \
+  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/visibility_control.h \
+  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/message_type_support_dispatch.h \
+  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/type_support_map.h \
+  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/service_type_support_dispatch.h
+
+CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/srv/ec_controller_service__type_support.cpp.o: rosidl_typesupport_c/interfaces/srv/ec_controller_service__type_support.cpp \
+  /usr/include/stdc-predef.h \
+  /usr/include/c++/11/cstddef \
+  /usr/include/aarch64-linux-gnu/c++/11/bits/c++config.h \
+  /usr/include/aarch64-linux-gnu/c++/11/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
+  /usr/include/aarch64-linux-gnu/bits/timesize.h \
+  /usr/include/aarch64-linux-gnu/sys/cdefs.h \
+  /usr/include/aarch64-linux-gnu/bits/long-double.h \
+  /usr/include/aarch64-linux-gnu/gnu/stubs.h \
+  /usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h \
+  /usr/include/aarch64-linux-gnu/c++/11/bits/cpu_defines.h \
+  /usr/lib/gcc/aarch64-linux-gnu/11/include/stddef.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
+  /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
+  rosidl_generator_c/interfaces/srv/detail/ec_controller_service__struct.h \
+  /usr/lib/gcc/aarch64-linux-gnu/11/include/stdbool.h \
+  /usr/lib/gcc/aarch64-linux-gnu/11/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/aarch64-linux-gnu/bits/types.h \
+  /usr/include/aarch64-linux-gnu/bits/typesizes.h \
+  /usr/include/aarch64-linux-gnu/bits/time64.h \
+  /usr/include/aarch64-linux-gnu/bits/wchar.h \
+  /usr/include/aarch64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  rosidl_generator_c/interfaces/srv/detail/ec_controller_service__type_support.h \
   rosidl_generator_c/interfaces/msg/rosidl_generator_c__visibility_control.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
   /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/identifier.h \
@@ -1850,8 +1890,6 @@ rosidl_typesupport_c/interfaces/srv/irrigation_service__type_support.cpp:
 
 rosidl_generator_c/interfaces/srv/detail/i2c_expander_service__struct.h:
 
-rosidl_generator_c/interfaces/srv/detail/get_bool__type_support.h:
-
 rosidl_generator_c/interfaces/srv/detail/get_bool__struct.h:
 
 rosidl_typesupport_c/interfaces/srv/get_bool__type_support.cpp:
@@ -1864,6 +1902,14 @@ rosidl_typesupport_c/interfaces/srv/i2c_expander_service__type_support.cpp:
 
 rosidl_generator_c/interfaces/srv/detail/expander_service__struct.h:
 
+rosidl_generator_c/interfaces/srv/detail/ec_controller_service__type_support.h:
+
+rosidl_generator_c/interfaces/srv/detail/get_bool__type_support.h:
+
+rosidl_generator_c/interfaces/srv/detail/ec_controller_service__struct.h:
+
+rosidl_typesupport_c/interfaces/srv/ec_controller_service__type_support.cpp:
+
 rosidl_generator_c/interfaces/srv/detail/conveyor_service__struct.h:
 
 rosidl_generator_c/interfaces/srv/detail/air_sensor_svc__type_support.h:
@@ -1875,6 +1921,8 @@ rosidl_generator_c/interfaces/srv/detail/air_sensor_service__type_support.h:
 rosidl_generator_c/interfaces/srv/detail/air_sensor_service__struct.h:
 
 rosidl_typesupport_c/interfaces/srv/air_sensor_service__type_support.cpp:
+
+rosidl_typesupport_c/interfaces/msg/controller_message__type_support.cpp:
 
 rosidl_generator_c/interfaces/srv/detail/flow_meter_service__struct.h:
 
@@ -1912,11 +1960,11 @@ rosidl_generator_c/interfaces/srv/detail/actuator_service_rwc__type_support.h:
 
 rosidl_generator_c/interfaces/msg/detail/lift_instruction__type_support.h:
 
-rosidl_typesupport_c/interfaces/msg/light_status__type_support.cpp:
+rosidl_generator_c/interfaces/srv/detail/potentiometer_service__struct.h:
+
+rosidl_generator_c/interfaces/msg/detail/light_status__type_support.h:
 
 rosidl_typesupport_c/interfaces/msg/vat_status__type_support.cpp:
-
-rosidl_typesupport_c/interfaces/msg/conveyor_message__type_support.cpp:
 
 /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/message_type_support_dispatch.h:
 
@@ -1950,19 +1998,11 @@ rosidl_generator_c/interfaces/msg/detail/light_instruction__struct.h:
 
 rosidl_generator_c/interfaces/msg/detail/actuator_status__struct.h:
 
-rosidl_generator_c/interfaces/srv/detail/potentiometer_service__struct.h:
-
-rosidl_generator_c/interfaces/msg/detail/light_status__type_support.h:
-
-rosidl_generator_c/interfaces/msg/detail/ph_controller_message__type_support.h:
-
 /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/identifier.h:
 
 rosidl_typesupport_c/interfaces/msg/actuator_status__type_support.cpp:
 
 rosidl_generator_c/interfaces/msg/detail/vat_instruction__type_support.h:
-
-rosidl_typesupport_c/interfaces/msg/ph_controller_message__type_support.cpp:
 
 rosidl_generator_c/interfaces/msg/rosidl_generator_c__visibility_control.h:
 
@@ -1983,6 +2023,8 @@ rosidl_generator_c/interfaces/msg/detail/tank_status__type_support.h:
 rosidl_generator_c/interfaces/msg/detail/air_instruction__struct.h:
 
 rosidl_generator_c/interfaces/msg/detail/flow_meter_message__struct.h:
+
+/usr/include/aarch64-linux-gnu/c++/11/bits/os_defines.h:
 
 /usr/include/aarch64-linux-gnu/c++/11/bits/cpu_defines.h:
 
@@ -2036,13 +2078,19 @@ rosidl_typesupport_c/interfaces/msg/camera_status__type_support.cpp:
 
 /usr/include/aarch64-linux-gnu/bits/time64.h:
 
+rosidl_typesupport_c/interfaces/msg/flow_meter_message__type_support.cpp:
+
+rosidl_typesupport_c/interfaces/msg/light_status__type_support.cpp:
+
+rosidl_generator_c/interfaces/msg/detail/controller_message__type_support.h:
+
+rosidl_typesupport_c/interfaces/msg/conveyor_message__type_support.cpp:
+
 rosidl_generator_c/interfaces/srv/detail/actuator_service_rwc__struct.h:
 
 rosidl_generator_c/interfaces/msg/detail/air_status__struct.h:
 
 rosidl_generator_c/interfaces/msg/detail/conveyor_message__struct.h:
-
-rosidl_typesupport_c/interfaces/msg/flow_meter_message__type_support.cpp:
 
 rosidl_generator_c/interfaces/srv/detail/lift_service__struct.h:
 
@@ -2079,10 +2127,6 @@ rosidl_typesupport_c/interfaces/msg/lift_instruction__type_support.cpp:
 rosidl_generator_c/interfaces/msg/detail/lift_instruction__struct.h:
 
 rosidl_generator_c/interfaces/msg/detail/lift_message__struct.h:
-
-/usr/include/aarch64-linux-gnu/c++/11/bits/os_defines.h:
-
-rosidl_generator_c/interfaces/msg/detail/ph_controller_message__struct.h:
 
 rosidl_generator_c/interfaces/msg/detail/actuator_status_rwc__struct.h:
 
@@ -2137,6 +2181,8 @@ rosidl_generator_c/interfaces/msg/detail/flow_meter_message__type_support.h:
 rosidl_generator_c/interfaces/msg/detail/sensor_message_int16__type_support.h:
 
 rosidl_generator_c/interfaces/msg/detail/irrigation_message__struct.h:
+
+rosidl_generator_c/interfaces/msg/detail/controller_message__struct.h:
 
 rosidl_generator_c/interfaces/msg/detail/water_level_det__struct.h:
 

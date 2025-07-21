@@ -6,7 +6,8 @@ from rclpy.node import Node
 from interfaces.msg import SensorMessageFloat32
 from interfaces.srv import SensorServiceFloat32
 from hardware.config import WATER_EC_SENSORS, WATER_SENSOR_PERIOD, TANKS
-from water_ec_sensor.atlas_ezo_ec_sensor import AtlasEzoEcSensor
+from ec_sensor.ezo_ec_sensor import AtlasEzoEcSensor
+from utils.log import write_log
 
 
 class WaterEcSensor(Node):
@@ -46,6 +47,7 @@ class WaterEcSensor(Node):
         self._sensor_is_configured = False
         self._temperature = self.DEFAULT_TEMPERATURE  # Initialize with default temperature
         self._init = True
+        self._simulated_data = 100
         
         # Create the service
         self._service = self.create_service(
@@ -87,8 +89,10 @@ class WaterEcSensor(Node):
             self._publish_callback,
             callback_group=callback_group
         )
+        to_log = '🎋 EC_S: Node created successfully.'
+        write_log(to_log)
+        self.get_logger().info(to_log)
 
-        self.get_logger().info('Node created successfully.')
 
     def _temperature_callback(self, msg: SensorMessageFloat32):
         """Callback function for the temperature subscriber.
@@ -135,7 +139,7 @@ class WaterEcSensor(Node):
                 callback_group=MutuallyExclusiveCallbackGroup()
             )
 
-        self._read_sensor()
+        # self._read_sensor()
         if self._sensor_is_configured:
             self._init_timer.cancel()
 
@@ -151,6 +155,7 @@ class WaterEcSensor(Node):
         if not self._sensor_is_configured:
             err, msg = self._configure_sensor()
             if err:
+                write_log(f"    ☄️  PH: Warning from pH sensor: {msg}")
                 return self._handle_sensor_error(msg)
 
             else:
@@ -164,6 +169,26 @@ class WaterEcSensor(Node):
         if err:
             return self._handle_sensor_error(msg)
 
+        self._publish_status(err, msg, data)
+        return err, msg, data
+    
+    def _simulate_read_sensor(self) -> tuple[bool, str, float]:
+        """Generates EC values for testing purposes and publishes the status.
+
+        Returns:
+            tuple: A tuple containing:
+                - bool: Error flag, True if an error occurred, False otherwise.
+                - str: Error message, or an empty string if no error occurred.
+                - float: Value from reading the sensor.
+        """
+        err = False
+        msg = "This is simulated data"
+        data = float(self._simulated_data)  # fabricated ec data
+        if self._simulated_data >= 1000:
+            self._simulated_data = 100
+        else:
+            self._simulated_data += 100
+            
         self._publish_status(err, msg, data)
         return err, msg, data
 
@@ -212,6 +237,10 @@ class WaterEcSensor(Node):
             message (str): Error or status message.
             data (float): Electrical conductivity value.
         """
+        to_log = f'🥗 EC_S: EC sensor reading: EC={data}'
+        write_log(to_log)
+        self.get_logger().info(to_log)
+        
         status_msg = SensorMessageFloat32()
         status_msg.err = error
         status_msg.msg = message
@@ -220,7 +249,12 @@ class WaterEcSensor(Node):
 
     def _publish_callback(self):
         """Callback function to publish sensor data periodically."""
-        self._read_sensor()
+        # self._read_sensor()
+        # self.get_logger().info('Sensor read successfully.')
+        
+        self._simulate_read_sensor()
+        self.get_logger().info('Sensor readings simulated.')
+
 
 
 def main(args=None):

@@ -105,10 +105,13 @@ CMakeFiles/interfaces: /workspace/ph_sys_ws/src/interfaces/msg/PeristalticPumpMe
 CMakeFiles/interfaces: /workspace/ph_sys_ws/src/interfaces/srv/PeristalticPumpService.srv
 CMakeFiles/interfaces: rosidl_cmake/srv/PeristalticPumpService_Request.msg
 CMakeFiles/interfaces: rosidl_cmake/srv/PeristalticPumpService_Response.msg
-CMakeFiles/interfaces: /workspace/ph_sys_ws/src/interfaces/msg/PhControllerMessage.msg
+CMakeFiles/interfaces: /workspace/ph_sys_ws/src/interfaces/msg/ControllerMessage.msg
 CMakeFiles/interfaces: /workspace/ph_sys_ws/src/interfaces/srv/PhControllerService.srv
 CMakeFiles/interfaces: rosidl_cmake/srv/PhControllerService_Request.msg
 CMakeFiles/interfaces: rosidl_cmake/srv/PhControllerService_Response.msg
+CMakeFiles/interfaces: /workspace/ph_sys_ws/src/interfaces/srv/ECControllerService.srv
+CMakeFiles/interfaces: rosidl_cmake/srv/ECControllerService_Request.msg
+CMakeFiles/interfaces: rosidl_cmake/srv/ECControllerService_Response.msg
 CMakeFiles/interfaces: /workspace/ph_sys_ws/src/interfaces/msg/SensorMessageInt16.msg
 CMakeFiles/interfaces: /workspace/ph_sys_ws/src/interfaces/srv/SensorServiceInt16.srv
 CMakeFiles/interfaces: rosidl_cmake/srv/SensorServiceInt16_Request.msg

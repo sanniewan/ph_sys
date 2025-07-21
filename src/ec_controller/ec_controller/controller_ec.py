@@ -5,8 +5,8 @@ class Controller:
     This class is independent of ROS and can be unit-tested.
     """
 
-    def __init__(self, unit_name: str, target_low: float=5.5, target_high: float=6.5, crit_low: float=4, crit_high: float=8.5, kp: float = 0.01):
-        self.target_low = target_low  # pH value
+    def __init__(self, unit_name: str, target_low: float=900, target_high: float=1100, crit_low: float=200, crit_high: float=2000, kp: float = 0.1):
+        self.target_low = target_low
         self.target_high = target_high
         self.crit_low = crit_low
         self.crit_high = crit_high
@@ -29,7 +29,7 @@ class Controller:
         
         """Controller behavior in different ranges of pH
 
-        Already acceptable pH values, do nothing:                           self.target_low <= measurement <= self.target_high
+        Already acceptable EC values, do nothing:                           self.target_low <= measurement <= self.target_high
         In the critical, possibly malfunctioning range, dispense 0 mL:      self.crit_low > measurement or self.crit_high < measurement
         In the operating range, calculate the volume to dispense:           measurement < self.target_low or measurement > self.target_high 
         """
@@ -39,8 +39,14 @@ class Controller:
             msg = f"Warning: {self.unit_name} value has reached a critical {'low.' if (self.crit_low > measurement) else 'high.'}"
             return True, msg, 0
         else:
-            # If error is negative, then ph_down pump activates.
+            # For typical EC system, error will usually be positive
             mid_target = (self.target_low + self.target_high)/2
             error = mid_target - measurement
-            control = self.kp * error
-            return False, "Operating range, successfully computed volume to dispense.", round(float(control), 3)
+            if error >= 0:
+                control = self.kp * error
+                msg = "Operating range, successfully computed volume to dispense."
+                return False, msg, round(float(control), 3)
+            # In case of negative error
+            else:
+                msg = f"Warning: {self.unit_name} value calculated to be higher than target {self.unit_name} value."
+                return True, msg, 0

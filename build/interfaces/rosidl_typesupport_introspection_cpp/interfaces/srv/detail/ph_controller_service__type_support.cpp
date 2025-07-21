@@ -56,14 +56,14 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember PhControllerS
     nullptr  // resize(index) function pointer
   },
   {
-    "pump_id",  // name
+    "pump_type",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(interfaces::srv::PhControllerService_Request, pump_id),  // bytes offset in struct
+    offsetof(interfaces::srv::PhControllerService_Request, pump_type),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -175,14 +175,14 @@ void PhControllerService_Response_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember PhControllerService_Response_message_member_array[4] = {
   {
-    "pump_id",  // name
+    "pump_type",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(interfaces::srv::PhControllerService_Response, pump_id),  // bytes offset in struct
+    offsetof(interfaces::srv::PhControllerService_Response, pump_type),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

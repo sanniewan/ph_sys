@@ -13,6 +13,7 @@ interfaces/msg/_air_sensor_message.py
 interfaces/msg/_air_status.py
 interfaces/msg/_camera_instruction.py
 interfaces/msg/_camera_status.py
+interfaces/msg/_controller_message.py
 interfaces/msg/_conveyor_message.py
 interfaces/msg/_flow_meter_message.py
 interfaces/msg/_irrigation_instruction.py
@@ -40,6 +41,7 @@ interfaces/srv/_actuator_service_rwc.py
 interfaces/srv/_air_sensor_service.py
 interfaces/srv/_air_sensor_svc.py
 interfaces/srv/_conveyor_service.py
+interfaces/srv/_ec_controller_service.py
 interfaces/srv/_expander_service.py
 interfaces/srv/_flow_meter_service.py
 interfaces/srv/_get_bool.py

@@ -1,4 +1,6 @@
-
+float32   ec
+string    pump_type
+---
 string    pump_type
 bool      warning
 string    msg

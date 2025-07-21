@@ -8,10 +8,10 @@ module interfaces {
     struct PhControllerService_Request {
       float ph;
 
-      string pump_id;
+      string pump_type;
     };
     struct PhControllerService_Response {
-      string pump_id;
+      string pump_type;
 
       boolean warning;
 

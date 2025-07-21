@@ -21,15 +21,15 @@ namespace srv
 namespace builder
 {
 
-class Init_PhControllerService_Request_pump_id
+class Init_PhControllerService_Request_pump_type
 {
 public:
-  explicit Init_PhControllerService_Request_pump_id(::interfaces::srv::PhControllerService_Request & msg)
+  explicit Init_PhControllerService_Request_pump_type(::interfaces::srv::PhControllerService_Request & msg)
   : msg_(msg)
   {}
-  ::interfaces::srv::PhControllerService_Request pump_id(::interfaces::srv::PhControllerService_Request::_pump_id_type arg)
+  ::interfaces::srv::PhControllerService_Request pump_type(::interfaces::srv::PhControllerService_Request::_pump_type_type arg)
   {
-    msg_.pump_id = std::move(arg);
+    msg_.pump_type = std::move(arg);
     return std::move(msg_);
   }
 
@@ -43,10 +43,10 @@ public:
   Init_PhControllerService_Request_ph()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_PhControllerService_Request_pump_id ph(::interfaces::srv::PhControllerService_Request::_ph_type arg)
+  Init_PhControllerService_Request_pump_type ph(::interfaces::srv::PhControllerService_Request::_ph_type arg)
   {
     msg_.ph = std::move(arg);
-    return Init_PhControllerService_Request_pump_id(msg_);
+    return Init_PhControllerService_Request_pump_type(msg_);
   }
 
 private:
@@ -127,15 +127,15 @@ private:
   ::interfaces::srv::PhControllerService_Response msg_;
 };
 
-class Init_PhControllerService_Response_pump_id
+class Init_PhControllerService_Response_pump_type
 {
 public:
-  Init_PhControllerService_Response_pump_id()
+  Init_PhControllerService_Response_pump_type()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_PhControllerService_Response_warning pump_id(::interfaces::srv::PhControllerService_Response::_pump_id_type arg)
+  Init_PhControllerService_Response_warning pump_type(::interfaces::srv::PhControllerService_Response::_pump_type_type arg)
   {
-    msg_.pump_id = std::move(arg);
+    msg_.pump_type = std::move(arg);
     return Init_PhControllerService_Response_warning(msg_);
   }
 
@@ -154,7 +154,7 @@ template<>
 inline
 auto build<::interfaces::srv::PhControllerService_Response>()
 {
-  return interfaces::srv::builder::Init_PhControllerService_Response_pump_id();
+  return interfaces::srv::builder::Init_PhControllerService_Response_pump_type();
 }
 
 }  // namespace interfaces

@@ -13,7 +13,7 @@
 
 
 // Include directives for member types
-// Member `pump_id`
+// Member `pump_type`
 #include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
@@ -54,14 +54,14 @@ static rosidl_typesupport_introspection_c__MessageMember interfaces__srv__PhCont
     NULL  // resize(index) function pointer
   },
   {
-    "pump_id",  // name
+    "pump_type",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(interfaces__srv__PhControllerService_Request, pump_id),  // bytes offset in struct
+    offsetof(interfaces__srv__PhControllerService_Request, pump_type),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -122,7 +122,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 
 
 // Include directives for member types
-// Member `pump_id`
+// Member `pump_type`
 // Member `msg`
 // already included above
 // #include "rosidl_runtime_c/string_functions.h"
@@ -148,14 +148,14 @@ void interfaces__srv__PhControllerService_Response__rosidl_typesupport_introspec
 
 static rosidl_typesupport_introspection_c__MessageMember interfaces__srv__PhControllerService_Response__rosidl_typesupport_introspection_c__PhControllerService_Response_message_member_array[4] = {
   {
-    "pump_id",  // name
+    "pump_type",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(interfaces__srv__PhControllerService_Response, pump_id),  // bytes offset in struct
+    offsetof(interfaces__srv__PhControllerService_Response, pump_type),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

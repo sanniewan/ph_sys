@@ -137,7 +137,8 @@ class WaterPhSensor(Node):
                 callback_group=MutuallyExclusiveCallbackGroup()
             )
 
-        self._read_sensor()
+        # self._read_sensor()
+        self.get_logger().info('Init timer reading sensor')
         if self._sensor_is_configured:
             self._init_timer.cancel()
 
@@ -170,7 +171,7 @@ class WaterPhSensor(Node):
         return err, msg, data
 
     def _simulate_read_sensor(self) -> tuple[bool, str, float]:
-        """Uses made-up numbers and publishes the status.
+        """Generates pH values for testing purposes and publishes the status.
 
         Returns:
             tuple: A tuple containing:
@@ -182,9 +183,9 @@ class WaterPhSensor(Node):
         msg = "This is simulated data"
         data = float(self._simulated_data)  # fabricated ph data
         if self._simulated_data >= 9:
-            self._simulated_data = 0
+            self._simulated_data = 5
         else:
-            self._simulated_data += 0.12
+            self._simulated_data += 0.5
             
         self._publish_status(err, msg, data)
         return err, msg, data
@@ -247,11 +248,11 @@ class WaterPhSensor(Node):
 
     def _publish_callback(self):
         """Callback function to publish sensor data periodically."""
-        self._read_sensor()
-        self.get_logger().info('Sensor read successfully.')
+        # self._read_sensor()
+        # self.get_logger().info('Sensor read successfully.')
         
-        # self._simulate_read_sensor()
-        # self.get_logger().info('Sensor readings simulated.')
+        self._simulate_read_sensor()
+        self.get_logger().info('Sensor readings simulated.')
 
 
 def main(args=None):

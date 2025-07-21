@@ -271,9 +271,9 @@ CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator
   rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__type_support.h \
   rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__struct.h \
   rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.h \
-  rosidl_generator_c/interfaces/msg/detail/ph_controller_message__type_support.h \
-  rosidl_generator_c/interfaces/msg/detail/ph_controller_message__struct.h \
-  rosidl_generator_c/interfaces/msg/detail/ph_controller_message__functions.h \
+  rosidl_generator_c/interfaces/msg/detail/controller_message__type_support.h \
+  rosidl_generator_c/interfaces/msg/detail/controller_message__struct.h \
+  rosidl_generator_c/interfaces/msg/detail/controller_message__functions.h \
   rosidl_generator_c/interfaces/msg/detail/sensor_message_int16__type_support.h \
   rosidl_generator_c/interfaces/msg/detail/sensor_message_int16__struct.h \
   rosidl_generator_c/interfaces/msg/detail/sensor_message_int16__functions.h \
@@ -364,6 +364,9 @@ CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator
   rosidl_generator_c/interfaces/srv/detail/ph_controller_service__type_support.h \
   rosidl_generator_c/interfaces/srv/detail/ph_controller_service__struct.h \
   rosidl_generator_c/interfaces/srv/detail/ph_controller_service__functions.h \
+  rosidl_generator_c/interfaces/srv/detail/ec_controller_service__type_support.h \
+  rosidl_generator_c/interfaces/srv/detail/ec_controller_service__struct.h \
+  rosidl_generator_c/interfaces/srv/detail/ec_controller_service__functions.h \
   rosidl_generator_c/interfaces/srv/detail/sensor_service_int16__type_support.h \
   rosidl_generator_c/interfaces/srv/detail/sensor_service_int16__struct.h \
   rosidl_generator_c/interfaces/srv/detail/sensor_service_int16__functions.h \
@@ -410,6 +413,8 @@ rosidl_generator_c/interfaces/srv/detail/water_level_detector_service__type_supp
 rosidl_generator_c/interfaces/srv/detail/sensor_service_int16__struct.h:
 
 rosidl_generator_c/interfaces/srv/detail/sensor_service_int16__type_support.h:
+
+rosidl_generator_c/interfaces/srv/detail/ec_controller_service__struct.h:
 
 rosidl_generator_c/interfaces/srv/detail/ph_controller_service__functions.h:
 
@@ -471,8 +476,6 @@ rosidl_generator_c/interfaces/msg/detail/light_status__functions.h:
 
 rosidl_generator_c/interfaces/msg/detail/light_instruction__functions.h:
 
-rosidl_generator_c/interfaces/msg/detail/light_instruction__type_support.h:
-
 rosidl_generator_c/interfaces/msg/detail/lift_status__functions.h:
 
 rosidl_generator_c/interfaces/msg/detail/lift_status__struct.h:
@@ -511,21 +514,23 @@ rosidl_generator_c/interfaces/msg/detail/water_level_detector_message__functions
 
 rosidl_generator_c/interfaces/msg/detail/water_level_detector_message__struct.h:
 
-rosidl_generator_c/interfaces/msg/detail/sensor_message_float32__struct.h:
-
-rosidl_generator_c/interfaces/msg/detail/sensor_message_int16__functions.h:
-
-rosidl_generator_c/interfaces/msg/detail/sensor_message_int16__struct.h:
-
 rosidl_generator_c/interfaces/srv/detail/sensor_service_float32__type_support.h:
 
 rosidl_generator_c/interfaces/srv/detail/potentiometer_service__type_support.h:
 
 rosidl_generator_c/interfaces/msg/detail/water_level_detector_message__type_support.h:
 
-rosidl_generator_c/interfaces/msg/detail/ph_controller_message__functions.h:
+rosidl_generator_c/interfaces/msg/detail/sensor_message_float32__struct.h:
 
-rosidl_generator_c/interfaces/msg/detail/ph_controller_message__struct.h:
+rosidl_generator_c/interfaces/msg/detail/sensor_message_int16__functions.h:
+
+rosidl_generator_c/interfaces/msg/detail/sensor_message_int16__struct.h:
+
+rosidl_generator_c/interfaces/msg/detail/light_instruction__type_support.h:
+
+rosidl_generator_c/interfaces/msg/detail/controller_message__functions.h:
+
+rosidl_generator_c/interfaces/msg/detail/controller_message__type_support.h:
 
 rosidl_generator_c/interfaces/msg/detail/peristaltic_pump_message__functions.h:
 
@@ -807,8 +812,6 @@ rosidl_generator_c/interfaces/msg/detail/actuator_status_rwc__type_support.h:
 
 rosidl_generator_c/interfaces/msg/detail/light_status__type_support.h:
 
-rosidl_generator_c/interfaces/msg/detail/ph_controller_message__type_support.h:
-
 /usr/include/features.h:
 
 /usr/include/python3.10/sliceobject.h:
@@ -860,6 +863,8 @@ rosidl_generator_c/interfaces/msg/detail/tank_status__struct.h:
 rosidl_generator_c/interfaces/msg/detail/conveyor_message__functions.h:
 
 /usr/include/aarch64-linux-gnu/bits/libc-header-start.h:
+
+rosidl_generator_c/interfaces/srv/detail/ec_controller_service__type_support.h:
 
 rosidl_generator_c/interfaces/msg/detail/vat_instruction__struct.h:
 
@@ -944,6 +949,8 @@ rosidl_generator_c/interfaces/msg/detail/sensor_message_float32__functions.h:
 /usr/include/aarch64-linux-gnu/sys/types.h:
 
 rosidl_generator_c/interfaces/msg/detail/camera_status__functions.h:
+
+rosidl_generator_c/interfaces/msg/detail/controller_message__struct.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/struct_statx.h:
 
@@ -1134,6 +1141,8 @@ rosidl_generator_c/interfaces/msg/detail/air_sensor_message__type_support.h:
 /usr/include/python3.10/bytearrayobject.h:
 
 /usr/include/python3.10/eval.h:
+
+rosidl_generator_c/interfaces/srv/detail/ec_controller_service__functions.h:
 
 /usr/lib/gcc/aarch64-linux-gnu/11/include/stdbool.h:
 

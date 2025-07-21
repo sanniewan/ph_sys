@@ -14,6 +14,8 @@ msg/CameraInstruction.idl
 msg/CameraInstruction.msg
 msg/CameraStatus.idl
 msg/CameraStatus.msg
+msg/ControllerMessage.idl
+msg/ControllerMessage.msg
 msg/ConveyorMessage.idl
 msg/ConveyorMessage.msg
 msg/FlowMeterMessage.idl
@@ -36,8 +38,6 @@ msg/LightStatus.idl
 msg/LightStatus.msg
 msg/PeristalticPumpMessage.idl
 msg/PeristalticPumpMessage.msg
-msg/PhControllerMessage.idl
-msg/PhControllerMessage.msg
 msg/PotentiometerMessage.idl
 msg/PotentiometerMessage.msg
 msg/SensorMessageFloat32.idl
@@ -76,6 +76,10 @@ srv/ConveyorService.idl
 srv/ConveyorService.srv
 srv/ConveyorService_Request.msg
 srv/ConveyorService_Response.msg
+srv/ECControllerService.idl
+srv/ECControllerService.srv
+srv/ECControllerService_Request.msg
+srv/ECControllerService_Response.msg
 srv/ExpanderService.idl
 srv/ExpanderService.srv
 srv/ExpanderService_Request.msg

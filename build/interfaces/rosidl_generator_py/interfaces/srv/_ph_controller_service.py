@@ -58,12 +58,12 @@ class PhControllerService_Request(metaclass=Metaclass_PhControllerService_Reques
 
     __slots__ = [
         '_ph',
-        '_pump_id',
+        '_pump_type',
     ]
 
     _fields_and_field_types = {
         'ph': 'float',
-        'pump_id': 'string',
+        'pump_type': 'string',
     }
 
     SLOT_TYPES = (
@@ -76,7 +76,7 @@ class PhControllerService_Request(metaclass=Metaclass_PhControllerService_Reques
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.ph = kwargs.get('ph', float())
-        self.pump_id = kwargs.get('pump_id', str())
+        self.pump_type = kwargs.get('pump_type', str())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -109,7 +109,7 @@ class PhControllerService_Request(metaclass=Metaclass_PhControllerService_Reques
             return False
         if self.ph != other.ph:
             return False
-        if self.pump_id != other.pump_id:
+        if self.pump_type != other.pump_type:
             return False
         return True
 
@@ -134,17 +134,17 @@ class PhControllerService_Request(metaclass=Metaclass_PhControllerService_Reques
         self._ph = value
 
     @builtins.property
-    def pump_id(self):
-        """Message field 'pump_id'."""
-        return self._pump_id
+    def pump_type(self):
+        """Message field 'pump_type'."""
+        return self._pump_type
 
-    @pump_id.setter
-    def pump_id(self, value):
+    @pump_type.setter
+    def pump_type(self, value):
         if __debug__:
             assert \
                 isinstance(value, str), \
-                "The 'pump_id' field must be of type 'str'"
-        self._pump_id = value
+                "The 'pump_type' field must be of type 'str'"
+        self._pump_type = value
 
 
 # Import statements for member types
@@ -204,14 +204,14 @@ class PhControllerService_Response(metaclass=Metaclass_PhControllerService_Respo
     """Message class 'PhControllerService_Response'."""
 
     __slots__ = [
-        '_pump_id',
+        '_pump_type',
         '_warning',
         '_msg',
         '_volume',
     ]
 
     _fields_and_field_types = {
-        'pump_id': 'string',
+        'pump_type': 'string',
         'warning': 'boolean',
         'msg': 'string',
         'volume': 'float',
@@ -228,7 +228,7 @@ class PhControllerService_Response(metaclass=Metaclass_PhControllerService_Respo
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.pump_id = kwargs.get('pump_id', str())
+        self.pump_type = kwargs.get('pump_type', str())
         self.warning = kwargs.get('warning', bool())
         self.msg = kwargs.get('msg', str())
         self.volume = kwargs.get('volume', float())
@@ -262,7 +262,7 @@ class PhControllerService_Response(metaclass=Metaclass_PhControllerService_Respo
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.pump_id != other.pump_id:
+        if self.pump_type != other.pump_type:
             return False
         if self.warning != other.warning:
             return False
@@ -278,17 +278,17 @@ class PhControllerService_Response(metaclass=Metaclass_PhControllerService_Respo
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def pump_id(self):
-        """Message field 'pump_id'."""
-        return self._pump_id
+    def pump_type(self):
+        """Message field 'pump_type'."""
+        return self._pump_type
 
-    @pump_id.setter
-    def pump_id(self, value):
+    @pump_type.setter
+    def pump_type(self, value):
         if __debug__:
             assert \
                 isinstance(value, str), \
-                "The 'pump_id' field must be of type 'str'"
-        self._pump_id = value
+                "The 'pump_type' field must be of type 'str'"
+        self._pump_type = value
 
     @builtins.property
     def warning(self):

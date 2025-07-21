@@ -11,7 +11,7 @@
 #include "rcutils/allocator.h"
 
 // Include directives for member types
-// Member `pump_id`
+// Member `pump_type`
 #include "rosidl_runtime_c/string_functions.h"
 
 bool
@@ -21,8 +21,8 @@ interfaces__srv__PhControllerService_Request__init(interfaces__srv__PhController
     return false;
   }
   // ph
-  // pump_id
-  if (!rosidl_runtime_c__String__init(&msg->pump_id)) {
+  // pump_type
+  if (!rosidl_runtime_c__String__init(&msg->pump_type)) {
     interfaces__srv__PhControllerService_Request__fini(msg);
     return false;
   }
@@ -36,8 +36,8 @@ interfaces__srv__PhControllerService_Request__fini(interfaces__srv__PhController
     return;
   }
   // ph
-  // pump_id
-  rosidl_runtime_c__String__fini(&msg->pump_id);
+  // pump_type
+  rosidl_runtime_c__String__fini(&msg->pump_type);
 }
 
 bool
@@ -50,9 +50,9 @@ interfaces__srv__PhControllerService_Request__are_equal(const interfaces__srv__P
   if (lhs->ph != rhs->ph) {
     return false;
   }
-  // pump_id
+  // pump_type
   if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->pump_id), &(rhs->pump_id)))
+      &(lhs->pump_type), &(rhs->pump_type)))
   {
     return false;
   }
@@ -69,9 +69,9 @@ interfaces__srv__PhControllerService_Request__copy(
   }
   // ph
   output->ph = input->ph;
-  // pump_id
+  // pump_type
   if (!rosidl_runtime_c__String__copy(
-      &(input->pump_id), &(output->pump_id)))
+      &(input->pump_type), &(output->pump_type)))
   {
     return false;
   }
@@ -259,7 +259,7 @@ interfaces__srv__PhControllerService_Request__Sequence__copy(
 
 
 // Include directives for member types
-// Member `pump_id`
+// Member `pump_type`
 // Member `msg`
 // already included above
 // #include "rosidl_runtime_c/string_functions.h"
@@ -270,8 +270,8 @@ interfaces__srv__PhControllerService_Response__init(interfaces__srv__PhControlle
   if (!msg) {
     return false;
   }
-  // pump_id
-  if (!rosidl_runtime_c__String__init(&msg->pump_id)) {
+  // pump_type
+  if (!rosidl_runtime_c__String__init(&msg->pump_type)) {
     interfaces__srv__PhControllerService_Response__fini(msg);
     return false;
   }
@@ -291,8 +291,8 @@ interfaces__srv__PhControllerService_Response__fini(interfaces__srv__PhControlle
   if (!msg) {
     return;
   }
-  // pump_id
-  rosidl_runtime_c__String__fini(&msg->pump_id);
+  // pump_type
+  rosidl_runtime_c__String__fini(&msg->pump_type);
   // warning
   // msg
   rosidl_runtime_c__String__fini(&msg->msg);
@@ -305,9 +305,9 @@ interfaces__srv__PhControllerService_Response__are_equal(const interfaces__srv__
   if (!lhs || !rhs) {
     return false;
   }
-  // pump_id
+  // pump_type
   if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->pump_id), &(rhs->pump_id)))
+      &(lhs->pump_type), &(rhs->pump_type)))
   {
     return false;
   }
@@ -336,9 +336,9 @@ interfaces__srv__PhControllerService_Response__copy(
   if (!input || !output) {
     return false;
   }
-  // pump_id
+  // pump_type
   if (!rosidl_runtime_c__String__copy(
-      &(input->pump_id), &(output->pump_id)))
+      &(input->pump_type), &(output->pump_type)))
   {
     return false;
   }

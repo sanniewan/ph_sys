@@ -32,10 +32,10 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: pump_id
+  // member: pump_type
   {
-    out << "pump_id: ";
-    rosidl_generator_traits::value_to_yaml(msg.pump_id, out);
+    out << "pump_type: ";
+    rosidl_generator_traits::value_to_yaml(msg.pump_type, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -54,13 +54,13 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: pump_id
+  // member: pump_type
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "pump_id: ";
-    rosidl_generator_traits::value_to_yaml(msg.pump_id, out);
+    out << "pump_type: ";
+    rosidl_generator_traits::value_to_yaml(msg.pump_type, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
@@ -134,10 +134,10 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: pump_id
+  // member: pump_type
   {
-    out << "pump_id: ";
-    rosidl_generator_traits::value_to_yaml(msg.pump_id, out);
+    out << "pump_type: ";
+    rosidl_generator_traits::value_to_yaml(msg.pump_type, out);
     out << ", ";
   }
 
@@ -167,13 +167,13 @@ inline void to_block_style_yaml(
   const PhControllerService_Response & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: pump_id
+  // member: pump_type
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "pump_id: ";
-    rosidl_generator_traits::value_to_yaml(msg.pump_id, out);
+    out << "pump_type: ";
+    rosidl_generator_traits::value_to_yaml(msg.pump_type, out);
     out << "\n";
   }
 
