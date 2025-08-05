@@ -1,1 +1,0 @@
-/workspace/ph_sys_ws/build/interfaces/rosidl_generator_cpp/interfaces/msg/detail/water_level_detector_message__struct.hpp

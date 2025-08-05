@@ -1,7 +1,0 @@
-string    instruction
-int16     height
----
-bool      err
-string    msg
-bool      state
-int16     height

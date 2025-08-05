@@ -1,1 +1,0 @@
-/workspace/ph_sys_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/potentiometer_service__type_support.h

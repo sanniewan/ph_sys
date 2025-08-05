@@ -1,1 +1,0 @@
-/workspace/ph_sys_ws/build/interfaces/rosidl_generator_py/interfaces/srv/_potentiometer_service_s.c

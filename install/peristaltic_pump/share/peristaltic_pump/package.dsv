@@ -1,9 +1,0 @@
-source;share/peristaltic_pump/hook/pythonpath.ps1
-source;share/peristaltic_pump/hook/pythonpath.dsv
-source;share/peristaltic_pump/hook/pythonpath.sh
-source;share/peristaltic_pump/hook/ament_prefix_path.ps1
-source;share/peristaltic_pump/hook/ament_prefix_path.dsv
-source;share/peristaltic_pump/hook/ament_prefix_path.sh
-source;../../build/peristaltic_pump/share/peristaltic_pump/hook/pythonpath_develop.ps1
-source;../../build/peristaltic_pump/share/peristaltic_pump/hook/pythonpath_develop.dsv
-source;../../build/peristaltic_pump/share/peristaltic_pump/hook/pythonpath_develop.sh

@@ -1,3 +1,0 @@
-[console_scripts]
-ph_sensor_node = ph_sensor.ph_sensor_node:main
-

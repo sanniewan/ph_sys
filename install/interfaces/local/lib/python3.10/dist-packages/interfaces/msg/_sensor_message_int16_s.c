@@ -1,1 +1,0 @@
-/workspace/ph_sys_ws/build/interfaces/rosidl_generator_py/interfaces/msg/_sensor_message_int16_s.c

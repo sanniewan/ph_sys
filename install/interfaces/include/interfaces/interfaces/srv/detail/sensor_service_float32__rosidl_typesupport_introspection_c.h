@@ -1,1 +1,0 @@
-/workspace/ph_sys_ws/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/sensor_service_float32__rosidl_typesupport_introspection_c.h

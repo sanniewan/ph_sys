@@ -1,1 +1,0 @@
-/workspace/ph_sys_ws/src/interfaces/msg/AirInstruction.msg

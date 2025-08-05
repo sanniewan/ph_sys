@@ -1,1 +1,0 @@
-/workspace/ph_sys_ws/build/interfaces/rosidl_typesupport_introspection_c/interfaces/srv/detail/i2c_expander_service__rosidl_typesupport_introspection_c.h

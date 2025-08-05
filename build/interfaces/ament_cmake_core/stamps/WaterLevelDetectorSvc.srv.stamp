@@ -1,5 +1,0 @@
-bool        threshold
----
-bool        err
-string      msg
-bool        result

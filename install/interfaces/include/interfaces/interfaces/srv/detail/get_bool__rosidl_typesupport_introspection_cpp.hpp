@@ -1,1 +1,0 @@
-/workspace/ph_sys_ws/build/interfaces/rosidl_typesupport_introspection_cpp/interfaces/srv/detail/get_bool__rosidl_typesupport_introspection_cpp.hpp

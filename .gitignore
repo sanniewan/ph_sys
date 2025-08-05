@@ -1,6 +1,17 @@
 # Logs and cache
-logs/
-__pycache__/
-*.log
+# ROS2 build and install folders
 build/
 install/
+log/
+# Python virtual environments
+venv/
+.env/
+# ROS2 workspace files
+.colcon/
+.colcon_install_layout
+# Misc
+*.pyc
+*.swp
+.DS_Store
+.idea/
+.vscode/

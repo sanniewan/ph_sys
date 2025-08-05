@@ -1,1 +1,0 @@
-/workspace/ph_sys_ws/build/interfaces/rosidl_generator_py/interfaces/srv/_water_level_detector_svc_s.c

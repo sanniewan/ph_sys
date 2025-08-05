@@ -1,1 +1,0 @@
-/workspace/ph_sys_ws/build/interfaces/rosidl_generator_c/interfaces/srv/detail/actuator_service_rwc__functions.h

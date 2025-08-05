@@ -1,1 +1,0 @@
-/workspace/ph_sys_ws/build/interfaces/rosidl_generator_cpp/interfaces/msg/detail/lift_instruction__struct.hpp

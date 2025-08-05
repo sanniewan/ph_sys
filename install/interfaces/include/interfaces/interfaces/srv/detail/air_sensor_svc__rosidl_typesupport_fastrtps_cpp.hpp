@@ -1,1 +1,0 @@
-/workspace/ph_sys_ws/build/interfaces/rosidl_typesupport_fastrtps_cpp/interfaces/srv/detail/air_sensor_svc__rosidl_typesupport_fastrtps_cpp.hpp

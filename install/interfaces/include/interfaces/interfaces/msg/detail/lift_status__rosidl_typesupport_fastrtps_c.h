@@ -1,1 +1,0 @@
-/workspace/ph_sys_ws/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/lift_status__rosidl_typesupport_fastrtps_c.h

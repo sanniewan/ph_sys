@@ -1,1 +1,0 @@
-/workspace/ph_sys_ws/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/light_instruction__rosidl_typesupport_fastrtps_c.h

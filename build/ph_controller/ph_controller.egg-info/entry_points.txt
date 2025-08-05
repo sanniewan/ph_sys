@@ -1,3 +1,0 @@
-[console_scripts]
-ph_controller_node = ph_controller.ph_controller_node:main
-
