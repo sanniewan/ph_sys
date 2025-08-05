@@ -37,9 +37,34 @@ def generate_launch_description():
             output='screen'
         ),
         Node(
+            package='ec_sensor',
+            executable='ec_sensor_node',
+            name='ec_sensor',
+            output='screen'
+        ),
+        Node(
+            package='ec_controller',
+            executable='ec_controller_node',
+            name='ec_controller',
+            output='screen'
+        ),
+        Node(
             package='peristaltic_pump',
             executable='peristaltic_pump_node',
             name='peristaltic_pump',
             output='screen'
         ),
+        Node(
+            package='daily_scheduler',
+            executable='daily_scheduler_node',
+            name='daily_scheduler',
+            output='screen'
+        ),
+        Node(
+            package='irrigation_pumps',
+            executable='irrigation_pumps_node',
+            name='irrigation_pumps',
+            output='screen'
+        ),
+        
     ])

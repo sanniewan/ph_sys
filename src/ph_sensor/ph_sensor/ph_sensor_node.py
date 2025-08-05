@@ -3,7 +3,7 @@ from rclpy.callback_groups import ReentrantCallbackGroup, MutuallyExclusiveCallb
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 
-from interfaces.msg import SensorMessageFloat32
+from interfaces.msg import SensorMessageFloat32, DailySchedulerMessage
 from interfaces.srv import SensorServiceFloat32
 from hardware.config import WATER_PH_SENSORS, WATER_SENSOR_PERIOD, TANKS
 from ph_sensor.ezo_ph_sensor import AtlasEzoPhSensor
@@ -28,7 +28,12 @@ class WaterPhSensor(Node):
     SENSOR_ADDRESSES = WATER_PH_SENSORS
     INIT_TIMER_PERIOD = 60  # Time in seconds for the initialization timer
     DEFAULT_TEMPERATURE = 25.0  # Degrees Celsius
-
+    
+    SIMULATED_DATA_MIN = 5.0
+    SIMULATED_DATA_MAX = 7.5
+    SIMULATED_DATA_STEP = 1  # How much the data increases every cyle before it hits SIMULATED_DATA_MAX
+                             # and resets
+    
     def __init__(self, tank: str):
         """Initializes the WaterPhSensor node for the given water tank.
 
@@ -46,7 +51,8 @@ class WaterPhSensor(Node):
         self._sensor_is_configured = False
         self._temperature = self.DEFAULT_TEMPERATURE  # Initialize with default temperature
         self._init = True
-        self._simulated_data = 0
+        self._simulated_data = self.SIMULATED_DATA_MIN
+        self._is_daytime = True
         
         # Create the service
         self._service = self.create_service(
@@ -75,6 +81,16 @@ class WaterPhSensor(Node):
         )
         self.get_logger().info(f'Subscribed to {tank}_tank_t_sensor topic')
 
+        # Create subscriber to daily scheduler topic
+        self._daily_scheduler_subscriber = self.create_subscription(
+            DailySchedulerMessage,
+            'daily_scheduler_node',
+            self._daily_scheduler_callback,
+            self.BUFFER_SIZE,
+            callback_group=callback_group
+        )
+        self.get_logger().info(f'Subscribed to daily_scheduler_node topic')
+
         # Create initialization timer
         self._init_timer = self.create_timer(
             60,
@@ -102,7 +118,16 @@ class WaterPhSensor(Node):
             self.get_logger().warning(f'Received error from water temperature sensor: {msg.msg}')
         else:
             self._temperature = msg.data
-        
+    
+    def _daily_scheduler_callback(self, msg: DailySchedulerMessage):
+        """Callback function for the temperature subscriber.
+
+        Args:
+            msg (SensorMessageFloat32): The received temperature message.
+        """
+        self.get_logger().info(f'Received message from daily scheduler. It is now {msg.state}')
+        self._is_daytime = msg.is_daytime
+    
     def _service_callback(
         self, 
         request: SensorServiceFloat32.Request,
@@ -139,6 +164,8 @@ class WaterPhSensor(Node):
 
         # self._read_sensor()
         self.get_logger().info('Init timer reading sensor')
+        # self._read_sensor()
+        self.get_logger().info('Init timer reading sensor')
         if self._sensor_is_configured:
             self._init_timer.cancel()
 
@@ -172,6 +199,7 @@ class WaterPhSensor(Node):
 
     def _simulate_read_sensor(self) -> tuple[bool, str, float]:
         """Generates pH values for testing purposes and publishes the status.
+        """Generates pH values for testing purposes and publishes the status.
 
         Returns:
             tuple: A tuple containing:
@@ -182,10 +210,10 @@ class WaterPhSensor(Node):
         err = False
         msg = "This is simulated data"
         data = float(self._simulated_data)  # fabricated ph data
-        if self._simulated_data >= 9:
-            self._simulated_data = 5
+        if self._simulated_data >= self.SIMULATED_DATA_MAX:
+            self._simulated_data = self.SIMULATED_DATA_MIN
         else:
-            self._simulated_data += 0.5
+            self._simulated_data += self.SIMULATED_DATA_STEP
             
         self._publish_status(err, msg, data)
         return err, msg, data
@@ -248,11 +276,15 @@ class WaterPhSensor(Node):
 
     def _publish_callback(self):
         """Callback function to publish sensor data periodically."""
-        # self._read_sensor()
-        # self.get_logger().info('Sensor read successfully.')
-        
-        self._simulate_read_sensor()
-        self.get_logger().info('Sensor readings simulated.')
+        if self._is_daytime:
+            self._read_sensor()
+            self.get_logger().info('Sensor read successfully.')
+            
+            # self._simulate_read_sensor()
+            # self.get_logger().info('Sensor readings simulated.')
+        else:
+            to_log = '🌱 PH_S: It is NOT daytime - Nothing to publish'
+            write_log(to_log)
 
 
 def main(args=None):
