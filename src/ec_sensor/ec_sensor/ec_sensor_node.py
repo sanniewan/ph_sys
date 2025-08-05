@@ -8,8 +8,6 @@ from interfaces.srv import SensorServiceFloat32
 from hardware.config import WATER_EC_SENSORS, WATER_SENSOR_PERIOD, TANKS
 from ec_sensor.ezo_ec_sensor import AtlasEzoEcSensor
 from utils.log import write_log
-from ec_sensor.ezo_ec_sensor import AtlasEzoEcSensor
-from utils.log import write_log
 
 
 class WaterEcSensor(Node):
@@ -184,8 +182,7 @@ class WaterEcSensor(Node):
         if not self._sensor_is_configured:
             err, msg = self._configure_sensor()
             if err:
-                write_log(f"    ☄️  PH: Warning from pH sensor: {msg}")
-                write_log(f"    ☄️  PH: Warning from pH sensor: {msg}")
+                write_log(f"    ☄️  PH: Warning from EC sensor: {msg}")
                 return self._handle_sensor_error(msg)
 
             else:

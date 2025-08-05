@@ -1,0 +1,594 @@
+2025-08-05 14:59:16   <._.>   🎋 CTRL_EC: Node created successfully.
+2025-08-05 14:59:16   <._.>   🎋 CTRL_EC: Node created successfully.
+2025-08-05 14:59:16   <._.>   🎋 TIME: Node created successfully.
+2025-08-05 14:59:16   <._.>   🎋 CTRL_PH: Node created successfully.
+2025-08-05 15:00:16   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:00:16   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:00:16   <._.>   ⏰ TIME: Now Hour: 15; Now minute: 0; Daytime? True
+2025-08-05 15:00:16   <._.>            🧮 CTRL_PH: Published command: pump_type: ph_up | Normal | message: | volume: 0.0
+2025-08-05 15:01:08   <._.>   🎋 CTRL_EC: Node created successfully.
+2025-08-05 15:01:08   <._.>   🎋 CTRL_PH: Node created successfully.
+2025-08-05 15:01:08   <._.>   🎋 TIME: Node created successfully.
+2025-08-05 15:01:08   <._.>   🎋 CTRL_EC: Node created successfully.
+2025-08-05 15:04:54   <._.>   🎋 CTRL_PH: Node created successfully.
+2025-08-05 15:04:54   <._.>   🎋 TIME: Node created successfully.
+2025-08-05 15:04:54   <._.>   🎋 CTRL_EC: Node created successfully.
+2025-08-05 15:04:54   <._.>   🎋 CTRL_EC: Node created successfully.
+2025-08-05 15:16:42   <._.>   🎋 EC_S: Node created successfully.
+2025-08-05 15:16:42   <._.>   🎋 EC_S: Node created successfully.
+2025-08-05 15:16:42   <._.>   🎋 EC_S: Node created successfully.
+2025-08-05 15:16:42   <._.>   🎋 EC_S: Node created successfully.
+2025-08-05 15:16:42   <._.>   🎋 TIME: Node created successfully.
+2025-08-05 15:16:42   <._.>   🎋 TNK_PMP: Node created successfully.
+2025-08-05 15:16:42   <._.>   🎋 PH_S: Node created successfully.
+2025-08-05 15:16:42   <._.>   🎋 CTRL_PH: Node created successfully.
+2025-08-05 15:16:42   <._.>   🎋 CTRL_EC: Node created successfully.
+2025-08-05 15:16:42   <._.>   🎋 CTRL_EC: Node created successfully.
+2025-08-05 15:16:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:16:42   <._.>   🎋 PMP: Node created successfully.
+2025-08-05 15:17:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:17:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:17:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:17:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:17:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:17:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:17:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:17:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:17:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:17:02   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:17:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:17:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:17:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:17:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:17:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:17:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:17:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:17:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:17:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:17:22   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:17:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:17:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:17:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:17:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:17:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:17:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:17:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:17:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:17:42   <._.>   ⏰ TIME: Now Hour: 15; Now minute: 17; Daytime? True
+2025-08-05 15:17:42   <._.>            🧮 CTRL_PH: Published command: pump_type: ph_up | Normal | message: | volume: 0.0
+2025-08-05 15:17:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:17:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:17:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:17:42   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:17:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:17:42   <._.>       ☄️⚙️ PMP: Error- pump[ph_up] at ID '1' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:17:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:17:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:17:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:17:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:18:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:18:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:18:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:18:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:18:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:18:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:18:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:18:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:18:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:18:02   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:18:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:18:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:18:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:18:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:18:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:18:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:18:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:18:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:18:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:18:22   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:18:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:18:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:18:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:18:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:18:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:18:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:18:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:18:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:18:42   <._.>   ⏰ TIME: Now Hour: 15; Now minute: 18; Daytime? True
+2025-08-05 15:18:42   <._.>            🧮 CTRL_PH: Published command: pump_type: ph_up | Normal | message: | volume: 0.0
+2025-08-05 15:18:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:18:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:18:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:18:42   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:18:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:18:42   <._.>       ☄️⚙️ PMP: Error- pump[ph_up] at ID '1' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:18:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:18:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:18:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:18:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:19:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:19:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:19:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:19:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:19:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:19:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:19:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:19:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:19:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:19:02   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:19:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:19:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:19:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:19:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:19:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:19:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:19:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:19:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:19:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:19:22   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:19:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:19:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:19:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:19:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:19:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:19:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:19:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:19:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:19:42   <._.>   ⏰ TIME: Now Hour: 15; Now minute: 19; Daytime? True
+2025-08-05 15:19:42   <._.>            🧮 CTRL_PH: Published command: pump_type: ph_up | Normal | message: | volume: 0.0
+2025-08-05 15:19:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:19:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:19:42   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:19:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:19:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:19:42   <._.>       ☄️⚙️ PMP: Error- pump[ph_up] at ID '1' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:19:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:19:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:19:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:19:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:20:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:20:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:20:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:20:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:20:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:20:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:20:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:20:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:20:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:20:02   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:20:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:20:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:20:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:20:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:20:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:20:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:20:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:20:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:20:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:20:22   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:20:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:20:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:20:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:20:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:20:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:20:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:20:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:20:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:20:42   <._.>   ⏰ TIME: Now Hour: 15; Now minute: 20; Daytime? True
+2025-08-05 15:20:42   <._.>            🧮 CTRL_PH: Published command: pump_type: ph_up | Normal | message: | volume: 0.0
+2025-08-05 15:20:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:20:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:20:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:20:42   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:20:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:20:42   <._.>       ☄️⚙️ PMP: Error- pump[ph_up] at ID '1' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:20:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:20:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:20:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:20:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:21:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:21:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:21:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:21:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:21:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:21:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:21:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:21:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:21:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:21:02   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:21:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:21:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:21:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:21:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:21:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:21:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:21:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:21:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:21:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:21:22   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:21:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:21:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:21:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:21:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:21:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:21:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:21:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:21:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:21:42   <._.>   ⏰ TIME: Now Hour: 15; Now minute: 21; Daytime? True
+2025-08-05 15:21:42   <._.>            🧮 CTRL_PH: Published command: pump_type: ph_up | Normal | message: | volume: 0.0
+2025-08-05 15:21:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:21:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:21:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:21:42   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:21:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:21:42   <._.>       ☄️⚙️ PMP: Error- pump[ph_up] at ID '1' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:21:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:21:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:21:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:21:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:22:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:22:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:22:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:22:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:22:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:22:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:22:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:22:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:22:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:22:02   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:22:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:22:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:22:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:22:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:22:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:22:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:22:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:22:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:22:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:22:22   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:22:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:22:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:22:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:22:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:22:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:22:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:22:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:22:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:22:42   <._.>   ⏰ TIME: Now Hour: 15; Now minute: 22; Daytime? True
+2025-08-05 15:22:42   <._.>            🧮 CTRL_PH: Published command: pump_type: ph_up | Normal | message: | volume: 0.0
+2025-08-05 15:22:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:22:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:22:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:22:42   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:22:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:22:42   <._.>       ☄️⚙️ PMP: Error- pump[ph_up] at ID '1' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:22:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:22:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:22:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:22:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:22:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:23:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:23:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:23:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:23:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:23:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:23:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:23:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:23:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:23:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:23:02   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:23:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:23:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:23:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:23:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:23:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:23:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:23:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:23:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:23:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:23:22   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:23:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:23:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:23:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:23:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:23:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:23:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:23:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:23:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:23:42   <._.>   ⏰ TIME: Now Hour: 15; Now minute: 23; Daytime? True
+2025-08-05 15:23:42   <._.>            🧮 CTRL_PH: Published command: pump_type: ph_up | Normal | message: | volume: 0.0
+2025-08-05 15:23:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:23:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:23:42   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:23:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:23:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:23:42   <._.>       ☄️⚙️ PMP: Error- pump[ph_up] at ID '1' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:23:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:23:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:23:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:23:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:24:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:24:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:24:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:24:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:24:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:24:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:24:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:24:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:24:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:24:02   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:24:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:24:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:24:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:24:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:24:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:24:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:24:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:24:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:24:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:24:22   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:24:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:24:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:24:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:24:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:24:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:24:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:24:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:24:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:24:42   <._.>   ⏰ TIME: Now Hour: 15; Now minute: 24; Daytime? True
+2025-08-05 15:24:42   <._.>            🧮 CTRL_PH: Published command: pump_type: ph_up | Normal | message: | volume: 0.0
+2025-08-05 15:24:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:24:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:24:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:24:42   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:24:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:24:42   <._.>       ☄️⚙️ PMP: Error- pump[ph_up] at ID '1' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:24:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:24:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:24:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:24:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:25:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:25:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:25:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:25:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:25:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:25:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:25:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:25:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:25:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:25:02   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:25:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:25:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:25:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:25:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:25:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:25:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:25:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:25:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:25:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:25:22   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:25:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:25:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:25:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:25:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:25:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:25:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:25:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:25:42   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:25:42   <._.>   ⏰ TIME: Now Hour: 15; Now minute: 25; Daytime? True
+2025-08-05 15:25:42   <._.>            🧮 CTRL_PH: Published command: pump_type: ph_up | Normal | message: | volume: 0.0
+2025-08-05 15:25:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:25:42   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:25:42   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:25:42   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:25:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:25:42   <._.>       ☄️⚙️ PMP: Error- pump[ph_up] at ID '1' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:25:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:25:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:25:42   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:25:42   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:26:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:26:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:26:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:26:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:26:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:26:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:26:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:26:02   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:26:02   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:26:02   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:26:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:26:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:26:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:26:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:26:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:26:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:26:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:26:22   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:26:22   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:26:22   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:28:18   <._.>   🎋 EC_S: Node created successfully.
+2025-08-05 15:28:18   <._.>   🎋 EC_S: Node created successfully.
+2025-08-05 15:28:18   <._.>   🎋 CTRL_PH: Node created successfully.
+2025-08-05 15:28:18   <._.>   🎋 PH_S: Node created successfully.
+2025-08-05 15:28:18   <._.>   🎋 TIME: Node created successfully.
+2025-08-05 15:28:18   <._.>   🎋 CTRL_EC: Node created successfully.
+2025-08-05 15:28:18   <._.>   🎋 TNK_PMP: Node created successfully.
+2025-08-05 15:28:18   <._.>   🎋 TNK_PMP: Node created successfully.
+2025-08-05 15:28:18   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:28:18   <._.>   🎋 PMP: Node created successfully.
+2025-08-05 15:28:38   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:28:38   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:28:38   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:28:38   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:28:38   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:28:58   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:28:58   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:28:58   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:28:58   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:28:58   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:29:18   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:29:18   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:29:18   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:29:18   <._.>            🧮 CTRL_PH: Published command: pump_type: ph_up | Normal | message: | volume: 0.0
+2025-08-05 15:29:18   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:29:18   <._.>       ☄️⚙️ PMP: Error- pump[ph_up] at ID '1' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:29:18   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:29:18   <._.>   ⏰ TIME: Now Hour: 15; Now minute: 29; Daytime? True
+2025-08-05 15:29:18   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:29:18   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:29:18   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:29:18   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:29:38   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:29:38   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:29:38   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:29:38   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:29:38   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:29:58   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:29:58   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:29:58   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:29:58   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:29:58   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:30:18   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:30:18   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:30:18   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:30:18   <._.>            🧮 CTRL_PH: Published command: pump_type: ph_up | Normal | message: | volume: 0.0
+2025-08-05 15:30:18   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:30:18   <._.>       ☄️⚙️ PMP: Error- pump[ph_up] at ID '1' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:30:18   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:30:18   <._.>   ⏰ TIME: Now Hour: 15; Now minute: 30; Daytime? True
+2025-08-05 15:30:18   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:30:18   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:30:18   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:30:18   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:30:57   <._.>   🎋 TIME: Node created successfully.
+2025-08-05 15:30:57   <._.>   🎋 CTRL_PH: Node created successfully.
+2025-08-05 15:30:57   <._.>   🎋 EC_S: Node created successfully.
+2025-08-05 15:30:57   <._.>   🎋 EC_S: Node created successfully.
+2025-08-05 15:30:57   <._.>   🎋 PH_S: Node created successfully.
+2025-08-05 15:30:57   <._.>   🎋 TNK_PMP: Node created successfully.
+2025-08-05 15:30:58   <._.>   🎋 CTRL_EC: Node created successfully.
+2025-08-05 15:30:58   <._.>   🎋 TNK_PMP: Node created successfully.
+2025-08-05 15:30:58   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:30:58   <._.>   🎋 PMP: Node created successfully.
+2025-08-05 15:31:17   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:31:17   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:31:17   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:31:18   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:31:18   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:31:37   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:31:37   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:31:37   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:31:38   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:31:38   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:31:57   <._.>   ⏰ TIME: Now Hour: 15; Now minute: 31; Daytime? True
+2025-08-05 15:31:57   <._.>            🧮 CTRL_PH: Published command: pump_type: ph_up | Normal | message: | volume: 0.0
+2025-08-05 15:31:57   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:31:57   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:31:57   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:31:57   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:31:57   <._.>       ☄️⚙️ PMP: Error- pump[ph_up] at ID '1' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:31:58   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:31:58   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:31:58   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:31:58   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:31:58   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:32:17   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:32:17   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:32:17   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:32:18   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:32:18   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:32:37   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:32:37   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:32:37   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:32:37   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:32:38   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:32:57   <._.>   ⏰ TIME: Now Hour: 15; Now minute: 32; Daytime? True
+2025-08-05 15:32:57   <._.>            🧮 CTRL_PH: Published command: pump_type: ph_up | Normal | message: | volume: 0.0
+2025-08-05 15:32:57   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:32:57   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:32:57   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:32:57   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:32:57   <._.>       ☄️⚙️ PMP: Error- pump[ph_up] at ID '1' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:32:58   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:32:58   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:32:58   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:32:58   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:32:58   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:33:17   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:33:17   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:33:17   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:33:18   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:33:18   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:35:02   <._.>   🎋 CTRL_PH: Node created successfully.
+2025-08-05 15:35:03   <._.>   🎋 EC_S: Node created successfully.
+2025-08-05 15:35:03   <._.>   🎋 PH_S: Node created successfully.
+2025-08-05 15:35:03   <._.>   🎋 EC_S: Node created successfully.
+2025-08-05 15:35:03   <._.>   🎋 TNK_PMP: Node created successfully.
+2025-08-05 15:35:03   <._.>   🎋 TIME: Node created successfully.
+2025-08-05 15:35:03   <._.>   🎋 CTRL_EC: Node created successfully.
+2025-08-05 15:35:03   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:35:03   <._.>   🎋 PMP: Node created successfully.
+2025-08-05 15:35:03   <._.>   🎋 TNK_PMP: Node created successfully.
+2025-08-05 15:35:23   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:35:23   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:35:23   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:35:23   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:35:23   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:35:43   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:35:43   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:35:43   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:35:43   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:35:43   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:36:02   <._.>            🧮 CTRL_PH: Published command: pump_type: ph_up | Normal | message: | volume: 0.0
+2025-08-05 15:36:02   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:36:02   <._.>       ☄️⚙️ PMP: Error- pump[ph_up] at ID '1' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:36:03   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:36:03   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:36:03   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:36:03   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:36:03   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:36:03   <._.>   ⏰ TIME: Now Hour: 15; Now minute: 36; Daytime? True
+2025-08-05 15:36:03   <._.>   🚿 TNK_PMP: Failed to initialize MCP23017 board at address 38: No I2C device at address: 0x26
+2025-08-05 15:36:03   <._.>   🚿 TNK_PMP: Failed to initialize MCP23017 board at address 38: No I2C device at address: 0x26
+2025-08-05 15:36:03   <._.>   🚿 TNK_PMP: Error configuring the board.
+2025-08-05 15:36:03   <._.>   🚿 TNK_PMP: Error configuring the board.
+2025-08-05 15:36:03   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:36:03   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:36:03   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:36:23   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:36:23   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:36:23   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:36:23   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:36:23   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:36:43   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:36:43   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:36:43   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:36:43   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:36:43   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:37:02   <._.>            🧮 CTRL_PH: Published command: pump_type: ph_up | Normal | message: | volume: 0.0
+2025-08-05 15:37:02   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:37:02   <._.>       ☄️⚙️ PMP: Error- pump[ph_up] at ID '1' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:37:03   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:37:03   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:37:03   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:37:03   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:37:03   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:37:03   <._.>   ⏰ TIME: Now Hour: 15; Now minute: 37; Daytime? True
+2025-08-05 15:37:03   <._.>   🚿 TNK_PMP: Failed to initialize MCP23017 board at address 38: No I2C device at address: 0x26
+2025-08-05 15:37:03   <._.>   🚿 TNK_PMP: Error configuring the board.
+2025-08-05 15:37:03   <._.>   🚿 TNK_PMP: Failed to initialize MCP23017 board at address 38: No I2C device at address: 0x26
+2025-08-05 15:37:03   <._.>   🚿 TNK_PMP: Error configuring the board.
+2025-08-05 15:37:03   <._.>            🧮 CTRL_EC: Published command: pump_type: ec_up | Normal | message: | volume: 0
+2025-08-05 15:37:03   <._.>       ☄️ PMP: Error configuring the following pump(s): ['ph_up', 'ph_down', 'ec_up']. Please check wiring.
+2025-08-05 15:37:03   <._.>       ☄️⚙️ PMP: Error- pump[ec_up] at ID '3' could not be configured. Check wiring to troubleshoot further.
+2025-08-05 15:37:23   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:37:23   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:37:23   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:37:23   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:37:23   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:37:43   <._.>       ☄️  PH: Warning from pH sensor: Error detecting Atlas EZO pH Probe (0x63)
+2025-08-05 15:37:43   <._.>   🌱 PH_S: pH sensor reading: pH=-99.9
+2025-08-05 15:37:43   <._.>       ☄️  PH: Warning from EC sensor: Error detecting Atlas EZO Electrical Conductivity Probe (0x64)
+2025-08-05 15:37:43   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9
+2025-08-05 15:37:43   <._.>   🥗 EC_S: EC sensor reading: EC=-99.9

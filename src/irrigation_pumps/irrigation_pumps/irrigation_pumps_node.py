@@ -139,16 +139,29 @@ class IrrigationPumpNode(Node):
         Returns:
             bool: Error flag; True if configuration failed, False otherwise.
         """
-        board = MCP23017_RelayBoard(0x26)
-        
+        address = 0x26
+        try:
+            board = MCP23017_RelayBoard(address)
+        except Exception as e:
+            to_log = f"🚿 TNK_PMP: Failed to initialize MCP23017 board at address {hex(address)}: {str(e)}"
+            write_log(to_log)
+            self.get_logger().error(to_log)
+            return True
+            
         # Set all ports as output initially
         err, msg = board._set_ports_as_output()
         if err:
             self._board_configured = False
+            to_log = f"🚿 TNK_PMP: Failed to configure board: {msg}"
+            write_log(to_log)
+            self.get_logger().error(to_log)
             return True
         else:
             self._board = board
             self._board_configured = True
+            to_log = "🚿 TNK_PMP: Board configured successfully"
+            write_log(to_log)
+            self.get_logger().info(to_log)
             
         # Close all ports initially
         err, msg = self.close_all_ports()

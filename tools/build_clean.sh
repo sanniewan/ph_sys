@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rm -rf build/ install/ log/
+rm -rf ../build ../install ../log

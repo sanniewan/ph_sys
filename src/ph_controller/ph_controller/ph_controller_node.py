@@ -41,7 +41,6 @@ class PhControllerNode(Node):
         # Create the service
         self._service = self.create_service(
             PhControllerService,
-            PhControllerService,
             service_name,
             self._service_callback,
             callback_group=callback_group
@@ -50,7 +49,6 @@ class PhControllerNode(Node):
 
         # Create pump command publisher
         self._publisher = self.create_publisher(
-            ControllerMessage,
             ControllerMessage,
             service_name,
             self.BUFFER_SIZE
@@ -113,11 +111,7 @@ class PhControllerNode(Node):
         
         which_pump = "ph_up" if volume >= 0 else "ph_down"  # ph_up pump (1) if positive volume, else ph_down pump (2)
         abs_vol = round(abs(float(volume)), 3)
-        which_pump = "ph_up" if volume >= 0 else "ph_down"  # ph_up pump (1) if positive volume, else ph_down pump (2)
-        abs_vol = round(abs(float(volume)), 3)
         
-        command_msg = ControllerMessage()
-        command_msg.pump_type = which_pump
         command_msg = ControllerMessage()
         command_msg.pump_type = which_pump
         command_msg.warning = warning
@@ -179,7 +173,6 @@ class PhControllerNode(Node):
         
         self.get_logger().info("🥶 service callback ph Controller Node activating")
         warning, msg, volume = self._compute_volume(current_ph)
-        response.pump_type = request.pump_type
         response.pump_type = request.pump_type
         response.err = warning
         response.msg = msg

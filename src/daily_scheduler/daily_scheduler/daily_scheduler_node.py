@@ -5,6 +5,8 @@ from rclpy.node import Node
 
 from interfaces.msg import DailySchedulerMessage
 
+from hardware.config import DAILY_SCHEDULER_PERIOD
+
 from datetime import datetime
 from utils.log import write_log
 
@@ -19,14 +21,11 @@ class DailyScheduler(Node):
         BUFFER_SIZE (int): The size of the buffer for the status publisher
         START_DAY_HOUR (int): The hour of day that the node starts publishing that it is Daytime
         END_DAY_HOUR (int): The hour of day that the node starts publishing that it is Nighttime
-        DAILY_SCHEDULER_PERIOD (int): Period in seconds for the publisher function
     """
     
     BUFFER_SIZE = 1
     START_DAY_HOUR = 6
     END_DAY_HOUR = 20
-    DAILY_SCHEDULER_PERIOD = 60  # seconds   DEVELOPMENT
-    # DAILY_SCHEDULER_PERIOD = 10*60  # seconds   TESTING
     
     IRRIGATION_WINDOW_START = 1
     IRRIGATION_WINDOW_END = 16
@@ -49,7 +48,7 @@ class DailyScheduler(Node):
         
         # Create periodic publish timer
         self._daytime_publish_timer = self.create_timer(
-            self.DAILY_SCHEDULER_PERIOD,
+            DAILY_SCHEDULER_PERIOD,
             self._publish_callback,
             callback_group=callback_group
         )

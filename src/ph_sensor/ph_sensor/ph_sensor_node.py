@@ -199,7 +199,6 @@ class WaterPhSensor(Node):
 
     def _simulate_read_sensor(self) -> tuple[bool, str, float]:
         """Generates pH values for testing purposes and publishes the status.
-        """Generates pH values for testing purposes and publishes the status.
 
         Returns:
             tuple: A tuple containing:
