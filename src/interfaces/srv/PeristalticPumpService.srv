@@ -1,4 +1,5 @@
 float32   volume
+string    pump_type
 ---
 bool      err
 string    msg

@@ -3,9 +3,11 @@ from rclpy.callback_groups import ReentrantCallbackGroup, MutuallyExclusiveCallb
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 
-from interfaces.msg import SensorMessageFloat32
+from interfaces.msg import SensorMessageFloat32, DailySchedulerMessage
 from interfaces.srv import SensorServiceFloat32
 from hardware.config import WATER_EC_SENSORS, WATER_SENSOR_PERIOD, TANKS
+from ec_sensor.ezo_ec_sensor import AtlasEzoEcSensor
+from utils.log import write_log
 from ec_sensor.ezo_ec_sensor import AtlasEzoEcSensor
 from utils.log import write_log
 
@@ -29,6 +31,9 @@ class WaterEcSensor(Node):
     SENSOR_ADDRESSES = WATER_EC_SENSORS
     INIT_TIMER_PERIOD = 60  # Time in seconds for the initialization timer
     DEFAULT_TEMPERATURE = 25.0  # Degrees Celsius
+    
+    SIMULATED_DATA_MIN = 800
+    SIMULATED_DATA_MAX = 1000
 
     def __init__(self, tank: str):
         """Initializes the WaterEcSensor node for the given water tank.
@@ -48,6 +53,7 @@ class WaterEcSensor(Node):
         self._temperature = self.DEFAULT_TEMPERATURE  # Initialize with default temperature
         self._init = True
         self._simulated_data = 100
+        self._is_daytime = True
         
         # Create the service
         self._service = self.create_service(
@@ -76,6 +82,16 @@ class WaterEcSensor(Node):
         )
         self.get_logger().info(f'Subscribed to {tank}_tank_t_sensor topic')
 
+        # Create subscriber to daily scheduler topic
+        self._daily_scheduler_subscriber = self.create_subscription(
+            DailySchedulerMessage,
+            'daily_scheduler_node',
+            self._daily_scheduler_callback,
+            self.BUFFER_SIZE,
+            callback_group=callback_group
+        )
+        self.get_logger().info(f'Subscribed to daily_scheduler_node topic')
+
         # Create initialization timer
         self._init_timer = self.create_timer(
             self.INIT_TIMER_PERIOD,
@@ -92,6 +108,9 @@ class WaterEcSensor(Node):
         to_log = '🎋 EC_S: Node created successfully.'
         write_log(to_log)
         self.get_logger().info(to_log)
+        to_log = '🎋 EC_S: Node created successfully.'
+        write_log(to_log)
+        self.get_logger().info(to_log)
 
 
     def _temperature_callback(self, msg: SensorMessageFloat32):
@@ -104,7 +123,16 @@ class WaterEcSensor(Node):
             self.get_logger().warning(f'Received error from water temperature sensor: {msg.msg}')
         else:
             self._temperature = msg.data
-        
+    
+    def _daily_scheduler_callback(self, msg: DailySchedulerMessage):
+        """Callback function for the temperature subscriber.
+
+        Args:
+            msg (SensorMessageFloat32): The received temperature message.
+        """
+        self.get_logger().info(f'Received message from daily scheduler. It is now {msg.state}')
+        self._is_daytime = msg.is_daytime
+    
     def _service_callback(
         self, 
         request: SensorServiceFloat32.Request,
@@ -140,6 +168,7 @@ class WaterEcSensor(Node):
             )
 
         # self._read_sensor()
+        # self._read_sensor()
         if self._sensor_is_configured:
             self._init_timer.cancel()
 
@@ -155,6 +184,7 @@ class WaterEcSensor(Node):
         if not self._sensor_is_configured:
             err, msg = self._configure_sensor()
             if err:
+                write_log(f"    ☄️  PH: Warning from pH sensor: {msg}")
                 write_log(f"    ☄️  PH: Warning from pH sensor: {msg}")
                 return self._handle_sensor_error(msg)
 
@@ -183,9 +213,9 @@ class WaterEcSensor(Node):
         """
         err = False
         msg = "This is simulated data"
-        data = float(self._simulated_data)  # fabricated ec data
-        if self._simulated_data >= 1000:
-            self._simulated_data = 100
+        data = float(self._simulated_data)  # fabricated ph data
+        if self._simulated_data >= self.SIMULATED_DATA_MAX:
+            self._simulated_data = self.SIMULATED_DATA_MIN
         else:
             self._simulated_data += 100
             
@@ -241,6 +271,10 @@ class WaterEcSensor(Node):
         write_log(to_log)
         self.get_logger().info(to_log)
         
+        to_log = f'🥗 EC_S: EC sensor reading: EC={data}'
+        write_log(to_log)
+        self.get_logger().info(to_log)
+        
         status_msg = SensorMessageFloat32()
         status_msg.err = error
         status_msg.msg = message
@@ -249,12 +283,15 @@ class WaterEcSensor(Node):
 
     def _publish_callback(self):
         """Callback function to publish sensor data periodically."""
-        # self._read_sensor()
-        # self.get_logger().info('Sensor read successfully.')
-        
-        self._simulate_read_sensor()
-        self.get_logger().info('Sensor readings simulated.')
-
+        if self._is_daytime:
+            self._read_sensor()
+            self.get_logger().info('Sensor read successfully.')
+            
+            # self._simulate_read_sensor()
+            # self.get_logger().info('Sensor readings simulated.')
+        else:
+            to_log = '🥗 EC_S: It is NOT daytime - Nothing to publish'
+            write_log(to_log)
 
 
 def main(args=None):

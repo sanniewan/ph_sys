@@ -3,11 +3,9 @@ from rclpy.callback_groups import ReentrantCallbackGroup, MutuallyExclusiveCallb
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 
-from interfaces.msg import ControllerMessage
+from interfaces.msg import ControllerMessage, SensorMessageFloat32, DailySchedulerMessage
 from interfaces.srv import ECControllerService
-
-
-from interfaces.msg import SensorMessageFloat32
+from hardware.config import CONTROLLER_PERIOD
 
 from ec_controller.controller_ec import Controller
 from utils.log import write_log
@@ -21,12 +19,11 @@ class ECControllerNode(Node):
 
     """
     
-    DEFAULT_EC = 100
-    DEFAULT_KP = 0.1
+    TARGET_EC = 1500
+    TOLERANCE_EC = 200
+    DEFAULT_EC = 1500
+    DEFAULT_KP = 0.005
     BUFFER_SIZE = 1
-    EC_CONTROLLER_PERIOD = 0.5*60  # seconds   DEVELOPMENT
-    # EC_CONTROLLER_PERIOD = 60*60   # 1 hour    TESTING
-    
     
     def __init__(self):
         super().__init__('ec_controller_node')
@@ -35,10 +32,10 @@ class ECControllerNode(Node):
         service_name = 'ec_controller_node'
         callback_group = ReentrantCallbackGroup()
         
-        self._target_ec = 1000
         self._ec = self.DEFAULT_EC
         self._kp = self.DEFAULT_KP
         self._controller_is_configured = False
+        self._is_daytime = True
 
         # Create the service
         self._service = self.create_service(
@@ -59,7 +56,7 @@ class ECControllerNode(Node):
 
         # Create periodic publish timer
         self._publish_timer = self.create_timer(
-            self.EC_CONTROLLER_PERIOD,
+            CONTROLLER_PERIOD,
             self._publish_callback,
             callback_group=callback_group
         )
@@ -73,6 +70,16 @@ class ECControllerNode(Node):
         )
         self.get_logger().info(f'Subscribed to cultivation_tank_ec_sensor topic')
         
+        # Create subscriber to daily scheduler topic
+        self._daily_scheduler_subscriber = self.create_subscription(
+            DailySchedulerMessage,
+            'daily_scheduler_node',
+            self._daily_scheduler_callback,
+            self.BUFFER_SIZE,
+            callback_group=callback_group
+        )
+        self.get_logger().info(f'Subscribed to daily_scheduler_node topic')
+
         to_log = '🎋 CTRL_EC: Node created successfully.'
         write_log(to_log)
         self.get_logger().info(to_log)
@@ -88,6 +95,15 @@ class ECControllerNode(Node):
         else:
             self.get_logger().info(f'Received reading from EC sensor: {msg.data}')
             self._ec = msg.data
+    
+    def _daily_scheduler_callback(self, msg: DailySchedulerMessage):
+        """Callback function for the temperature subscriber.
+
+        Args:
+            msg (SensorMessageFloat32): The received temperature message.
+        """
+        self.get_logger().info(f'Received message from daily scheduler. It is now {msg.state}')
+        self._is_daytime = msg.is_daytime
             
     def _publish_command(self, warning: bool, message: str, volume: float) -> None:
         command_msg = ControllerMessage()
@@ -100,13 +116,17 @@ class ECControllerNode(Node):
         self._publisher.publish(command_msg)
         
         # Write to logs
-        to_log = f'🧮 CTRL_EC: Published command: pump_type: ec_up | warning: {warning} | message: {message}| volume: {round(volume, 3)}'
+        to_log = f'         🧮 CTRL_EC: Published command: pump_type: ec_up | {"Warning" if warning else "Normal"} | message: {message}| volume: {round(volume, 3)}'
         write_log(to_log)
         self.get_logger().info(to_log)
     
     def _configure_controller(self) -> None:
         """Instantiates the controller."""
-        self._controller = Controller(unit_name="EC")
+        target_low = float(self.TARGET_EC-self.TOLERANCE_EC)
+        target_high = float(self.TARGET_EC+self.TOLERANCE_EC)
+        self._controller = Controller(unit_name="EC", kp=self._kp, 
+                                      target_low=target_low, target_high=target_high, 
+                                      crit_high=5000, crit_low=10)
         self._controller_is_configured = True
     
     def _compute_volume(self, ec: float) -> tuple[bool,str,float]:
@@ -115,14 +135,18 @@ class ECControllerNode(Node):
         return warning, msg, out_vol
     
     def _publish_callback(self):
-        if not self._controller_is_configured:
-            self._configure_controller()
+        if self._is_daytime:
+            if not self._controller_is_configured:
+                self._configure_controller()
+                
+            # to_log = f'📝 CTRL_EC: Publishing to peristaltic pumps: ec={round(self._ec, 3)}'
+            # self.get_logger().info(to_log)
+            # write_log(to_log)
+            self._compute_volume(self._ec)
+        else:
+            to_log = '          🧮 CTRL_EC: It is NOT daytime - Nothing to publish'
+            write_log(to_log)
             
-        to_log = f'📝 CTRL_EC: Publishing to peristaltic pumps: ec={round(self._ec, 3)}'
-        self.get_logger().info(to_log)
-        write_log(to_log)
-        self._compute_volume(self._ec)
-    
     def _service_callback(
         self,
         request: ECControllerService.Request,

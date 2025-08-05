@@ -44,10 +44,13 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/PeristalticPumpService.srv"
 
   "msg/ControllerMessage.msg"  
+  "msg/ControllerMessage.msg"  
   "srv/PhControllerService.srv"
 
   "srv/ECControllerService.srv"
 
+  "msg/DailySchedulerMessage.msg"
+  "srv/IrrigationPumpsService.srv"
 
   "msg/SensorMessageInt16.msg"
   "srv/SensorServiceInt16.srv"
@@ -57,9 +60,6 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 
   "msg/WaterLevelDetectorMessage.msg"
   "srv/WaterLevelDetectorService.srv"
-
-
-  
 
   "msg/ActuatorStatus.msg"
 

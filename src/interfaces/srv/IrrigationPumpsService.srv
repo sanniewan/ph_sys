@@ -1,0 +1,6 @@
+int8    port
+bool    state
+---
+bool    err
+string  msg
+bool    state

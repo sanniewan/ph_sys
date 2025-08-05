@@ -5,7 +5,7 @@ class Controller:
     This class is independent of ROS and can be unit-tested.
     """
 
-    def __init__(self, unit_name: str, target_low: float=900, target_high: float=1100, crit_low: float=200, crit_high: float=2000, kp: float = 0.1):
+    def __init__(self, unit_name: str, target_low: float=1100, target_high: float=1900, crit_low: float=200, crit_high: float=5000, kp: float = 0.001):
         self.target_low = target_low
         self.target_high = target_high
         self.crit_low = crit_low
